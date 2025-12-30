@@ -20,20 +20,17 @@ class Database {
     public function getConnection() {
         $this->conn = null;
         
-        // Hardcoded for Vercel - Standard Supabase Config
+        // Hardcoded for Vercel - Regional Pooler Config (Bypasses IPv6 DNS issues)
         $this->driver = 'pgsql';
-        $this->host = 'db.ogiwoavudsjlwfkvndgc.supabase.co';
+        $this->host = 'aws-0-sa-east-1.pooler.supabase.com'; // Direct Regional Pooler
         $this->db_name = 'postgres';
-        $this->username = 'postgres';
+        $this->username = 'postgres.ogiwoavudsjlwfkvndgc'; // Format: user.project_ref
         $this->password = 'G4a1ther2020#';
-        $this->port = '5432';
+        $this->port = '6543';
 
         try {
-            // Extract Project Ref for Endpoint ID
-            $ref = explode('.', $this->host)[1] ?? 'ogiwoavudsjlwfkvndgc';
-            
-            // DSN with proper SSL and Endpoint options
-            $dsn = "{$this->driver}:host={$this->host};port={$this->port};dbname={$this->db_name};sslmode=require;options='endpoint={$ref}'";
+            // DSN for Pooler
+            $dsn = "{$this->driver}:host={$this->host};port={$this->port};dbname={$this->db_name};sslmode=require";
             $this->conn = new PDO($dsn, $this->username, $this->password);
             
             if ($this->driver === 'mysql') {
