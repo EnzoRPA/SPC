@@ -122,11 +122,33 @@ class Database {
                 $this->host = '54.94.90.106'; // aws-0-sa-east-1.pooler.supabase.com
             }
 
+            // 5. EXTRACT PROJECT REF (needed for routing via IP)
+            // Hostname is usually: db.<project_ref>.supabase.co
+            $projectRef = '';
+            if (preg_match('/db\.([a-z0-9]+)\.supabase\.co/', $original_host, $matches)) {
+                $projectRef = $matches[1];
+            } else {
+                // Try from username if formatted like postgres.ref
+                $parts = explode('.', $this->username);
+                if (count($parts) > 1) {
+                    $projectRef = $parts[1];
+                } else {
+                    // Fallback hardcoded based on user logs: ogiwoavudsjlwfkvndgc
+                    $projectRef = 'ogiwoavudsjlwfkvndgc';
+                }
+            }
+
+            // 6. FORCE PORT 6543 (Pooler) for IPv4 compatibility
+            // Direct conn (5432) is IPv6 only on Free tier. Since we are forcing IPv4 IP, we MUST use 6543.
+            $this->port = '6543';
+
             try {
                 // Connect
-                // NOTE: For Supabase Transaction Pool (Port 6543), we might need `pgbouncer=true` in options or similar, 
-                // but usually just standard connection works if Prepared Statements are handled correctly.
+                // Append endpoint to options so Supabase knows the tenant when we connect via IP
                 $dsn = "{$this->driver}:host={$this->host};port={$this->port};dbname={$this->db_name};sslmode=require";
+                if ($projectRef) {
+                    $dsn .= ";options='endpoint={$projectRef}'";
+                }
                 
                 $options = [
                     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
