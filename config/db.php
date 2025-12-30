@@ -20,7 +20,7 @@ class Database {
     public function getConnection() {
         $this->conn = null;
         
-        // Hardcoded for Vercel - Standard Host with IPv4 Enforcement
+        // Hardcoded for Vercel - IPv4 Enforcement + SNI Fix
         $this->driver = 'pgsql';
         $original_host = 'db.ogiwoavudsjlwfkvndgc.supabase.co';
         $this->db_name = 'postgres';
@@ -28,25 +28,24 @@ class Database {
         $this->password = 'G4a1ther2020#';
         $this->port = '5432';
 
-        // FORCE IPv4: Resolve hostname to A record (IPv4) to avoid Vercel IPv6 issues
-        $dns = dns_get_record($original_host, DNS_A);
-        $ipv4_host = $original_host;
-        if (!empty($dns) && isset($dns[0]['ip'])) {
-            $ipv4_host = $dns[0]['ip'];
-        } else {
-             // Fallback
-             $ipv4_host = gethostbyname($original_host);
+        // FORCE IPv4: Vercel defaults to IPv6 which fails. We must find an IPv4 address.
+        $this->host = $original_host; // Default fallback
+        $ips = gethostbynamel($original_host);
+        if ($ips) {
+            foreach ($ips as $ip) {
+                if (filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV4)) {
+                    $this->host = $ip;
+                    break;
+                }
+            }
         }
-        $this->host = $ipv4_host;
 
         try {
-            // DSN uses the Resolved IPv4 address directly
-            $dsn = "{$this->driver}:host={$this->host};port={$this->port};dbname={$this->db_name};sslmode=require";
+            // Extract Project Ref for Endpoint ID (SNI Equivalent)
+            $ref = 'ogiwoavudsjlwfkvndgc';
             
-            // Add custom options for Endpoint if needed (useful for Transaction Pooler, valid for Session too)
-            // But with direct IP, we might lose SNI. Supabase usually validates IP access.
-            // Let's try standard connection first with the IP.
-            
+            // Connect to IP, but send 'endpoint' option so Supabase knows who we are
+            $dsn = "{$this->driver}:host={$this->host};port={$this->port};dbname={$this->db_name};sslmode=require;options='endpoint={$ref}'";
             $this->conn = new PDO($dsn, $this->username, $this->password);
             
             if ($this->driver === 'mysql') {
