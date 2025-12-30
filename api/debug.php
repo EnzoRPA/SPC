@@ -1,8 +1,8 @@
 <?php
 header('Content-Type: text/plain');
 
-echo "Debug Environment\n";
-echo "=================\n";
+echo "Debug Environment v2\n";
+echo "====================\n";
 echo "Date: " . date('Y-m-d H:i:s') . "\n";
 echo "SAPI: " . php_sapi_name() . "\n";
 echo "User: " . get_current_user() . "\n";
