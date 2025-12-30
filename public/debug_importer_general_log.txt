@@ -1,0 +1,120 @@
+Row 1:
+  Contrato (Col 0/Mapped): 'CONTRATO'
+  Raw Row: ["CONTRATO","TP_CONTRATO","CONTRATANTE","CONTRATACAO","CPF_CNPJ","STATUS","VENDA","PARCELA","DEBITO","EMISSAO","VENCIMENTO","DIAS_ATRASO","RUA","NUMERO","BAIRRO","CEP","CIDADE","ESTADO"]
+Row 2:
+  Contrato (Col 0/Mapped): '44766'
+  Raw Row: ["44766","PF","Marcelino Mendes Andrade Filho","19\/04\/11","19807449200","A","5286075","1a parcela","861.34","05\/11\/25","20\/11\/25","21","208 SUL ALAMEDA","2","Plano Diretor Sul","77020570","Palmas","TO"]
+Row 3:
+  Contrato (Col 0/Mapped): '37958'
+  Raw Row: ["37958","PF","Francisca De Jesus Pontes e Vasconcelos","19\/03\/09","46023720315","A","5285861","1a parcela","1551.04","05\/11\/25","25\/11\/25","16","DOM SEBASTIAO LEME","655","FATIMA","60050160","Fortaleza","CE"]
+Row 4:
+  Contrato (Col 0/Mapped): '23278'
+  Raw Row: ["23278","PF","Janio De Oliveira","30\/12\/02","12488348104","A","5297519","1a parcela","3184.04","13\/11\/25","30\/11\/25","11","T 49","925","Setor Bueno","74210200","Goi\u00e2nia","GO"]
+Row 1:
+  Contrato (Col 0/Mapped): 'CONTRATO'
+  Raw Row: ["CONTRATO","TP_CONTRATO","CONTRATANTE","CONTRATACAO","CPF_CNPJ","STATUS","VENDA","PARCELA","DEBITO","EMISSAO","VENCIMENTO","DIAS_ATRASO","RUA","NUMERO","BAIRRO","CEP","CIDADE","ESTADO"]
+Row 2:
+  Contrato (Col 0/Mapped): '44766'
+  Raw Row: ["44766","PF","Marcelino Mendes Andrade Filho","19\/04\/11","19807449200","A","5286075","1a parcela","861.34","05\/11\/25","20\/11\/25","22","208 SUL ALAMEDA","2","Plano Diretor Sul","77020570","Palmas","TO"]
+Row 3:
+  Contrato (Col 0/Mapped): '37958'
+  Raw Row: ["37958","PF","Francisca De Jesus Pontes e Vasconcelos","19\/03\/09","46023720315","A","5285861","1a parcela","1551.04","05\/11\/25","25\/11\/25","17","DOM SEBASTIAO LEME","655","FATIMA","60050160","Fortaleza","CE"]
+Row 4:
+  Contrato (Col 0/Mapped): '23278'
+  Raw Row: ["23278","PF","Janio De Oliveira","30\/12\/02","12488348104","A","5297519","1a parcela","3184.04","13\/11\/25","30\/11\/25","12","T 49","925","Setor Bueno","74210200","Goi\u00e2nia","GO"]
+Row 1:
+  Contrato (Col 0/Mapped): 'CONTRATO'
+  Raw Row: ["CONTRATO","TP_CONTRATO","CONTRATANTE","CONTRATACAO","CPF_CNPJ","STATUS","VENDA","PARCELA","DEBITO","EMISSAO","VENCIMENTO","DIAS_ATRASO","RUA","NUMERO","BAIRRO","CEP","CIDADE","ESTADO"]
+Row 2:
+  Contrato (Col 0/Mapped): '44766'
+  Raw Row: ["44766","PF","Marcelino Mendes Andrade Filho","19\/04\/11","19807449200","A","5286075","1a parcela","861.34","05\/11\/25","20\/11\/25","22","208 SUL ALAMEDA","2","Plano Diretor Sul","77020570","Palmas","TO"]
+Row 3:
+  Contrato (Col 0/Mapped): '37958'
+  Raw Row: ["37958","PF","Francisca De Jesus Pontes e Vasconcelos","19\/03\/09","46023720315","A","5285861","1a parcela","1551.04","05\/11\/25","25\/11\/25","17","DOM SEBASTIAO LEME","655","FATIMA","60050160","Fortaleza","CE"]
+Row 4:
+  Contrato (Col 0/Mapped): '23278'
+  Raw Row: ["23278","PF","Janio De Oliveira","30\/12\/02","12488348104","A","5297519","1a parcela","3184.04","13\/11\/25","30\/11\/25","12","T 49","925","Setor Bueno","74210200","Goi\u00e2nia","GO"]
+Row 1:
+  Contrato (Col 0/Mapped): 'CONTRATO'
+  Raw Row: ["CONTRATO","TP_CONTRATO","CONTRATANTE","CONTRATACAO","CPF_CNPJ","STATUS","VENDA","PARCELA","DEBITO","EMISSAO","VENCIMENTO","DIAS_ATRASO","RUA","NUMERO","BAIRRO","CEP","CIDADE","ESTADO"]
+Row 2:
+  Contrato (Col 0/Mapped): '44766'
+  Raw Row: ["44766","PF","Marcelino Mendes Andrade Filho","19\/04\/11","19807449200","A","5286075","1a parcela","861.34","05\/11\/25","20\/11\/25","25","208 SUL ALAMEDA","2","Plano Diretor Sul","77020570","Palmas","TO"]
+Row 3:
+  Contrato (Col 0/Mapped): '37958'
+  Raw Row: ["37958","PF","Francisca De Jesus Pontes e Vasconcelos","19\/03\/09","46023720315","A","5285861","1a parcela","1551.04","05\/11\/25","25\/11\/25","20","DOM SEBASTIAO LEME","655","FATIMA","60050160","Fortaleza","CE"]
+Row 4:
+  Contrato (Col 0/Mapped): '23278'
+  Raw Row: ["23278","PF","Janio De Oliveira","30\/12\/02","12488348104","A","5297519","1a parcela","3184.04","13\/11\/25","30\/11\/25","15","T 49","925","Setor Bueno","74210200","Goi\u00e2nia","GO"]
+Row 1:
+  Contrato (Col 0/Mapped): 'CONTRATO'
+  Raw Row: ["CONTRATO","TP_CONTRATO","CONTRATANTE","CONTRATACAO","CPF_CNPJ","STATUS","VENDA","PARCELA","DEBITO","EMISSAO","VENCIMENTO","DIAS_ATRASO","RUA","NUMERO","BAIRRO","CEP","CIDADE","ESTADO"]
+Row 2:
+  Contrato (Col 0/Mapped): '44766'
+  Raw Row: ["44766","PF","Marcelino Mendes Andrade Filho","19\/04\/11","19807449200","A","5286075","1a parcela","861.34","05\/11\/25","20\/11\/25","27","208 SUL ALAMEDA","2","Plano Diretor Sul","77020570","Palmas","TO"]
+Row 3:
+  Contrato (Col 0/Mapped): '37958'
+  Raw Row: ["37958","PF","Francisca De Jesus Pontes e Vasconcelos","19\/03\/09","46023720315","A","5285861","1a parcela","1551.04","05\/11\/25","25\/11\/25","22","DOM SEBASTIAO LEME","655","FATIMA","60050160","Fortaleza","CE"]
+Row 4:
+  Contrato (Col 0/Mapped): '23278'
+  Raw Row: ["23278","PF","Janio De Oliveira","30\/12\/02","12488348104","A","5297519","1a parcela","3184.04","13\/11\/25","30\/11\/25","17","T 49","925","Setor Bueno","74210200","Goi\u00e2nia","GO"]
+Row 1:
+  Contrato (Col 0/Mapped): 'CONTRATO'
+  Raw Row: ["CONTRATO","TP_CONTRATO","CONTRATANTE","CONTRATACAO","CPF_CNPJ","STATUS","VENDA","PARCELA","DEBITO","EMISSAO","VENCIMENTO","DIAS_ATRASO","RUA","NUMERO","BAIRRO","CEP","CIDADE","ESTADO"]
+Row 2:
+  Contrato (Col 0/Mapped): '44766'
+  Raw Row: ["44766","PF","Marcelino Mendes Andrade Filho","19\/04\/11","19807449200","A","5286075","1a parcela","861.34","05\/11\/25","20\/11\/25","29","208 SUL ALAMEDA","2","Plano Diretor Sul","77020570","Palmas","TO"]
+Row 3:
+  Contrato (Col 0/Mapped): '37958'
+  Raw Row: ["37958","PF","Francisca De Jesus Pontes e Vasconcelos","19\/03\/09","46023720315","A","5285861","1a parcela","1551.04","05\/11\/25","25\/11\/25","24","DOM SEBASTIAO LEME","655","FATIMA","60050160","Fortaleza","CE"]
+Row 4:
+  Contrato (Col 0/Mapped): '72578'
+  Raw Row: ["72578","PF","Cristiane Dos Anjos Correa","15\/09\/23","00714697370","A","5305660","1a parcela","321.55","01\/12\/25","10\/12\/25","9","DEZENOVE","10","Vila Vit\u00f3ria","65918078","Imperatriz","MA"]
+Row 1:
+  Contrato (Col 0/Mapped): 'CONTRATO'
+  Raw Row: ["CONTRATO","TP_CONTRATO","CONTRATANTE","CONTRATACAO","CPF_CNPJ","STATUS","VENDA","PARCELA","DEBITO","EMISSAO","VENCIMENTO","DIAS_ATRASO","RUA","NUMERO","BAIRRO","CEP","CIDADE","ESTADO"]
+Row 2:
+  Contrato (Col 0/Mapped): '44766'
+  Raw Row: ["44766","PF","Marcelino Mendes Andrade Filho","19\/04\/11","19807449200","A","5307222","1a parcela","861.34","04\/12\/25","20\/12\/25","2","208 SUL ALAMEDA","2","Plano Diretor Sul","77020570","Palmas","TO"]
+Row 3:
+  Contrato (Col 0/Mapped): '44766'
+  Raw Row: ["44766","PF","Marcelino Mendes Andrade Filho","19\/04\/11","19807449200","A","5286075","1a parcela","861.34","05\/11\/25","20\/11\/25","32","208 SUL ALAMEDA","2","Plano Diretor Sul","77020570","Palmas","TO"]
+Row 4:
+  Contrato (Col 0/Mapped): '53640'
+  Raw Row: ["53640","PF","Marcos Antonio De Sousa","20\/05\/14","00572557175","A","5307598","1a parcela","458.71","04\/12\/25","20\/12\/25","2","BOM JARDIM","95","Jardim Goi\u00e1s","77824080","Aragua\u00edna","TO"]
+Row 1:
+  Contrato (Col 0/Mapped): 'CONTRATO'
+  Raw Row: ["CONTRATO","TP_CONTRATO","CONTRATANTE","CONTRATACAO","CPF_CNPJ","STATUS","VENDA","PARCELA","DEBITO","EMISSAO","VENCIMENTO","DIAS_ATRASO","RUA","NUMERO","BAIRRO","CEP","CIDADE","ESTADO"]
+Row 2:
+  Contrato (Col 0/Mapped): '44766'
+  Raw Row: ["44766","PF","Marcelino Mendes Andrade Filho","19\/04\/11","19807449200","A","5307222","1a parcela","861.34","04\/12\/25","20\/12\/25","4","208 SUL ALAMEDA","2","Plano Diretor Sul","77020570","Palmas","TO"]
+Row 3:
+  Contrato (Col 0/Mapped): '44766'
+  Raw Row: ["44766","PF","Marcelino Mendes Andrade Filho","19\/04\/11","19807449200","A","5286075","1a parcela","861.34","05\/11\/25","20\/11\/25","34","208 SUL ALAMEDA","2","Plano Diretor Sul","77020570","Palmas","TO"]
+Row 4:
+  Contrato (Col 0/Mapped): '71288'
+  Raw Row: ["71288","PF","Maria Clara Balbino Lago Cunha","07\/06\/22","61006702326","A","5309079","1a parcela","539.23","04\/12\/25","20\/12\/25","4","ALAGOAS","650","Savassi","30130160","Belo Horizonte","MG"]
+Row 1:
+  Contrato (Col 0/Mapped): 'CONTRATO'
+  Raw Row: ["CONTRATO","TP_CONTRATO","CONTRATANTE","CONTRATACAO","CPF_CNPJ","STATUS","VENDA","PARCELA","DEBITO","EMISSAO","VENCIMENTO","DIAS_ATRASO","RUA","NUMERO","BAIRRO","CEP","CIDADE","ESTADO"]
+Row 2:
+  Contrato (Col 0/Mapped): '44766'
+  Raw Row: ["44766","PF","Marcelino Mendes Andrade Filho","19\/04\/11","19807449200","A","5307222","1a parcela","861.34","04\/12\/25","20\/12\/25","6","208 SUL ALAMEDA","2","Plano Diretor Sul","77020570","Palmas","TO"]
+Row 3:
+  Contrato (Col 0/Mapped): '44766'
+  Raw Row: ["44766","PF","Marcelino Mendes Andrade Filho","19\/04\/11","19807449200","A","5286075","1a parcela","861.34","05\/11\/25","20\/11\/25","36","208 SUL ALAMEDA","2","Plano Diretor Sul","77020570","Palmas","TO"]
+Row 4:
+  Contrato (Col 0/Mapped): '71288'
+  Raw Row: ["71288","PF","Maria Clara Balbino Lago Cunha","07\/06\/22","61006702326","A","5309079","1a parcela","539.23","04\/12\/25","20\/12\/25","6","ALAGOAS","650","Savassi","30130160","Belo Horizonte","MG"]
+Row 1:
+  Contrato (Col 0/Mapped): 'CONTRATO'
+  Raw Row: ["CONTRATO","TP_CONTRATO","CONTRATANTE","CONTRATACAO","CPF_CNPJ","STATUS","VENDA","PARCELA","DEBITO","EMISSAO","VENCIMENTO","DIAS_ATRASO","RUA","NUMERO","BAIRRO","CEP","CIDADE","ESTADO"]
+Row 2:
+  Contrato (Col 0/Mapped): '71288'
+  Raw Row: ["71288","PF","Maria Clara Balbino Lago Cunha","07\/06\/22","61006702326","A","5309079","1a parcela","539.23","04\/12\/25","20\/12\/25","9","ALAGOAS","650","Savassi","30130160","Belo Horizonte","MG"]
+Row 3:
+  Contrato (Col 0/Mapped): '72578'
+  Raw Row: ["72578","PF","Cristiane Dos Anjos Correa","15\/09\/23","00714697370","A","5305660","1a parcela","321.55","01\/12\/25","10\/12\/25","19","DEZENOVE","10","Vila Vit\u00f3ria","65918078","Imperatriz","MA"]
+Row 4:
+  Contrato (Col 0/Mapped): '71164'
+  Raw Row: ["71164","PF","Juliana Mota Garcia Eduvirgem","25\/05\/22","61021054356","A","5309023","1a parcela","306.27","04\/12\/25","20\/12\/25","9","DEZENOVE","129","Vila Vit\u00f3ria","65918078","Imperatriz","MA"]

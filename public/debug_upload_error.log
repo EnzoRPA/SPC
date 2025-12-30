@@ -1,0 +1,5 @@
+SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect time value: '14:30:60' for column 'hora_inclusao' at row 1
+#0 C:\Users\enzoverzaro\Documents\SPC ANTI\src\Importers\SpcImporter.php(90): PDOStatement->execute(Array)
+#1 C:\Users\enzoverzaro\Documents\SPC ANTI\src\Importer.php(49): App\Importers\SpcImporter->import('uploads/modelo_...', '78')
+#2 C:\Users\enzoverzaro\Documents\SPC ANTI\public\index.php(318): App\Importer->importarArquivo('uploads/modelo_...', 'spc')
+#3 {main}

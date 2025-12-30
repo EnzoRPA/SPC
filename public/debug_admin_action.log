@@ -1,0 +1,1282 @@
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => delete
+    [table] => spc_inclusos
+    [id] => 3997
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => delete
+    [table] => spc_inclusos
+    [id] => 3998
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => delete
+    [table] => spc_inclusos
+    [id] => 5961
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => delete
+    [table] => spc_inclusos
+    [id] => 3
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => delete
+    [table] => spc_inclusos
+    [id] => 1
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => delete
+    [table] => spc_inclusos
+    [id] => 2
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => delete
+    [table] => spc_inclusos
+    [id] => 4
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => delete
+    [table] => spc_inclusos
+    [id] => 4529
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => delete
+    [table] => spc_inclusos
+    [id] => 1083
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => delete
+    [table] => spc_inclusos
+    [id] => 1182
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => delete
+    [table] => spc_inclusos
+    [id] => 1283
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => spc_inclusos
+    [id] => 6397
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => spc_inclusos
+    [id] => 6397
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => spc_inclusos
+    [id] => 6395
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => spc_inclusos
+    [id] => 6395
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => spc_inclusos
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => spc_inclusos
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => spc_inclusos
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => spc_inclusos
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => spc_inclusos
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => spc_inclusos
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => delete
+    [table] => spc_inclusos
+    [id] => 1393
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => delete
+    [table] => spc_inclusos
+    [id] => 1389
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => delete
+    [table] => spc_inclusos
+    [id] => 5993
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => delete
+    [table] => spc_inclusos
+    [id] => 4684
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => delete
+    [table] => spc_inclusos
+    [id] => 3775
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => spc_inclusos
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => delete
+    [table] => spc_inclusos
+    [id] => 618
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => delete
+    [table] => spc_inclusos
+    [id] => 3311
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => delete
+    [table] => spc_inclusos
+    [id] => 4546
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => delete
+    [table] => spc_inclusos
+    [id] => 4796
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => delete
+    [table] => spc_inclusos
+    [id] => 4421
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => delete
+    [table] => spc_inclusos
+    [id] => 4303
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => delete
+    [table] => spc_inclusos
+    [id] => 4804
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => delete
+    [table] => spc_inclusos
+    [id] => 4426
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => delete
+    [table] => spc_inclusos
+    [id] => 4803
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => delete
+    [table] => spc_inclusos
+    [id] => 4424
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => delete
+    [table] => spc_inclusos
+    [id] => 4799
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => get_column_values
+    [table] => spc_inclusos
+    [column] => contratante
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => get_column_values
+    [table] => spc_inclusos
+    [column] => contratacao
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => get_column_values
+    [table] => spc_inclusos
+    [column] => status_inclusao
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => get_column_values
+    [table] => spc_inclusos
+    [column] => status_inclusao
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => delete
+    [table] => import_batches
+    [id] => 108
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => delete
+    [table] => import_batches
+    [id] => 109
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => delete
+    [table] => spc_inclusos
+    [id] => 1
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => delete
+    [table] => spc_inclusos
+    [id] => 4795
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => delete
+    [table] => spc_inclusos
+    [id] => 172
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => get_column_values
+    [table] => spc_inclusos
+    [column] => status_inclusao
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => get_column_values
+    [table] => spc_inclusos
+    [column] => status_inclusao
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => spc_inclusos
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => spc_inclusos
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => spc_inclusos
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => get_column_values
+    [table] => spc_inclusos
+    [column] => status_inclusao
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => get_column_values
+    [table] => spc_inclusos
+    [column] => status_inclusao
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => get_column_values
+    [table] => spc_inclusos
+    [column] => status_inclusao
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => get_column_values
+    [table] => spc_inclusos
+    [column] => status_inclusao
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => delete
+    [table] => spc_inclusos
+    [id] => 5996
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => delete
+    [table] => spc_inclusos
+    [id] => 4687
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => delete
+    [table] => spc_inclusos
+    [id] => 3778
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => delete
+    [table] => spc_inclusos
+    [id] => 3314
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => delete
+    [table] => spc_inclusos
+    [id] => 1396
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => delete
+    [table] => spc_inclusos
+    [id] => 1392
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => delete
+    [table] => spc_inclusos
+    [id] => 621
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => delete
+    [table] => spc_inclusos
+    [id] => 499
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => delete
+    [table] => spc_inclusos
+    [id] => 63
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => get_column_values
+    [table] => spc_inclusos
+    [column] => status_inclusao
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => delete
+    [table] => spc_inclusos
+    [id] => 4807
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => delete
+    [table] => spc_inclusos
+    [id] => 4806
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => delete
+    [table] => spc_inclusos
+    [id] => 4802
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => delete
+    [table] => spc_inclusos
+    [id] => 4799
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => delete
+    [table] => spc_inclusos
+    [id] => 4549
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => delete
+    [table] => spc_inclusos
+    [id] => 4429
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => delete
+    [table] => spc_inclusos
+    [id] => 4427
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => delete
+    [table] => spc_inclusos
+    [id] => 4424
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => delete
+    [table] => spc_inclusos
+    [id] => 4306
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => get_column_values
+    [table] => spc_inclusos
+    [column] => status_inclusao
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => delete
+    [table] => import_batches
+    [id] => 16
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => delete
+    [table] => import_batches
+    [id] => 17
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => delete
+    [table] => import_batches
+    [id] => 19
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => delete
+    [table] => import_batches
+    [id] => 18
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => delete
+    [table] => import_batches
+    [id] => 20
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => get_column_values
+    [table] => spc_historico_removidos
+    [column] => data_remocao
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => get_column_values
+    [table] => spc_historico_removidos
+    [column] => data_remocao
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => get_column_values
+    [table] => spc_historico_removidos
+    [column] => data_remocao
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => get_column_values
+    [table] => spc_historico_removidos
+    [column] => data_remocao
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => delete
+    [table] => import_batches
+    [id] => 21
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => get_column_values
+    [table] => spc_historico_removidos
+    [column] => data_remocao
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => get_column_values
+    [table] => spc_historico_removidos
+    [column] => data_remocao
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => delete
+    [table] => spc_inclusos
+    [id] => 6267
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => pdd_perdas
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => pdd_perdas
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => pdd_perdas
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => pdd_perdas
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => pdd_perdas
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => pdd_perdas
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => pdd_perdas
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => get_column_values
+    [table] => pdd_perdas
+    [column] => data_vencimento
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => pdd_perdas
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => pdd_perdas
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => pdd_perdas
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => pdd_perdas
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => pdd_perdas
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => pdd_perdas
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => pdd_perdas
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => pdd_perdas
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => pdd_perdas
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => pdd_perdas
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => pdd_perdas
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => pdd_perdas
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => pdd_perdas
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => pdd_perdas
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => pdd_perdas
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => pdd_perdas
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => pdd_perdas
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => pdd_perdas
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => pdd_perdas
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => pdd_perdas
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => pdd_perdas
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => pdd_perdas
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => pdd_perdas
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => pdd_perdas
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => pdd_perdas
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => pdd_perdas
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => pdd_perdas
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => pdd_perdas
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => pdd_perdas
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => pdd_perdas
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => pdd_perdas
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => pdd_perdas
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => pdd_perdas
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => pdd_perdas
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => pdd_perdas
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => pdd_perdas
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => pdd_perdas
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => pdd_perdas
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => pdd_perdas
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => pdd_perdas
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => pdd_perdas
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => pdd_perdas
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => pdd_perdas
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => pdd_perdas
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => pdd_perdas
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => pdd_perdas
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => pdd_perdas
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => pdd_perdas
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => pdd_perdas
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => pdd_perdas
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => pdd_perdas
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => pdd_perdas
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => pdd_perdas
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => pdd_perdas
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => pdd_perdas
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => pdd_perdas
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => pdd_perdas
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => pdd_perdas
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => pdd_perdas
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => pdd_perdas
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => pdd_perdas
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => pdd_perdas
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => pdd_perdas
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => pdd_perdas
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => pdd_perdas
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => pdd_perdas
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => pdd_perdas
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => pdd_perdas
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => update_cell
+    [table] => pdd_perdas
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => get_column_values
+    [table] => pdd_perdas
+    [column] => data_vencimento
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => get_column_values
+    [table] => pdd_perdas
+    [column] => data_vencimento
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => delete
+    [table] => spc_inclusos
+    [id] => 6189
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => delete
+    [table] => import_batches
+    [id] => 75
+)
+
+Admin Action Request: Array
+(
+    [page] => admin_action
+    [action] => delete
+    [table] => spc_inclusos
+    [id] => 1824
+)
+

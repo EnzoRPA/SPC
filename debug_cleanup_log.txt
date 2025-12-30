@@ -1,0 +1,1680 @@
+=== Limpeza de Duplicatas 2025-11-27 20:00:54 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-11-27 20:07:35 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-11-27 20:08:57 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-11-27 20:09:48 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-11-27 20:12:50 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-11-27 20:13:06 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-11-27 20:59:23 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-11-27 21:42:16 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-11-27 21:42:42 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-11-27 21:52:53 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-11-27 21:58:07 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-11-27 21:58:33 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-11-27 22:00:13 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 116
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 116
+
+=== Limpeza de Duplicatas 2025-11-27 22:04:06 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-11-27 22:11:49 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 125
+Tabela parcelas_em_aberto - Removidos por campos: 5
+Total removido: 130
+
+=== Limpeza de Duplicatas 2025-11-27 22:14:04 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-11-27 22:14:40 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-11-27 22:15:16 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-11-28 11:30:57 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-11-28 11:31:09 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-11-28 11:32:30 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-11-28 11:42:39 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-11-28 11:44:30 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-11-28 11:45:22 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-11-28 11:51:24 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-11-28 11:53:20 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-11-28 11:55:51 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-11-28 11:57:02 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-11-28 12:06:52 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-11-28 12:08:02 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-11-28 12:32:23 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-11-28 12:49:33 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-11-28 12:53:59 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-11-28 12:54:21 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-11-28 13:38:40 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-11-28 13:45:37 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-11-28 13:55:47 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-11-28 16:25:59 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-11-28 16:34:46 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-11-28 16:50:03 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-11-28 16:55:57 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 122
+Tabela parcelas_em_aberto - Removidos por campos: 5
+Total removido: 127
+
+=== Limpeza de Duplicatas 2025-11-28 17:04:44 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-11-28 17:05:36 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 122
+Tabela parcelas_em_aberto - Removidos por campos: 5
+Total removido: 127
+
+=== Limpeza de Duplicatas 2025-12-01 12:12:09 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-01 13:38:53 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 135
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 135
+
+=== Limpeza de Duplicatas 2025-12-01 17:10:33 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-01 17:11:15 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-01 17:20:13 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-01 17:21:02 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-01 17:23:33 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-01 17:29:16 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-01 21:11:36 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-02 12:54:22 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-02 12:55:12 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-02 12:55:54 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-02 18:37:34 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-02 19:41:39 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-02 20:50:20 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-02 20:53:29 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-03 11:43:19 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-03 11:48:25 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 1025
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 1025
+
+=== Limpeza de Duplicatas 2025-12-03 11:56:52 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-03 11:57:06 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-03 11:58:03 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 1025
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 1025
+
+=== Limpeza de Duplicatas 2025-12-03 12:00:09 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-03 12:03:35 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 124
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 124
+
+=== Limpeza de Duplicatas 2025-12-03 13:04:40 ===
+Tabela spc_inclusos - Removidos por venda: 1
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 1
+
+=== Limpeza de Duplicatas 2025-12-03 12:17:51 ===
+Tabela spc_inclusos - Removidos por venda: 83
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 124
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 207
+
+=== Limpeza de Duplicatas 2025-12-03 12:20:09 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 124
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 124
+
+=== Limpeza de Duplicatas 2025-12-03 12:41:30 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-03 14:00:41 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-03 16:31:53 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-03 17:18:14 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-03 17:24:31 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-03 17:25:35 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-03 17:29:38 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-03 17:33:45 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-03 20:17:35 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-03 20:25:46 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-03 20:26:45 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-03 20:32:50 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-03 20:41:21 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-03 20:48:55 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-03 21:00:15 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-03 21:04:01 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-03 21:04:34 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-03 21:06:23 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-03 21:07:50 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-03 21:10:44 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-03 21:17:41 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-04 11:57:28 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-04 16:50:31 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-04 16:51:52 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 119
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 119
+
+=== Limpeza de Duplicatas 2025-12-04 16:54:56 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-04 16:55:29 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-04 17:37:59 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-04 17:38:37 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-04 17:41:11 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-04 17:51:15 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-04 18:00:54 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-04 19:16:26 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-04 19:17:10 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-04 19:34:37 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-04 19:35:34 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-04 19:36:46 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-04 20:33:35 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-04 20:35:14 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-04 20:43:32 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-04 20:47:10 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-04 20:48:18 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-04 21:14:44 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-04 21:16:27 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-05 11:26:48 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-05 12:31:00 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-05 12:39:27 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-05 12:40:24 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-05 17:06:38 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-05 17:07:57 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-05 17:37:20 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 119
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 119
+
+=== Limpeza de Duplicatas 2025-12-05 17:45:20 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-05 17:56:35 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-08 17:47:31 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-08 17:55:28 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 119
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 119
+
+=== Limpeza de Duplicatas 2025-12-08 18:10:44 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-08 18:27:13 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-08 18:31:30 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-08 18:34:15 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-08 18:35:59 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-08 18:50:34 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-08 19:34:33 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-08 19:43:43 ===
+Tabela spc_inclusos - Removidos por venda: 40
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 40
+
+=== Limpeza de Duplicatas 2025-12-09 12:34:51 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-09 13:10:11 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-09 13:23:15 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 130
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 130
+
+=== Limpeza de Duplicatas 2025-12-09 17:44:11 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-09 18:53:35 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-10 11:36:59 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-10 13:31:52 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-10 13:39:22 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-10 17:51:47 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-10 18:13:18 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-10 18:15:54 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-10 18:27:46 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-10 18:29:37 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-10 18:33:52 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 123
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 123
+
+=== Limpeza de Duplicatas 2025-12-10 18:35:35 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-10 18:36:10 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-10 18:48:02 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-10 18:48:56 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-10 19:34:38 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-10 19:35:29 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-10 19:38:02 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-10 19:39:04 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-11 12:23:53 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-11 12:24:50 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-11 13:09:35 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-11 16:24:14 ===
+Tabela spc_inclusos - Removidos por venda: 2
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 2
+
+=== Limpeza de Duplicatas 2025-12-11 16:31:46 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 122
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 122
+
+=== Limpeza de Duplicatas 2025-12-11 17:18:20 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-11 17:20:29 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 122
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 122
+
+=== Limpeza de Duplicatas 2025-12-11 17:28:20 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-11 17:29:37 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 122
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 122
+
+=== Limpeza de Duplicatas 2025-12-11 17:33:05 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 122
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 122
+
+=== Limpeza de Duplicatas 2025-12-11 18:50:32 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-11 18:51:23 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-11 18:54:03 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-11 19:01:24 ===
+Tabela spc_inclusos - Removidos por venda: 40
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 40
+
+=== Limpeza de Duplicatas 2025-12-11 19:02:14 ===
+Tabela spc_inclusos - Removidos por venda: 3
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 3
+
+=== Limpeza de Duplicatas 2025-12-11 19:17:12 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 122
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 122
+
+=== Limpeza de Duplicatas 2025-12-11 19:18:49 ===
+Tabela spc_inclusos - Removidos por venda: 20
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 20
+
+=== Limpeza de Duplicatas 2025-12-11 19:20:35 ===
+Tabela spc_inclusos - Removidos por venda: 119
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 119
+
+=== Limpeza de Duplicatas 2025-12-11 19:21:42 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-11 19:22:46 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-11 20:04:38 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-12 11:15:50 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-12 12:35:26 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-12 12:59:22 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 119
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 119
+
+=== Limpeza de Duplicatas 2025-12-12 13:27:20 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-12 13:28:32 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-12 13:29:57 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-12 13:35:12 ===
+Tabela spc_inclusos - Removidos por venda: 36
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 36
+
+=== Limpeza de Duplicatas 2025-12-12 13:58:10 ===
+Tabela spc_inclusos - Removidos por venda: 119
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 119
+
+=== Limpeza de Duplicatas 2025-12-12 13:59:21 ===
+Tabela spc_inclusos - Removidos por venda: 119
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 119
+
+=== Limpeza de Duplicatas 2025-12-12 14:02:37 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-12 18:18:48 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-12 18:24:03 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-12 18:25:37 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-12 20:07:01 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-12 20:11:52 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-12 20:13:15 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 119
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 119
+
+=== Limpeza de Duplicatas 2025-12-15 12:12:31 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-15 12:13:35 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 125
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 125
+
+=== Limpeza de Duplicatas 2025-12-15 12:38:58 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-15 13:53:40 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-15 13:57:29 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-15 13:59:29 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-15 16:58:45 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-15 18:05:42 ===
+Tabela spc_inclusos - Removidos por venda: 278
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 278
+
+=== Limpeza de Duplicatas 2025-12-16 13:37:38 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-16 19:27:15 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-16 19:27:50 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-17 11:49:37 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-17 11:52:41 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 123
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 123
+
+=== Limpeza de Duplicatas 2025-12-17 20:51:44 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-17 20:54:25 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-17 20:55:46 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-18 12:06:09 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-18 17:53:23 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-19 19:44:56 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-19 19:59:23 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 163
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 163
+
+=== Limpeza de Duplicatas 2025-12-22 11:53:22 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 151
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 151
+
+=== Limpeza de Duplicatas 2025-12-22 13:06:27 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-22 13:07:18 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-22 13:25:05 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-22 13:47:04 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-22 17:55:01 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-22 20:16:54 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-22 20:50:13 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-24 16:44:43 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-24 16:45:10 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-24 16:48:22 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 139
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 139
+
+=== Limpeza de Duplicatas 2025-12-24 18:41:36 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-24 18:42:27 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-24 18:44:02 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-24 18:45:07 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-26 11:45:34 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-26 11:48:20 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 136
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 136
+
+=== Limpeza de Duplicatas 2025-12-26 12:09:58 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-26 12:11:06 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-26 12:21:00 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-26 13:01:12 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-26 20:16:59 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-29 12:10:41 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-29 12:11:57 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 169
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 169
+
+=== Limpeza de Duplicatas 2025-12-29 13:46:01 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-29 13:47:18 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-29 20:58:09 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-29 21:02:23 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-29 21:04:01 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-12-29 21:09:43 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+

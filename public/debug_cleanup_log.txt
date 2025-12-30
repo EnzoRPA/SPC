@@ -1,0 +1,14 @@
+=== Limpeza de Duplicatas 2025-11-27 19:54:12 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2025-11-27 19:56:14 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+

@@ -1,0 +1,60 @@
+POST Request received at 2025-11-25 18:59:00
+FILES: Array
+(
+    [spc_excluidos_file] => Array
+        (
+            [name] => REMOVER.xlsx
+            [full_path] => REMOVER.xlsx
+            [type] => application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+            [tmp_name] => C:\Users\enzoverzaro\AppData\Local\Temp\php98A8.tmp
+            [error] => 0
+            [size] => 128186
+        )
+
+)
+
+POST Request received at 2025-11-28 12:07:39
+FILES: Array
+(
+    [spc_atualizacao_file] => Array
+        (
+            [name] => REMOVER.xlsx
+            [full_path] => REMOVER.xlsx
+            [type] => application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+            [tmp_name] => C:\Users\enzoverzaro\AppData\Local\Temp\php455.tmp
+            [error] => 0
+            [size] => 136991
+        )
+
+)
+
+POST Request received at 2025-12-15 17:48:25
+FILES: Array
+(
+    [spc_file] => Array
+        (
+            [name] => modelo_lista_excluidos (1).xlsx
+            [full_path] => modelo_lista_excluidos (1).xlsx
+            [type] => application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+            [tmp_name] => C:\Users\enzoverzaro\AppData\Local\Temp\php79BA.tmp
+            [error] => 0
+            [size] => 49657
+        )
+
+)
+
+POST Request received at 2025-12-15 17:50:52
+FILES: Array
+(
+    [spc_file] => Array
+        (
+            [name] => modelo_lista_excluidos (1).xlsx
+            [full_path] => modelo_lista_excluidos (1).xlsx
+            [type] => application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+            [tmp_name] => C:\Users\enzoverzaro\AppData\Local\Temp\phpCEF5.tmp
+            [error] => 0
+            [size] => 50773
+        )
+
+)
+

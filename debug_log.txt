@@ -1,0 +1,28 @@
+=== DEBUGGING DATA TRUNCATION ===
+
+1. Checking import_batches schema:
+   - Column 'type': enum('spc','parcelas')
+
+2. Testing insert into import_batches:
+   - Insert 'pdd_perdas' FAILED: SQLSTATE[01000]: Warning: 1265 Data truncated for column 'type' at row 1
+
+3. Checking pdd_pagos schema:
+   - id (int)
+   - batch_id (int)
+   - titulo (varchar(100))
+   - codigo (varchar(100))
+   - cliente (varchar(255))
+   - cpf_cnpj (varchar(20))
+   - situacao (varchar(50))
+   - vencimento_boleto (date)
+   - valor_titulo (decimal(15,2))
+   - codigo_norm (varchar(100))
+   - titulo_norm (varchar(100))
+   - cpf_cnpj_norm (varchar(20))
+
+4. Checking pdd_perdas schema:
+   - id (int)
+   - batch_id (int)
+   - codigo_contrato (varchar(100))
+   - data_vencimento (date)
+   - codigo_contrato_norm (varchar(100))
