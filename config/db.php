@@ -111,22 +111,13 @@ class Database {
                  $this->username = str_replace(".{$projectRef}", "", $this->username);
             }
 
-             // C. Hostname Resolution Strategy (IPv6 bypass)
-            // Vercel DNS resolves 'db.project.supabase.co' to IPv6 (AAAA), which fails.
-            // We need an IPv4 address, BUT we must use a Hostname for SNI (not IP).
-            // Solution: Resolve the CNAME (e.g. aws-0-sa-east-1.pooler.supabase.com).
-            // This CNAME resolves to IPv4 and is a valid SSL host.
+            // C. Hostname Resolution Strategy (IPv6 bypass - FINAL FIX)
+            // Vercel DNS resolves 'db.project.supabase.co' to IPv6 (AAAA), which crashes PHP.
+            // Dynamic DNS lookups failed. We MUST use the explicit Regional Pooler Hostname.
+            // This hostname ('aws-0-sa-east-1...') resolves to IPv4 and is SSL valid.
+            // The 'endpoint' option in DSN handles the tenant routing.
             $original_host_for_log = $this->host;
-            
-            $cname = dns_get_record($this->host, DNS_CNAME);
-            if ($cname && isset($cname[0]['target'])) {
-                $target = $cname[0]['target'];
-                // Verify the target has an IPv4 (A) record
-                $a_records = dns_get_record($target, DNS_A);
-                if ($a_records) {
-                    $this->host = $target; // Swap to CNAME target (e.g. aws-0-sa-east-1...)
-                }
-            }
+            $this->host = 'aws-0-sa-east-1.pooler.supabase.com';
 
             try {
                 // D. Connect with Endpoint Option
