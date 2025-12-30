@@ -23,10 +23,8 @@ class Database {
         // Check for VERCEL or specific Supabase Env to force Production
         $isVercel = getenv('VERCEL') || isset($_SERVER['VERCEL']) || isset($_ENV['VERCEL']);
         
-        $isLocal = false;
-        if (!$isVercel) {
-             $isLocal = ($_SERVER['SERVER_NAME'] === 'localhost' || $_SERVER['SERVER_NAME'] === '127.0.0.1' || php_sapi_name() === 'cli');
-        }
+        // If it is NOT Vercel, assume it is Local (this allows 192.168.x.x, localhost, etc.)
+        $isLocal = !$isVercel;
 
         if ($isLocal) {
             // --- LOCAL ENVIRONMENT (MySQL/XAMPP) ---

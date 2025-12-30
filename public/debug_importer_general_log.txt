@@ -118,3 +118,15 @@ Row 3:
 Row 4:
   Contrato (Col 0/Mapped): '71164'
   Raw Row: ["71164","PF","Juliana Mota Garcia Eduvirgem","25\/05\/22","61021054356","A","5309023","1a parcela","306.27","04\/12\/25","20\/12\/25","9","DEZENOVE","129","Vila Vit\u00f3ria","65918078","Imperatriz","MA"]
+Row 1:
+  Contrato (Col 0/Mapped): 'CONTRATO'
+  Raw Row: ["CONTRATO","TP_CONTRATO","CONTRATANTE","CONTRATACAO","CPF_CNPJ","STATUS","VENDA","PARCELA","DEBITO","EMISSAO","VENCIMENTO","DIAS_ATRASO","RUA","NUMERO","BAIRRO","CEP","CIDADE","ESTADO"]
+Row 2:
+  Contrato (Col 0/Mapped): '71288'
+  Raw Row: ["71288","PF","Maria Clara Balbino Lago Cunha","07\/06\/22","61006702326","A","5309079","1a parcela","539.23","04\/12\/25","20\/12\/25","10","ALAGOAS","650","Savassi","30130160","Belo Horizonte","MG"]
+Row 3:
+  Contrato (Col 0/Mapped): '72578'
+  Raw Row: ["72578","PF","Cristiane Dos Anjos Correa","15\/09\/23","00714697370","A","5305660","1a parcela","321.55","01\/12\/25","10\/12\/25","20","DEZENOVE","10","Vila Vit\u00f3ria","65918078","Imperatriz","MA"]
+Row 4:
+  Contrato (Col 0/Mapped): '71164'
+  Raw Row: ["71164","PF","Juliana Mota Garcia Eduvirgem","25\/05\/22","61021054356","A","5309023","1a parcela","306.27","04\/12\/25","20\/12\/25","10","DEZENOVE","129","Vila Vit\u00f3ria","65918078","Imperatriz","MA"]
