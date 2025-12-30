@@ -57,7 +57,7 @@ class Database {
             $this->db_name = getenv('DB_NAME') ?: 'postgres';
             $this->username = getenv('DB_USER') ?: 'postgres';
             $this->password = getenv('DB_PASSWORD') ?: 'G4a1ther2020#';
-            $this->port = getenv('DB_PORT') ?: '6543';
+            $this->port = getenv('DB_PORT') ?: '5432';
 
             // Support DATABASE_URL from Vercel/Supabase Integ.
             // Format: postgresql://user:pass@host:port/dbname
