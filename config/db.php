@@ -138,7 +138,14 @@ class Database {
                 }
             }
 
-            // 6. FORCE PORT 6543 REMOVED - User requested 5432
+            // 6. ROUTING FIX: Append Project Ref to Username
+            // When connecting via IP (IPv4 workaround) or Pooler, Supabase requires 'user.project_ref'
+            // to identify the tenant. The DSN 'endpoint' option helps, but modifying the user is more robust.
+            if ($projectRef && strpos($this->username, $projectRef) === false) {
+                $this->username .= ".{$projectRef}";
+            }
+
+            // 7. FORCE PORT 6543 REMOVED - User requested 5432
             // We rely on the port parsed from ENV or DATABASE_URL (default 5432)
             
             try {
