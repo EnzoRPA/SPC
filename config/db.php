@@ -60,19 +60,34 @@ class Database {
             $this->port = getenv('DB_PORT') ?: '6543';
 
             // FORCE IPv4: Vercel defaults to IPv6 which fails. We must find an IPv4 address.
-            // gethostbyname returns the IPv4 address as a string, or the hostname if it fails.
-            $resolved_ip = gethostbyname($original_host);
-            
-            if ($resolved_ip !== $original_host) {
-                $this->host = $resolved_ip;
-            } else {
-                // If gethostbyname fails, try one fallback or keep original
-                $this->host = $original_host;
-            }
-            
-            // Allow override via explicit env var if DNS resolution fails completely
+            $this->host = $original_host; // Default fallback
+
+            // 1. Check for manual override in Environment
             if (getenv('DB_FORCE_IP')) {
                 $this->host = getenv('DB_FORCE_IP');
+            } else {
+                // 2. Try to resolve IPv4 via gethostbynamel (returns array of IPs)
+                $ips = @gethostbynamel($original_host);
+                $found_ipv4 = false;
+                
+                if ($ips && is_array($ips)) {
+                    foreach ($ips as $ip) {
+                        if (filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV4)) {
+                            $this->host = $ip;
+                            $found_ipv4 = true;
+                            // error_log("Resolved IPv4 via gethostbynamel: $ip");
+                            break;
+                        }
+                    }
+                }
+                
+                // 3. If still no IPv4, try gethostbyname as last resort
+                if (!$found_ipv4) {
+                    $ip = @gethostbyname($original_host);
+                    if ($ip !== $original_host && filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV4)) {
+                         $this->host = $ip;
+                    }
+                }
             }
 
             try {
