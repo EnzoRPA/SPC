@@ -32,7 +32,12 @@ class Database {
             
             $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         } catch(PDOException $exception) {
-            echo "Connection error: " . $exception->getMessage();
+            // DEBUG: Show actual connection params (hide password)
+            $debugParams = "Driver: {$this->driver}, Host: {$this->host}, DB: {$this->db_name}, User: {$this->username}";
+            $envVars = "ENV keys: " . implode(', ', array_keys($_ENV));
+            
+            // Allow this error to be seen
+            die("Connection error: " . $exception->getMessage() . "<br>Params: $debugParams<br>Env Check: $envVars");
         }
 
         return $this->conn;
