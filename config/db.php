@@ -28,6 +28,12 @@ class Database {
         $this->password = 'G4a1ther2020#';
         $this->port = '6543'; // Transaction pooler port
 
+        // FORCE IPv4: Vercel has issues with IPv6 + Supabase
+        $ipv4 = gethostbyname($this->host);
+        if ($ipv4 !== $this->host) {
+            $this->host = $ipv4;
+        }
+
         try {
             $dsn = "{$this->driver}:host={$this->host};port={$this->port};dbname={$this->db_name};sslmode=require";
             $this->conn = new PDO($dsn, $this->username, $this->password);
