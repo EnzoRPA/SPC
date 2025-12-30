@@ -40,10 +40,11 @@ class Database {
         } catch(PDOException $exception) {
             // DEBUG: Show actual connection params (hide password)
             $debugParams = "Driver: {$this->driver}, Host: {$this->host}, DB: {$this->db_name}, User: {$this->username}";
-            $envVars = "ENV keys: " . implode(', ', array_keys($_ENV));
+            $envKeys = implode(', ', array_keys($_ENV));
+            $serverKeys = implode(', ', array_keys($_SERVER));
             
             // Allow this error to be seen
-            die("Connection error: " . $exception->getMessage() . "<br>Params: $debugParams<br>Env Check: $envVars");
+            die("Connection error: " . $exception->getMessage() . "<br>Params: $debugParams<br>ENV keys: $envKeys<br>SERVER keys: $serverKeys");
         }
 
         return $this->conn;
