@@ -1678,3 +1678,10 @@ Tabela parcelas_em_aberto - Removidos por venda: 0
 Tabela parcelas_em_aberto - Removidos por campos: 0
 Total removido: 0
 
+=== Limpeza de Duplicatas 2025-12-30 16:42:56 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
