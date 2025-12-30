@@ -102,7 +102,13 @@ class Database {
                 // Debug verbose for Production
                 $debugParams = "Host: {$original_host} -> Resolved: {$this->host} | Port: {$this->port}";
                 error_log("Production Connection error: " . $exception->getMessage() . " [Params: $debugParams]");
-                // Allow script to fail gracefully or show error page upstream
+                
+                // FORCE OUTPUT ERROR TO SCREEN FOR DEBUGGING
+                http_response_code(500);
+                echo "<h1>Erro de Conexão (Vercel)</h1>";
+                echo "<p><strong>Erro:</strong> " . $exception->getMessage() . "</p>";
+                echo "<p><strong>Detalhes:</strong> " . $debugParams . "</p>";
+                die();
             }
         }
 
