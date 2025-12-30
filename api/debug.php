@@ -8,7 +8,7 @@ echo "SAPI: " . php_sapi_name() . "\n";
 echo "User: " . get_current_user() . "\n";
 
 echo "\nCheck Specific Keys (getenv):\n";
-$keys = ['DB_HOST', 'DB_USER', 'DB_PASSWORD', 'DB_NAME', 'DB_PORT', 'DB_CONNECTION'];
+$keys = ['DB_HOST', 'DB_USER', 'DB_PASSWORD', 'DB_NAME', 'DB_PORT', 'DB_CONNECTION', 'VERCEL_PROJECT_NAME', 'VERCEL_ENV'];
 foreach ($keys as $key) {
     $val = getenv($key);
     echo "$key: " . ($val === false ? '(false)' : ($val === '' ? '(empty)' : $val)) . "\n";
