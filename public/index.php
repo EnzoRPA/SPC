@@ -25,7 +25,7 @@ if ($page === 'admin_action') {
     $log = "Admin Action Request: " . print_r($_GET, true);
     error_log($log);
 
-    require_once '../src/AdminController.php';
+    require_once __DIR__ . '/../src/AdminController.php';
     $admin = new \App\AdminController($db);
     
     $action = $_GET['action'] ?? '';
@@ -79,7 +79,7 @@ if ($page === 'admin_export') {
         ob_end_clean();
     }
 
-    require_once '../src/AdminController.php';
+    require_once __DIR__ . '/../src/AdminController.php';
     $admin = new \App\AdminController($db);
     $table = $_GET['table'] ?? '';
     $search = $_GET['search'] ?? '';
@@ -380,12 +380,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 // 3. Output HTML
-include '../templates/header.php';
+include __DIR__ . '/../templates/header.php';
 
 if ($page === 'dashboard') {
-    include '../templates/dashboard.php';
+    include __DIR__ . '/../templates/dashboard.php';
 } elseif ($page === 'admin') {
-    require_once '../src/AdminController.php';
+    require_once __DIR__ . '/../src/AdminController.php';
     $admin = new \App\AdminController($db);
     
     $table = $_GET['table'] ?? 'spc_inclusos';
@@ -413,7 +413,7 @@ if ($page === 'dashboard') {
         $result = $admin->listTable($table, $p, $perPage, $search, $filters);
         // Admin uses a different layout, so we don't include header/footer here or we customize them
         // For simplicity, let's use a standalone admin template
-        include '../templates/admin.php';
+        include __DIR__ . '/../templates/admin.php';
         exit; // Stop here, don't include footer
     } catch (Exception $e) {
         echo "Erro: " . $e->getMessage();
@@ -437,11 +437,11 @@ if ($page === 'dashboard') {
               </div>';
     }
     
-    include '../templates/report.php';
+    include __DIR__ . '/../templates/report.php';
 } elseif ($page === 'maintenance') {
-    include '../templates/maintenance.php';
+    include __DIR__ . '/../templates/maintenance.php';
 } else {
-    include '../templates/dashboard.php';
+    include __DIR__ . '/../templates/dashboard.php';
 }
 
-include '../templates/footer.php';
+include __DIR__ . '/../templates/footer.php';
