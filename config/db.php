@@ -52,68 +52,67 @@ class Database {
             // --- VERCEL PRODUCTION (Supabase/PostgreSQL) ---
             $this->driver = 'pgsql';
             
-            // Allow settings via individual Envs (default) or DATABASE_URL
-            $original_host = getenv('DB_HOST') ?: 'db.ogiwoavudsjlwfkvndgc.supabase.co';
-            $this->db_name = getenv('DB_NAME') ?: 'postgres';
-            $this->username = getenv('DB_USER') ?: 'postgres';
-            $this->password = getenv('DB_PASSWORD') ?: 'Gaither!202020202';
-            $this->port = getenv('DB_PORT') ?: '5432';
-
-            // Support DATABASE_URL from Vercel/Supabase Integ.
-            // Format: postgresql://user:pass@host:port/dbname
-            // Warning: parse_url fails if password has '#' (fragment). We parse manually if needed.
+            // 1. PRIMARY CONFIGURATION: Try DATABASE_URL first (Single Source of Truth)
             $dbUrl = getenv('DATABASE_URL');
+            $config = [];
+
             if ($dbUrl) {
-                // Try regex to handle special chars in password more gracefully
-                // Regex pattern captures: scheme://user:pass@host:port/dbname
+                // Parse DATABASE_URL (Handles special chars in password via regex)
                 if (preg_match('|postgres(?:ql)?://([^:]+):([^@]+)@([^:/]+)(?::(\d+))?/(\w+)|', $dbUrl, $matches)) {
-                    $this->username = $matches[1];
-                    $this->password = $matches[2]; // Captures # correctly
-                    $original_host = $matches[3];
-                    $this->port = !empty($matches[4]) ? $matches[4] : '5432';
-                    $this->db_name = $matches[5];
+                    $config['username'] = $matches[1];
+                    $config['password'] = $matches[2];
+                    $config['host']     = $matches[3];
+                    $config['port']     = !empty($matches[4]) ? $matches[4] : '5432';
+                    $config['dbname']   = $matches[5];
                 } else {
-                    // Fallback to parse_url if regex fails (simple passwords)
                     $parsed = parse_url($dbUrl);
                     if ($parsed && isset($parsed['host'])) {
-                        $original_host = $parsed['host'];
-                        $this->db_name = ltrim($parsed['path'] ?? '/postgres', '/');
-                        $this->username = $parsed['user'] ?? $this->username;
-                        $this->password = $parsed['pass'] ?? $this->password;
-                        $this->port = $parsed['port'] ?? '5432';
+                        $config['host']     = $parsed['host'];
+                        $config['dbname']   = ltrim($parsed['path'] ?? '/postgres', '/');
+                        $config['username'] = $parsed['user'] ?? 'postgres';
+                        $config['password'] = $parsed['pass'] ?? '';
+                        $config['port']     = $parsed['port'] ?? '5432';
                     }
                 }
             }
-
-            // 5. EXTRACT PROJECT REF (needed for endpoint option)
-            // Hostname is usually: db.<project_ref>.supabase.co
-            $projectRef = '';
-            if (preg_match('/db\.([a-z0-9]+)\.supabase\.co/', $original_host, $matches)) {
-                $projectRef = $matches[1];
-            } else {
-                // Fallback hardcoded based on user logs: ogiwoavudsjlwfkvndgc
-                $projectRef = 'ogiwoavudsjlwfkvndgc';
+            
+            // 2. FALLBACK: Individual Env Vars (if DATABASE_URL is missing/failed)
+            if (empty($config)) {
+                $config['host']     = getenv('DB_HOST') ?: 'db.ogiwoavudsjlwfkvndgc.supabase.co';
+                $config['dbname']   = getenv('DB_NAME') ?: 'postgres';
+                $config['username'] = getenv('DB_USER') ?: 'postgres';
+                $config['password'] = getenv('DB_PASSWORD') ?: 'Gaither!202020202';
+                $config['port']     = getenv('DB_PORT') ?: '5432';
             }
 
-            // 6. POOLER CONFIGURATION (CRITICAL for Vercel PHP Runtime)
-            // Vercel PHP cannot handle IPv6 sockets directly (Port 5432 fails).
-            // proper solution is using the Transaction Pooler (Port 6543).
+            // Assign to class properties
+            $this->host     = $config['host'];
+            $this->db_name  = $config['dbname'];
+            $this->username = $config['username'];
+            $this->password = $config['password'];
+            // Port will be overwritten below for Pooler
             
-            // A. Force Port 6543
+            // 3. EXTRACT PROJECT REF (Required for Supabase Pooler Endpoint)
+            $projectRef = '';
+            if (preg_match('/db\.([a-z0-9]+)\.supabase\.co/', $this->host, $matches)) {
+                $projectRef = $matches[1];
+            } else {
+                $projectRef = 'ogiwoavudsjlwfkvndgc'; // Hardcoded Fallback
+            }
+
+            // 4. SUPABASE POOLER CONFIGURATION (Mandatory for Vercel PHP)
+            // Force Port 6543, Clean Username, Add Endpoint Option via DSN.
+            
+            // A. Force Port 6543 (Pooler)
             $this->port = '6543';
 
-            // B. User must be JUST the username (e.g. 'postgres'), WITHOUT project ref
-            // If the code or env var appended it (db.ref), we strip it.
+            // B. Clean Username: Must be strictly 'postgres' (remove .suffix if present)
             if ($projectRef && strpos($this->username, $projectRef) !== false) {
                  $this->username = str_replace(".{$projectRef}", "", $this->username);
             }
 
-            // C. Hostname must be standard (SNI) - No IP resolution needed for Pooler
-            $this->host = $original_host;
-
             try {
-                // Connect
-                // D. DSN MUST include options='endpoint=...' for Pooler to identify Tenant
+                // C. Connect with Endpoint Option
                 $dsn = "{$this->driver}:host={$this->host};port={$this->port};dbname={$this->db_name};sslmode=require";
                 
                 if ($projectRef) {
@@ -123,14 +122,10 @@ class Database {
                 $options = [
                     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
                     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-                    // Supabase Transaction Pooler (Port 6543) works best with Emulate Prepares TRUE
-                    // to avoid "prepared statement does not exist" errors in serverless cleanup.
                     PDO::ATTR_EMULATE_PREPARES => true, 
                 ];
 
                 $this->conn = new PDO($dsn, $this->username, $this->password, $options);
-                
-                // Set charset just in case
                 $this->conn->exec("SET NAMES 'UTF8'");
                 
             } catch(PDOException $exception) {
