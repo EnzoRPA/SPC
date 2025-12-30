@@ -111,8 +111,25 @@ class Database {
                  $this->username = str_replace(".{$projectRef}", "", $this->username);
             }
 
+             // C. Hostname Resolution Strategy (IPv6 bypass)
+            // Vercel DNS resolves 'db.project.supabase.co' to IPv6 (AAAA), which fails.
+            // We need an IPv4 address, BUT we must use a Hostname for SNI (not IP).
+            // Solution: Resolve the CNAME (e.g. aws-0-sa-east-1.pooler.supabase.com).
+            // This CNAME resolves to IPv4 and is a valid SSL host.
+            $original_host_for_log = $this->host;
+            
+            $cname = dns_get_record($this->host, DNS_CNAME);
+            if ($cname && isset($cname[0]['target'])) {
+                $target = $cname[0]['target'];
+                // Verify the target has an IPv4 (A) record
+                $a_records = dns_get_record($target, DNS_A);
+                if ($a_records) {
+                    $this->host = $target; // Swap to CNAME target (e.g. aws-0-sa-east-1...)
+                }
+            }
+
             try {
-                // C. Connect with Endpoint Option
+                // D. Connect with Endpoint Option
                 $dsn = "{$this->driver}:host={$this->host};port={$this->port};dbname={$this->db_name};sslmode=require";
                 
                 if ($projectRef) {
@@ -130,7 +147,7 @@ class Database {
                 
             } catch(PDOException $exception) {
                 // Debug verbose for Production
-                $debugParams = "Host: {$original_host} -> Resolved: {$this->host} | Port: {$this->port}";
+                $debugParams = "Host: {$original_host_for_log} -> Used: {$this->host} | Port: {$this->port} | User: {$this->username}";
                 error_log("Production Connection error: " . $exception->getMessage() . " [Params: $debugParams]");
                 
                 // FORCE OUTPUT ERROR TO SCREEN FOR DEBUGGING
