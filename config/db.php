@@ -20,7 +20,13 @@ class Database {
         $this->conn = null;
 
         // DETECT ENVIRONMENT to restore Local Access
-        $isLocal = ($_SERVER['SERVER_NAME'] === 'localhost' || $_SERVER['SERVER_NAME'] === '127.0.0.1' || php_sapi_name() === 'cli');
+        // Check for VERCEL or specific Supabase Env to force Production
+        $isVercel = getenv('VERCEL') || isset($_SERVER['VERCEL']) || isset($_ENV['VERCEL']);
+        
+        $isLocal = false;
+        if (!$isVercel) {
+             $isLocal = ($_SERVER['SERVER_NAME'] === 'localhost' || $_SERVER['SERVER_NAME'] === '127.0.0.1' || php_sapi_name() === 'cli');
+        }
 
         if ($isLocal) {
             // --- LOCAL ENVIRONMENT (MySQL/XAMPP) ---
@@ -39,7 +45,9 @@ class Database {
                 }
                 $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             } catch(PDOException $exception) {
-                echo "Local Connection error: " . $exception->getMessage();
+                // Use error_log instead of echo to prevent "Headers already sent"
+                error_log("Local Connection error: " . $exception->getMessage());
+                // Do not die/echo here, let the caller handle null connection or throw
             }
 
         } else {
