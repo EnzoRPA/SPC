@@ -20,26 +20,20 @@ class Database {
     public function getConnection() {
         $this->conn = null;
         
-        // Hardcoded for Vercel
+        // Hardcoded for Vercel - Standard Supabase Config
         $this->driver = 'pgsql';
-        $this->host = 'db.ogiwoavudsjlwfkvndgc.supabase.co'; // Using 'db.' prefix standard for Supabase
+        $this->host = 'db.ogiwoavudsjlwfkvndgc.supabase.co';
         $this->db_name = 'postgres';
         $this->username = 'postgres';
         $this->password = 'G4a1ther2020#';
-        $this->port = '6543'; // Transaction pooler port
-
-        // FORCE IPv4: Aggressively resolve to A record
-        $dns = dns_get_record($this->host, DNS_A);
-        if (!empty($dns[0]['ip'])) {
-            $this->host = $dns[0]['ip'];
-        } else {
-            // Fallback for local dev or failure
-            $this->host = gethostbyname($this->host);
-        }
+        $this->port = '5432';
 
         try {
-            // Use resolved IP directly in DSN
-            $dsn = "{$this->driver}:host={$this->host};port={$this->port};dbname={$this->db_name};sslmode=require";
+            // Extract Project Ref for Endpoint ID
+            $ref = explode('.', $this->host)[1] ?? 'ogiwoavudsjlwfkvndgc';
+            
+            // DSN with proper SSL and Endpoint options
+            $dsn = "{$this->driver}:host={$this->host};port={$this->port};dbname={$this->db_name};sslmode=require;options='endpoint={$ref}'";
             $this->conn = new PDO($dsn, $this->username, $this->password);
             
             if ($this->driver === 'mysql') {
