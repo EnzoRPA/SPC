@@ -1,48 +1,48 @@
-# Deploy to Vercel with Supabase
+# Deploy na Vercel com Supabase
 
-This guide explains how to deploy the **SPC Control System** to Vercel using Supabase (PostgreSQL) as the database.
+Este guia explica como fazer o deploy do **Sistema de Controle SPC** na Vercel usando Supabase (PostgreSQL) como banco de dados.
 
-## Prerequisites
+## Pré-requisitos
 
-1.  **Vercel Account**: [Sign up here](https://vercel.com/signup).
-2.  **Supabase Account**: [Sign up here](https://supabase.com/).
-3.  **GitHub Repository**: Ensure this project is pushed to a GitHub repository.
+1.  **Conta na Vercel**: [Cadastre-se aqui](https://vercel.com/signup).
+2.  **Conta no Supabase**: [Cadastre-se aqui](https://supabase.com/).
+3.  **Repositório GitHub**: Certifique-se de que este projeto foi enviado para um repositório no GitHub.
 
-## Step 1: Set up Supabase Database
+## Passo 1: Configurar Banco de Dados Supabase
 
-1.  Create a new project in Supabase.
-2.  Once the project is ready, go to the **SQL Editor** in the left sidebar.
-3.  Click "New Query".
-4.  Copy the content of `database/schema_supabase.sql` from this project.
-5.  Paste it into the SQL Editor and click **Run** to create the tables.
+1.  Crie um novo projeto no Supabase.
+2.  Assim que o projeto estiver pronto, vá para o **SQL Editor** na barra lateral esquerda.
+3.  Clique em "New Query".
+4.  Copie o conteúdo de `database/schema_supabase.sql` deste projeto.
+5.  Cole no SQL Editor e clique em **Run** para criar as tabelas.
 
-## Step 2: Configure Vercel
+## Passo 2: Configurar Vercel
 
-1.  Log in to Vercel and click **Add New...** -> **Project**.
-2.  Import your GitHub repository.
-3.  In the **Configure Project** screen, go to **Environment Variables**.
-4.  Add the following variables (get these from Supabase **Project Settings** -> **Database** -> **Connection parameters**):
+1.  Faça login na Vercel e clique em **Add New...** -> **Project**.
+2.  Importe seu repositório do GitHub.
+3.  Na tela **Configure Project**, vá para **Environment Variables**.
+4.  Adicione as seguintes variáveis (pegue essas informações em Supabase **Project Settings** -> **Database** -> **Connection parameters**):
 
-    | Variable | Value |
+    | Variável | Valor |
     | :--- | :--- |
     | `DB_CONNECTION` | `pgsql` |
-    | `DB_HOST` | *Your Supabase Host* (e.g., `db.xyz.supabase.co`) |
-    | `DB_NAME` | `postgres` (default) |
-    | `DB_USER` | `postgres` (default) |
-    | `DB_PASSWORD` | *Your Database Password* |
+    | `DB_HOST` | *Seu Host do Supabase* (ex: `db.xyz.supabase.co`) |
+    | `DB_NAME` | `postgres` (padrão) |
+    | `DB_USER` | `postgres` (padrão) |
+    | `DB_PASSWORD` | *Sua Senha do Banco de Dados* |
     | `DB_PORT` | `5432` |
 
-5.  Click **Deploy**.
+5.  Clique em **Deploy**.
 
-## Local Development
+## Desenvolvimento Local
 
-Your local environment likely uses **MySQL**. The code interprets the `DB_CONNECTION` environment variable to switch between MySQL (local) and PostgreSQL (Vercel).
+Seu ambiente local provavelmente usa **MySQL**. O código interpreta a variável de ambiente `DB_CONNECTION` para alternar entre MySQL (local) e PostgreSQL (Vercel).
 
--   **Local**: Uses `config/db.php` defaults (MySQL).
--   **Vercel**: Uses environment variables (PostgreSQL).
+-   **Local**: Usa os padrões de `config/db.php` (MySQL).
+-   **Vercel**: Usa variáveis de ambiente (PostgreSQL).
 
-## Important Notes
+## Notas Importantes
 
--   **File Uploads**: On Vercel, uploaded files are processed immediately in the temporary directory. There is no persistent storage for uploads.
--   **Exports**: Generated Excel files are streamed directly to the download and not saved on the server.
--   **Logs**: Application logs are sent to Vercel's **Runtime Logs** (stdout/stderr) instead of local files.
+-   **Upload de Arquivos**: Na Vercel, arquivos enviados são processados imediatamente no diretório temporário. Não há armazenamento persistente para uploads.
+-   **Exportações**: Arquivos Excel gerados são transmitidos diretamente para download e não são salvos no servidor.
+-   **Logs**: Logs da aplicação são enviados para os **Runtime Logs** da Vercel (stdout/stderr) em vez de arquivos locais.
