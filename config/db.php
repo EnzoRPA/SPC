@@ -16,6 +16,8 @@ class Database {
         }
         return ($val !== false) ? $val : $default;
     }
+    public function getConnection() {
+        $this->conn = null;
 
         // DETECT ENVIRONMENT to restore Local Access
         $isLocal = ($_SERVER['SERVER_NAME'] === 'localhost' || $_SERVER['SERVER_NAME'] === '127.0.0.1' || php_sapi_name() === 'cli');
