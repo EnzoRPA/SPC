@@ -115,6 +115,12 @@ class Database {
                     }
                 }
             }
+            
+            // 4. FINAL FALLBACK: If we still don't have an IPv4 (still hostname or empty), 
+            // hardcode the known SA-East-1 Pooler IP. This is a "Hail Mary" to fix the IPv6 error.
+            if (!filter_var($this->host, FILTER_VALIDATE_IP, FILTER_FLAG_IPV4)) {
+                $this->host = '54.94.90.106'; // aws-0-sa-east-1.pooler.supabase.com
+            }
 
             try {
                 // Connect
