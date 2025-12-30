@@ -26,10 +26,10 @@ class Database {
         $this->db_name = 'postgres';
         $this->username = 'postgres';
         $this->password = 'G4a1ther2020#';
-        $this->port = '5432';
+        $this->port = '6543'; // Transaction pooler port
 
         try {
-            $dsn = "{$this->driver}:host={$this->host};port={$this->port};dbname={$this->db_name}";
+            $dsn = "{$this->driver}:host={$this->host};port={$this->port};dbname={$this->db_name};sslmode=require";
             $this->conn = new PDO($dsn, $this->username, $this->password);
             
             if ($this->driver === 'mysql') {
