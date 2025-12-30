@@ -78,7 +78,7 @@ class Database {
                 http_response_code(500);
                 die("Production Connection error: " . $exception->getMessage() . "<br>Params: $debugParams");
             }
-
+        }
 
         return $this->conn;
     }
