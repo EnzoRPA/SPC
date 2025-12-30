@@ -20,13 +20,13 @@ class Database {
     public function getConnection() {
         $this->conn = null;
         
-        // Environment variables or defaults
-        $this->driver = $this->getEnvVar('DB_CONNECTION', 'mysql');
-        $this->host = $this->getEnvVar('DB_HOST', 'localhost');
-        $this->db_name = $this->getEnvVar('DB_NAME', 'spc_control');
-        $this->username = $this->getEnvVar('DB_USER', 'root');
-        $this->password = $this->getEnvVar('DB_PASSWORD', '');
-        $this->port = $this->getEnvVar('DB_PORT', ($this->driver === 'pgsql' ? '5432' : '3306'));
+        // Hardcoded for Vercel
+        $this->driver = 'pgsql';
+        $this->host = 'db.ogiwoavudsjlwfkvndgc.supabase.co'; // Using 'db.' prefix standard for Supabase
+        $this->db_name = 'postgres';
+        $this->username = 'postgres';
+        $this->password = 'G4a1ther2020#';
+        $this->port = '5432';
 
         try {
             $dsn = "{$this->driver}:host={$this->host};port={$this->port};dbname={$this->db_name}";
