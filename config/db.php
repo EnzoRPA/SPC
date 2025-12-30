@@ -28,13 +28,17 @@ class Database {
         $this->password = 'G4a1ther2020#';
         $this->port = '6543'; // Transaction pooler port
 
-        // FORCE IPv4: Vercel has issues with IPv6 + Supabase
-        $ipv4 = gethostbyname($this->host);
-        if ($ipv4 !== $this->host) {
-            $this->host = $ipv4;
+        // FORCE IPv4: Aggressively resolve to A record
+        $dns = dns_get_record($this->host, DNS_A);
+        if (!empty($dns[0]['ip'])) {
+            $this->host = $dns[0]['ip'];
+        } else {
+            // Fallback for local dev or failure
+            $this->host = gethostbyname($this->host);
         }
 
         try {
+            // Use resolved IP directly in DSN
             $dsn = "{$this->driver}:host={$this->host};port={$this->port};dbname={$this->db_name};sslmode=require";
             $this->conn = new PDO($dsn, $this->username, $this->password);
             
