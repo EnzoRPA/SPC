@@ -10,7 +10,11 @@ class Database {
     public $conn;
 
     private function getEnvVar($key, $default = '') {
-        return $_ENV[$key] ?? $_SERVER[$key] ?? getenv($key) ?? $default;
+        $val = $_ENV[$key] ?? $_SERVER[$key] ?? false;
+        if ($val === false) {
+             $val = getenv($key);
+        }
+        return ($val !== false) ? $val : $default;
     }
 
     public function getConnection() {
