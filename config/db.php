@@ -51,13 +51,39 @@ class Database {
         } else {
             // --- VERCEL PRODUCTION (Supabase/PostgreSQL) ---
             $this->driver = 'pgsql';
+            
+            // Allow settings via individual Envs (default) or DATABASE_URL
             $original_host = getenv('DB_HOST') ?: 'db.ogiwoavudsjlwfkvndgc.supabase.co';
             $this->db_name = getenv('DB_NAME') ?: 'postgres';
             $this->username = getenv('DB_USER') ?: 'postgres';
-            // Use env var or fallback
             $this->password = getenv('DB_PASSWORD') ?: 'G4a1ther2020#';
-            // Supabase Pooler Port is 6543 (preferred for Serverless)
             $this->port = getenv('DB_PORT') ?: '6543';
+
+            // Support DATABASE_URL from Vercel/Supabase Integ.
+            // Format: postgresql://user:pass@host:port/dbname
+            // Warning: parse_url fails if password has '#' (fragment). We parse manually if needed.
+            $dbUrl = getenv('DATABASE_URL');
+            if ($dbUrl) {
+                // Try regex to handle special chars in password more gracefully
+                // Regex pattern captures: scheme://user:pass@host:port/dbname
+                if (preg_match('|postgres(?:ql)?://([^:]+):([^@]+)@([^:/]+)(?::(\d+))?/(\w+)|', $dbUrl, $matches)) {
+                    $this->username = $matches[1];
+                    $this->password = $matches[2]; // Captures # correctly
+                    $original_host = $matches[3];
+                    $this->port = !empty($matches[4]) ? $matches[4] : '5432';
+                    $this->db_name = $matches[5];
+                } else {
+                    // Fallback to parse_url if regex fails (simple passwords)
+                    $parsed = parse_url($dbUrl);
+                    if ($parsed && isset($parsed['host'])) {
+                        $original_host = $parsed['host'];
+                        $this->db_name = ltrim($parsed['path'] ?? '/postgres', '/');
+                        $this->username = $parsed['user'] ?? $this->username;
+                        $this->password = $parsed['pass'] ?? $this->password;
+                        $this->port = $parsed['port'] ?? '5432';
+                    }
+                }
+            }
 
             // FORCE IPv4: Vercel defaults to IPv6 which fails. We must find an IPv4 address.
             $this->host = $original_host; // Default fallback
