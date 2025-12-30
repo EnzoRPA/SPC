@@ -78,16 +78,7 @@ class Database {
                 http_response_code(500);
                 die("Production Connection error: " . $exception->getMessage() . "<br>Params: $debugParams");
             }
-        }
-            // DEBUG: Show actual connection params (hide password)
-            $debugParams = "Driver: {$this->driver}, Host: {$this->host}, DB: {$this->db_name}, User: {$this->username}";
-            $envKeys = implode(', ', array_keys($_ENV));
-            $serverKeys = implode(', ', array_keys($_SERVER));
-            $projName = $_ENV['VERCEL_PROJECT_NAME'] ?? $_SERVER['VERCEL_PROJECT_NAME'] ?? 'Unknown';
-            
-            // Allow this error to be seen
-            die("Connection error: " . $exception->getMessage() . "<br>Project: $projName<br>Params: $debugParams<br>ENV keys: $envKeys<br>SERVER keys: $serverKeys");
-        }
+
 
         return $this->conn;
     }
