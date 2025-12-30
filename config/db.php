@@ -60,23 +60,19 @@ class Database {
             $this->port = getenv('DB_PORT') ?: '6543';
 
             // FORCE IPv4: Vercel defaults to IPv6 which fails. We must find an IPv4 address.
-            $this->host = $original_host; // Default fallback
+            // gethostbyname returns the IPv4 address as a string, or the hostname if it fails.
+            $resolved_ip = gethostbyname($original_host);
             
-            // Try resolving A records (IPv4) explicitly
-            try {
-                $dns = dns_get_record($original_host, DNS_A);
-                if ($dns && isset($dns[0]['ip'])) {
-                    $this->host = $dns[0]['ip'];
-                    // error_log("Resolved IPv4 for Supabase: " . $this->host);
-                } else {
-                    // Fallback to gethostbynamel
-                    $ips = gethostbynamel($original_host);
-                    if ($ips && isset($ips[0])) {
-                         $this->host = $ips[0];
-                    }
-                }
-            } catch (Exception $e) {
-                error_log("DNS Resolution failed: " . $e->getMessage());
+            if ($resolved_ip !== $original_host) {
+                $this->host = $resolved_ip;
+            } else {
+                // If gethostbyname fails, try one fallback or keep original
+                $this->host = $original_host;
+            }
+            
+            // Allow override via explicit env var if DNS resolution fails completely
+            if (getenv('DB_FORCE_IP')) {
+                $this->host = getenv('DB_FORCE_IP');
             }
 
             try {
