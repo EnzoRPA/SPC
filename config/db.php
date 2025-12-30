@@ -138,10 +138,9 @@ class Database {
                 }
             }
 
-            // 6. FORCE PORT 6543 (Pooler) for IPv4 compatibility
-            // Direct conn (5432) is IPv6 only on Free tier. Since we are forcing IPv4 IP, we MUST use 6543.
-            $this->port = '6543';
-
+            // 6. FORCE PORT 6543 REMOVED - User requested 5432
+            // We rely on the port parsed from ENV or DATABASE_URL (default 5432)
+            
             try {
                 // Connect
                 // Append endpoint to options so Supabase knows the tenant when we connect via IP
