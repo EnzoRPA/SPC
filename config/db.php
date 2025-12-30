@@ -51,38 +51,58 @@ class Database {
         } else {
             // --- VERCEL PRODUCTION (Supabase/PostgreSQL) ---
             $this->driver = 'pgsql';
-            $original_host = 'db.ogiwoavudsjlwfkvndgc.supabase.co';
-            $this->db_name = 'postgres';
-            $this->username = 'postgres';
-            $this->password = 'G4a1ther2020#';
-            $this->port = '5432';
+            $original_host = getenv('DB_HOST') ?: 'db.ogiwoavudsjlwfkvndgc.supabase.co';
+            $this->db_name = getenv('DB_NAME') ?: 'postgres';
+            $this->username = getenv('DB_USER') ?: 'postgres';
+            // Use env var or fallback
+            $this->password = getenv('DB_PASSWORD') ?: 'G4a1ther2020#';
+            // Supabase Pooler Port is 6543 (preferred for Serverless)
+            $this->port = getenv('DB_PORT') ?: '6543';
 
             // FORCE IPv4: Vercel defaults to IPv6 which fails. We must find an IPv4 address.
             $this->host = $original_host; // Default fallback
-            $ips = gethostbynamel($original_host);
-            if ($ips) {
-                foreach ($ips as $ip) {
-                    if (filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV4)) {
-                        $this->host = $ip;
-                        break;
+            
+            // Try resolving A records (IPv4) explicitly
+            try {
+                $dns = dns_get_record($original_host, DNS_A);
+                if ($dns && isset($dns[0]['ip'])) {
+                    $this->host = $dns[0]['ip'];
+                    // error_log("Resolved IPv4 for Supabase: " . $this->host);
+                } else {
+                    // Fallback to gethostbynamel
+                    $ips = gethostbynamel($original_host);
+                    if ($ips && isset($ips[0])) {
+                         $this->host = $ips[0];
                     }
                 }
+            } catch (Exception $e) {
+                error_log("DNS Resolution failed: " . $e->getMessage());
             }
 
             try {
-                // Extract Project Ref for Endpoint ID (SNI Equivalent)
-                $ref = 'ogiwoavudsjlwfkvndgc';
+                // Connect
+                // NOTE: For Supabase Transaction Pool (Port 6543), we might need `pgbouncer=true` in options or similar, 
+                // but usually just standard connection works if Prepared Statements are handled correctly.
+                $dsn = "{$this->driver}:host={$this->host};port={$this->port};dbname={$this->db_name};sslmode=require";
                 
-                // Connect to IP, but send 'endpoint' option so Supabase knows who we are
-                $dsn = "{$this->driver}:host={$this->host};port={$this->port};dbname={$this->db_name};sslmode=require;options='endpoint={$ref}'";
-                $this->conn = new PDO($dsn, $this->username, $this->password);
+                $options = [
+                    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+                    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+                    // IMPORTANT for Supabase Transaction Pooler:
+                    // Disable server-side prepared statements to avoid "ERROR: prepared statement ... does not exist"
+                    PDO::ATTR_EMULATE_PREPARES => true, 
+                ];
+
+                $this->conn = new PDO($dsn, $this->username, $this->password, $options);
+                
+                // Set charset just in case, though pgsql usually handles it in DSN or default
                 $this->conn->exec("SET NAMES 'UTF8'");
-                $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                
             } catch(PDOException $exception) {
                 // Debug verbose for Production
-                $debugParams = "Host: {$original_host} / {$this->host}";
-                http_response_code(500);
-                die("Production Connection error: " . $exception->getMessage() . "<br>Params: $debugParams");
+                $debugParams = "Host: {$original_host} -> Resolved: {$this->host} | Port: {$this->port}";
+                error_log("Production Connection error: " . $exception->getMessage() . " [Params: $debugParams]");
+                // Allow script to fail gracefully or show error page upstream
             }
         }
 
