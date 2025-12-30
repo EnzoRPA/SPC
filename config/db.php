@@ -85,43 +85,46 @@ class Database {
                 }
             }
 
-            // 5. EXTRACT PROJECT REF (needed for username formatting)
+            // 5. EXTRACT PROJECT REF (needed for endpoint option)
             // Hostname is usually: db.<project_ref>.supabase.co
             $projectRef = '';
             if (preg_match('/db\.([a-z0-9]+)\.supabase\.co/', $original_host, $matches)) {
                 $projectRef = $matches[1];
             } else {
-                // Try from username if formatted like postgres.ref
-                $parts = explode('.', $this->username);
-                if (count($parts) > 1) {
-                    $projectRef = $parts[1];
-                } else {
-                    // Fallback hardcoded based on user logs: ogiwoavudsjlwfkvndgc
-                    $projectRef = 'ogiwoavudsjlwfkvndgc';
-                }
+                // Fallback hardcoded based on user logs: ogiwoavudsjlwfkvndgc
+                $projectRef = 'ogiwoavudsjlwfkvndgc';
             }
 
-            // 6. ROUTING FIX: Append Project Ref to Username (CRITICAL for Direct Connection)
-            // Supabase Direct (Port 5432) requires 'user.project_ref' to identify the tenant.
-            if ($projectRef && strpos($this->username, $projectRef) === false) {
-                $this->username .= ".{$projectRef}";
+            // 6. POOLER CONFIGURATION (CRITICAL for Vercel PHP Runtime)
+            // Vercel PHP cannot handle IPv6 sockets directly (Port 5432 fails).
+            // proper solution is using the Transaction Pooler (Port 6543).
+            
+            // A. Force Port 6543
+            $this->port = '6543';
+
+            // B. User must be JUST the username (e.g. 'postgres'), WITHOUT project ref
+            // If the code or env var appended it (db.ref), we strip it.
+            if ($projectRef && strpos($this->username, $projectRef) !== false) {
+                 $this->username = str_replace(".{$projectRef}", "", $this->username);
             }
 
-            // REVERTED: No IPv4 forcing, No hardcoded IP, No endpoint option.
-            // User confirmed Supabase requires Hostname (SNI) and correct User format.
+            // C. Hostname must be standard (SNI) - No IP resolution needed for Pooler
             $this->host = $original_host;
 
             try {
                 // Connect
-                // Standard DSN for Supabase Direct
+                // D. DSN MUST include options='endpoint=...' for Pooler to identify Tenant
                 $dsn = "{$this->driver}:host={$this->host};port={$this->port};dbname={$this->db_name};sslmode=require";
+                
+                if ($projectRef) {
+                    $dsn .= ";options='endpoint={$projectRef}'";
+                }
                 
                 $options = [
                     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
                     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-                    // IMPORTANT: Supabase Transaction Pooler might behave better with this off, 
-                    // but for Direct Connection (5432) it's standard Postgres behavior.
-                    // Leaving enabled (true) as it's generally safer for PHP PDO compatibility unless specific errors arise.
+                    // Supabase Transaction Pooler (Port 6543) works best with Emulate Prepares TRUE
+                    // to avoid "prepared statement does not exist" errors in serverless cleanup.
                     PDO::ATTR_EMULATE_PREPARES => true, 
                 ];
 
