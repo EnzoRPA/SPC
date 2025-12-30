@@ -85,44 +85,7 @@ class Database {
                 }
             }
 
-            // FORCE IPv4: Vercel defaults to IPv6 which fails. We must find an IPv4 address.
-            $this->host = $original_host; // Default fallback
-
-            // 1. Check for manual override in Environment
-            if (getenv('DB_FORCE_IP')) {
-                $this->host = getenv('DB_FORCE_IP');
-            } else {
-                // 2. Try to resolve IPv4 via gethostbynamel (returns array of IPs)
-                $ips = @gethostbynamel($original_host);
-                $found_ipv4 = false;
-                
-                if ($ips && is_array($ips)) {
-                    foreach ($ips as $ip) {
-                        if (filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV4)) {
-                            $this->host = $ip;
-                            $found_ipv4 = true;
-                            // error_log("Resolved IPv4 via gethostbynamel: $ip");
-                            break;
-                        }
-                    }
-                }
-                
-                // 3. If still no IPv4, try gethostbyname as last resort
-                if (!$found_ipv4) {
-                    $ip = @gethostbyname($original_host);
-                    if ($ip !== $original_host && filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV4)) {
-                         $this->host = $ip;
-                    }
-                }
-            }
-            
-            // 4. FINAL FALLBACK: If we still don't have an IPv4 (still hostname or empty), 
-            // hardcode the known SA-East-1 Pooler IP. This is a "Hail Mary" to fix the IPv6 error.
-            if (!filter_var($this->host, FILTER_VALIDATE_IP, FILTER_FLAG_IPV4)) {
-                $this->host = '54.94.90.106'; // aws-0-sa-east-1.pooler.supabase.com
-            }
-
-            // 5. EXTRACT PROJECT REF (needed for routing via IP)
+            // 5. EXTRACT PROJECT REF (needed for username formatting)
             // Hostname is usually: db.<project_ref>.supabase.co
             $projectRef = '';
             if (preg_match('/db\.([a-z0-9]+)\.supabase\.co/', $original_host, $matches)) {
@@ -138,35 +101,33 @@ class Database {
                 }
             }
 
-            // 6. ROUTING FIX: Append Project Ref to Username
-            // When connecting via IP (IPv4 workaround) or Pooler, Supabase requires 'user.project_ref'
-            // to identify the tenant. The DSN 'endpoint' option helps, but modifying the user is more robust.
+            // 6. ROUTING FIX: Append Project Ref to Username (CRITICAL for Direct Connection)
+            // Supabase Direct (Port 5432) requires 'user.project_ref' to identify the tenant.
             if ($projectRef && strpos($this->username, $projectRef) === false) {
                 $this->username .= ".{$projectRef}";
             }
 
-            // 7. FORCE PORT 6543 REMOVED - User requested 5432
-            // We rely on the port parsed from ENV or DATABASE_URL (default 5432)
-            
+            // REVERTED: No IPv4 forcing, No hardcoded IP, No endpoint option.
+            // User confirmed Supabase requires Hostname (SNI) and correct User format.
+            $this->host = $original_host;
+
             try {
                 // Connect
-                // Append endpoint to options so Supabase knows the tenant when we connect via IP
+                // Standard DSN for Supabase Direct
                 $dsn = "{$this->driver}:host={$this->host};port={$this->port};dbname={$this->db_name};sslmode=require";
-                if ($projectRef) {
-                    $dsn .= ";options='endpoint={$projectRef}'";
-                }
                 
                 $options = [
                     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
                     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-                    // IMPORTANT for Supabase Transaction Pooler:
-                    // Disable server-side prepared statements to avoid "ERROR: prepared statement ... does not exist"
+                    // IMPORTANT: Supabase Transaction Pooler might behave better with this off, 
+                    // but for Direct Connection (5432) it's standard Postgres behavior.
+                    // Leaving enabled (true) as it's generally safer for PHP PDO compatibility unless specific errors arise.
                     PDO::ATTR_EMULATE_PREPARES => true, 
                 ];
 
                 $this->conn = new PDO($dsn, $this->username, $this->password, $options);
                 
-                // Set charset just in case, though pgsql usually handles it in DSN or default
+                // Set charset just in case
                 $this->conn->exec("SET NAMES 'UTF8'");
                 
             } catch(PDOException $exception) {
