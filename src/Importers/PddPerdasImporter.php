@@ -48,6 +48,8 @@ class PddPerdasImporter implements ImportStrategy {
             if (strpos($colName, 'VENDA') !== false) $idxVenda = $i;
             if ((strpos($colName, 'CONTRATANTE') !== false) || (strpos($colName, 'NOME') !== false)) $idxNome = $i;
             if ((strpos($colName, 'VALOR') !== false)) $idxValor = $i;
+            if ((strpos($colName, 'CPF') !== false) || (strpos($colName, 'CNPJ') !== false)) $idxCpf = $i;
+            if ((strpos($colName, 'ENDERECO') !== false) || (strpos($colName, 'RUA') !== false)) $idxEndereco = $i;
         }
         
         if ($idxVencimento === -1 || $idxContrato === -1) {
@@ -57,8 +59,8 @@ class PddPerdasImporter implements ImportStrategy {
         $stmtCheck = $this->db->prepare("SELECT id FROM pdd_perdas WHERE codigo_contrato_norm = ? AND data_vencimento = ? LIMIT 1");
         $stmtInsert = $this->db->prepare("
             INSERT INTO pdd_perdas (
-                batch_id, codigo_venda, codigo_contrato, data_vencimento, codigo_contrato_norm, nome, valor
-            ) VALUES (?, ?, ?, ?, ?, ?, ?)
+                batch_id, codigo_venda, codigo_contrato, data_vencimento, codigo_contrato_norm, nome, valor, cpf_cnpj, endereco
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
         ");
 
         foreach ($rows as $index => $row) {
@@ -73,7 +75,7 @@ class PddPerdasImporter implements ImportStrategy {
             $contrato = $row[$idxContrato] ?? null;
             $venda = ($idxVenda !== -1) ? ($row[$idxVenda] ?? null) : null;
             
-            // Limpeza de artefatos relatados (ex: _-123_-)
+            // Limpeza de artefatos
             if ($contrato) $contrato = trim($contrato, " _-");
             if ($venda) $venda = trim($venda, " _-");
             
@@ -82,12 +84,18 @@ class PddPerdasImporter implements ImportStrategy {
             
             $nome = ($idxNome !== -1) ? ($row[$idxNome] ?? null) : null;
             $valor = ($idxValor !== -1) ? Normalizer::valor($row[$idxValor] ?? null) : 0.00;
+            $cpf = ($idxCpf !== -1) ? Normalizer::cpfCnpj($row[$idxCpf] ?? null) : null;
+            $endereco = ($idxEndereco !== -1) ? ($row[$idxEndereco] ?? null) : null;
             
             if ($contratoNorm && $vencimento) {
                 // Check existence
                 $stmtCheck->execute([$contratoNorm, $vencimento]);
-                if (!$stmtCheck->fetch()) {
-                    $stmtInsert->execute([$batchId, $venda, $contrato, $vencimento, $contratoNorm, $nome, $valor]);
+                if ($stmtCheck->fetch()) {
+                    // EXISTS: Update Name, Value, CPF, Address
+                    $stmtUpdate = $this->db->prepare("UPDATE pdd_perdas SET nome = ?, valor = ?, cpf_cnpj = ?, endereco = ? WHERE codigo_contrato_norm = ? AND data_vencimento = ?");
+                    $stmtUpdate->execute([$nome, $valor, $cpf, $endereco, $contratoNorm, $vencimento]);
+                } else {
+                    $stmtInsert->execute([$batchId, $venda, $contrato, $vencimento, $contratoNorm, $nome, $valor, $cpf, $endereco]);
                 }
             }
         }

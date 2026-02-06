@@ -148,7 +148,7 @@ class Comparator {
                 'PDD' as tp_contrato,
                 COALESCE(pp.nome, h.contratante, 'Cliente PDD') as contratante,
                 h.data_inclusao_spc as contratacao, 
-                COALESCE(h.cpf_cnpj, 'CPF NAO ENCONTRADO') as cpf_cnpj,
+                COALESCE(pp.cpf_cnpj, h.cpf_cnpj, 'CPF NAO ENCONTRADO') as cpf_cnpj,
                 'PDD PERDAS' as status,
                 pp.codigo_venda as venda,
                 '1' as parcela,
@@ -156,7 +156,7 @@ class Comparator {
                 pp.data_vencimento as emissao,
                 pp.data_vencimento as vencimento,
                 DATEDIFF(CURDATE(), pp.data_vencimento) as dias_atraso,
-                NULL as rua, NULL as numero, NULL as bairro, NULL as cep, NULL as cidade, NULL as estado,
+                COALESCE(pp.endereco, '') as rua, NULL as numero, NULL as bairro, NULL as cep, NULL as cidade, NULL as estado,
                 'PDD PERDAS (Importado)' as motivo
             FROM pdd_perdas pp
             LEFT JOIN spc_inclusos s ON pp.codigo_contrato_norm = s.contrato_norm

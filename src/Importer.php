@@ -7,6 +7,7 @@ use App\Importers\ParcelasImporter;
 use App\Importers\PddPerdasImporter;
 use App\Importers\PddPagosImporter;
 use App\Importers\SpcExcluidosImporter;
+use App\Importers\DataEnrichmentImporter;
 use PDO;
 
 class Importer {
@@ -41,6 +42,9 @@ class Importer {
                     break;
                 case 'spc_excluidos':
                     $strategy = new SpcExcluidosImporter($this->db);
+                    break;
+                case 'enrichment':
+                    $strategy = new DataEnrichmentImporter($this->db);
                     break;
                 default:
                     throw new \Exception("Tipo de importação desconhecido: $tipo");

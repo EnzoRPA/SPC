@@ -190,6 +190,17 @@ try {
                 'btn' => 'Importar Excluídos',
                 'tooltip' => 'Após fazer a exclusão, importar planilha por esse caminho, para atualizar a lista a serem removidas do SPC',
                 'model' => 'modelo_lista_excluidos.xlsx'
+            ],
+            [
+                'title' => '6. Atualização Cadastral',
+                'subtitle' => 'Enriquecimento de Dados • Excel',
+                'icon' => 'database',
+                'color' => 'indigo',
+                'name' => 'enrichment_file',
+                'accept' => '.xlsx, .xls, .csv',
+                'btn' => 'Importar Dados',
+                'tooltip' => 'Use esta opção para completar dados (CPF, Endereço) de registros PDD já existentes. O sistema buscará pelo número do contrato e atualizará as informações faltantes.',
+                'model' => 'modelo_atualizacao_cadastral.xlsx'
             ]
         ];
 

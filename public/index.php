@@ -358,6 +358,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $processed++;
         }
 
+        if (!empty($_FILES['enrichment_file']['name'])) {
+            $path = sys_get_temp_dir() . '/' . basename($_FILES['enrichment_file']['name']);
+            move_uploaded_file($_FILES['enrichment_file']['tmp_name'], $path);
+            $importer->importarArquivo($path, 'enrichment');
+            $processed++;
+        }
+
         if ($processed > 0) {
             header('Location: index.php?page=report&success=1');
             exit;
