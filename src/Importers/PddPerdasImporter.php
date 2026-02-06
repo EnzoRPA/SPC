@@ -40,6 +40,10 @@ class PddPerdasImporter implements ImportStrategy {
         $idxVencimento = -1;
         $idxContrato = -1;
         $idxVenda = -1;
+        $idxNome = -1;
+        $idxValor = -1;
+        $idxCpf = -1;
+        $idxEndereco = -1;
         
         foreach ($header as $i => $colName) {
             $colName = mb_strtoupper(trim($colName), 'UTF-8');
