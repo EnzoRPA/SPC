@@ -2406,3 +2406,17 @@ Tabela parcelas_em_aberto - Removidos por venda: 0
 Tabela parcelas_em_aberto - Removidos por campos: 0
 Total removido: 0
 
+=== Limpeza de Duplicatas 2026-02-06 20:44:38 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
+=== Limpeza de Duplicatas 2026-02-06 20:49:45 ===
+Tabela spc_inclusos - Removidos por venda: 0
+Tabela spc_inclusos - Removidos por campos: 0
+Tabela parcelas_em_aberto - Removidos por venda: 0
+Tabela parcelas_em_aberto - Removidos por campos: 0
+Total removido: 0
+
