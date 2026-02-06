@@ -31,10 +31,6 @@ class Comparator {
     }
 
     public function obterParaExclusao($startDate = null, $endDate = null) {
-        // Regra:
-        // 1. Em SPCINCLUSOS sem correspondente em Parcelas Em Aberto.
-        // 2. OU constando em PDD Pagos (prioridade remover).
-        
         $dateFilter = "";
         $params = [];
         
@@ -44,11 +40,18 @@ class Comparator {
             $params[':end_date'] = $endDate;
         }
 
+        // 1. Missing from Open/PDD Logic
+        // Remove if:
+        // (Not in Open AND Not in PDD)
+        // OR
+        // (Not in Open AND In PDD BUT Paid)
+        
         $sql = "
             SELECT s.*, 
                    CASE 
                        WHEN EXISTS (SELECT 1 FROM parcelas_em_aberto pa WHERE pa.contrato_norm = s.contrato_norm AND s.contrato_norm != '') THEN 'CPF Divergente'
-                       ELSE 'Sem Parcela' 
+                       WHEN pp.id IS NOT NULL AND pg_check.id IS NOT NULL THEN 'PDD PAGO (Titulo)'
+                       ELSE 'Sem Parcela / Falso PDD' 
                    END as motivo,
                    s.debito as valor
             FROM spc_inclusos s
@@ -57,17 +60,24 @@ class Comparator {
                 AND s.contrato_norm = p.contrato_norm
             LEFT JOIN pdd_perdas pp
                 ON s.contrato_norm = pp.codigo_contrato_norm
+            LEFT JOIN pdd_pagos pg_check
+                ON (pp.codigo_venda = pg_check.titulo_norm AND pp.id IS NOT NULL)
             LEFT JOIN spc_excluidos ex
                 ON s.cpf_cnpj_norm = ex.cpf_cnpj_norm
                 AND s.contrato_norm = ex.contrato_norm
                 AND (ex.vencimento IS NULL OR s.vencimento = ex.vencimento)
-            WHERE p.id IS NULL
-            AND pp.id IS NULL
+            WHERE p.id IS NULL -- Missing from Active Debts
+            AND (
+                pp.id IS NULL -- Also Missing from PDD Perdas
+                OR
+                pg_check.id IS NOT NULL -- OR it IS in PDD, but it is PAID
+            )
             AND ex.id IS NULL
             $dateFilter
             
             UNION
             
+            -- Keep existing explicit PDD PAGO check (legacy match by contract/title directly on spc_inclusos)
             SELECT s.*, 'PDD PAGO' as motivo, s.debito as valor
             FROM spc_inclusos s
             JOIN pdd_pagos pg
@@ -90,10 +100,6 @@ class Comparator {
     }
 
     public function obterParaInclusao($startDate = null, $endDate = null) {
-        // Regra:
-        // 1. Em Parcelas Em Aberto sem correspondente em SPCINCLUSOS.
-        // 2. E NÃO presente em PDD Pagos.
-        
         $dateFilter = "";
         $params = [];
         
@@ -104,15 +110,19 @@ class Comparator {
         }
         
         $vencAdjusted = $this->getVencimentoAdjustedSql('p.vencimento');
-        $dateSub6Month = $this->getDateSubSql('6 MONTH');
+        $dateSub6Month = $this->getDateSubSql('6 MONTH'); // Adjusted logic: PDD usually old
         $dateSub5Year = $this->getDateSubSql('5 YEAR');
         
+        // UNION Query requires matching columns. We explicitly list them.
+        // Columns needed: id, contrato, tp_contrato, contratante, contratacao, cpf_cnpj, status, 
+        // venda, parcela, debito, emissao, vencimento, dias_atraso, rua, numero, bairro, cep, cidade, estado, motivo
+        
         $sql = "
-            SELECT DISTINCT p.*, 
+            SELECT p.id, p.batch_id, p.contrato, p.tp_contrato, p.contratante, p.contratacao, p.cpf_cnpj, p.status, 
+                   p.venda, p.parcela, p.debito, p.emissao, p.vencimento, p.dias_atraso, 
+                   p.rua, p.numero, p.bairro, p.cep, p.cidade, p.estado,
                    CASE 
-                       WHEN pp.id IS NOT NULL 
-                            AND $vencAdjusted <= $dateSub6Month
-                       THEN 'PDD PERDAS' 
+                       WHEN pp.id IS NOT NULL THEN 'PDD PERDAS' 
                        ELSE 'EM ABERTO' 
                    END as motivo
             FROM parcelas_em_aberto p
@@ -128,6 +138,37 @@ class Comparator {
             AND $vencAdjusted >= $dateSub5Year
             AND (p.contratante NOT LIKE 'Unimed Maranhão Do Sul%' OR p.contratante IS NULL)
             $dateFilter
+
+            UNION
+
+            SELECT 
+                NULL as id, -- Placeholder
+                pp.batch_id,
+                pp.codigo_contrato as contrato,
+                'PDD' as tp_contrato,
+                COALESCE(pp.nome, h.contratante, 'Cliente PDD') as contratante,
+                h.data_inclusao_spc as contratacao, 
+                COALESCE(h.cpf_cnpj, 'CPF NAO ENCONTRADO') as cpf_cnpj,
+                'PDD PERDAS' as status,
+                pp.codigo_venda as venda,
+                '1' as parcela,
+                pp.valor as debito,
+                pp.data_vencimento as emissao,
+                pp.data_vencimento as vencimento,
+                DATEDIFF(CURDATE(), pp.data_vencimento) as dias_atraso,
+                NULL as rua, NULL as numero, NULL as bairro, NULL as cep, NULL as cidade, NULL as estado,
+                'PDD PERDAS (Importado)' as motivo
+            FROM pdd_perdas pp
+            LEFT JOIN spc_inclusos s ON pp.codigo_contrato_norm = s.contrato_norm
+            LEFT JOIN pdd_pagos pg ON pp.codigo_venda = pg.titulo_norm
+            LEFT JOIN spc_historico_removidos h ON pp.codigo_contrato_norm = h.contrato
+            WHERE s.id IS NULL -- Not in SPC
+            AND pg.id IS NULL -- Not Paid
+            AND pp.data_vencimento >= DATE_SUB(CURDATE(), INTERVAL 5 YEAR) -- Safety check for prescribed
+            -- Ensure we don't pick up items that are already in Parcelas (Duplicate protection on UNION)
+            AND NOT EXISTS (
+                SELECT 1 FROM parcelas_em_aberto pa WHERE pa.contrato_norm = pp.codigo_contrato_norm
+            )
         ";
 
         $stmt = $this->db->prepare($sql);

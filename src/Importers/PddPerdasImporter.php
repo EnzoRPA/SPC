@@ -46,6 +46,8 @@ class PddPerdasImporter implements ImportStrategy {
             if (strpos($colName, 'VENCIMENTO') !== false) $idxVencimento = $i;
             if (strpos($colName, 'CONTRATO') !== false) $idxContrato = $i;
             if (strpos($colName, 'VENDA') !== false) $idxVenda = $i;
+            if ((strpos($colName, 'CONTRATANTE') !== false) || (strpos($colName, 'NOME') !== false)) $idxNome = $i;
+            if ((strpos($colName, 'VALOR') !== false)) $idxValor = $i;
         }
         
         if ($idxVencimento === -1 || $idxContrato === -1) {
@@ -55,8 +57,8 @@ class PddPerdasImporter implements ImportStrategy {
         $stmtCheck = $this->db->prepare("SELECT id FROM pdd_perdas WHERE codigo_contrato_norm = ? AND data_vencimento = ? LIMIT 1");
         $stmtInsert = $this->db->prepare("
             INSERT INTO pdd_perdas (
-                batch_id, codigo_venda, codigo_contrato, data_vencimento, codigo_contrato_norm
-            ) VALUES (?, ?, ?, ?, ?)
+                batch_id, codigo_venda, codigo_contrato, data_vencimento, codigo_contrato_norm, nome, valor
+            ) VALUES (?, ?, ?, ?, ?, ?, ?)
         ");
 
         foreach ($rows as $index => $row) {
@@ -78,11 +80,14 @@ class PddPerdasImporter implements ImportStrategy {
             $vencimento = Normalizer::data($row[$idxVencimento] ?? null);
             $contratoNorm = Normalizer::contrato($contrato);
             
+            $nome = ($idxNome !== -1) ? ($row[$idxNome] ?? null) : null;
+            $valor = ($idxValor !== -1) ? Normalizer::valor($row[$idxValor] ?? null) : 0.00;
+            
             if ($contratoNorm && $vencimento) {
                 // Check existence
                 $stmtCheck->execute([$contratoNorm, $vencimento]);
                 if (!$stmtCheck->fetch()) {
-                    $stmtInsert->execute([$batchId, $venda, $contrato, $vencimento, $contratoNorm]);
+                    $stmtInsert->execute([$batchId, $venda, $contrato, $vencimento, $contratoNorm, $nome, $valor]);
                 }
             }
         }

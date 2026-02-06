@@ -130,3 +130,111 @@ Row 3:
 Row 4:
   Contrato (Col 0/Mapped): '71164'
   Raw Row: ["71164","PF","Juliana Mota Garcia Eduvirgem","25\/05\/22","61021054356","A","5309023","1a parcela","306.27","04\/12\/25","20\/12\/25","10","DEZENOVE","129","Vila Vit\u00f3ria","65918078","Imperatriz","MA"]
+Row 1:
+  Contrato (Col 0/Mapped): 'CONTRATO'
+  Raw Row: ["CONTRATO","TP_CONTRATO","CONTRATANTE","CONTRATACAO","CPF_CNPJ","STATUS","VENDA","PARCELA","DEBITO","EMISSAO","VENCIMENTO","DIAS_ATRASO","RUA","NUMERO","BAIRRO","CEP","CIDADE","ESTADO"]
+Row 2:
+  Contrato (Col 0/Mapped): '52261'
+  Raw Row: ["52261","PF","Baldur Rocha Giovannini","04\/12\/13","00325265631","A","5318170","1a parcela","502.97","05\/01\/26","10\/01\/26","10","PROFESSORA RITA DE CASSIA","0","Jardim Mans\u00f5es Palmeiras","77809550","Aragua\u00edna","TO"]
+Row 3:
+  Contrato (Col 0/Mapped): '72578'
+  Raw Row: ["72578","PF","Cristiane Dos Anjos Correa","15\/09\/23","00714697370","A","5319583","1a parcela","285.55","05\/01\/26","10\/01\/26","10","DEZENOVE","10","Vila Vit\u00f3ria","65918078","Imperatriz","MA"]
+Row 4:
+  Contrato (Col 0/Mapped): '72578'
+  Raw Row: ["72578","PF","Cristiane Dos Anjos Correa","15\/09\/23","00714697370","A","5305660","1a parcela","321.55","01\/12\/25","10\/12\/25","41","DEZENOVE","10","Vila Vit\u00f3ria","65918078","Imperatriz","MA"]
+Row 1:
+  Contrato (Col 0/Mapped): 'CONTRATO'
+  Raw Row: ["CONTRATO","TP_CONTRATO","CONTRATANTE","CONTRATACAO","CPF_CNPJ","STATUS","VENDA","PARCELA","DEBITO","EMISSAO","VENCIMENTO","DIAS_ATRASO","RUA","NUMERO","BAIRRO","CEP","CIDADE","ESTADO"]
+Row 2:
+  Contrato (Col 0/Mapped): '52261'
+  Raw Row: ["52261","PF","Baldur Rocha Giovannini","04\/12\/13","00325265631","A","5318170","1a parcela","502.97","05\/01\/26","10\/01\/26","12","PROFESSORA RITA DE CASSIA","0","Jardim Mans\u00f5es Palmeiras","77809550","Aragua\u00edna","TO"]
+Row 3:
+  Contrato (Col 0/Mapped): '71288'
+  Raw Row: ["71288","PF","Maria Clara Balbino Lago Cunha","07\/06\/22","61006702326","A","5322557","1a parcela","539.23","05\/01\/26","20\/01\/26","2","ALAGOAS","650","Savassi","30130160","Belo Horizonte","MG"]
+Row 4:
+  Contrato (Col 0/Mapped): '72578'
+  Raw Row: ["72578","PF","Cristiane Dos Anjos Correa","15\/09\/23","00714697370","A","5319583","1a parcela","285.55","05\/01\/26","10\/01\/26","12","DEZENOVE","10","Vila Vit\u00f3ria","65918078","Imperatriz","MA"]
+Row 1:
+  Contrato (Col 0/Mapped): 'CONTRATO'
+  Raw Row: ["CONTRATO","TP_CONTRATO","CONTRATANTE","CONTRATACAO","CPF_CNPJ","STATUS","VENDA","PARCELA","DEBITO","EMISSAO","VENCIMENTO","DIAS_ATRASO","RUA","NUMERO","BAIRRO","CEP","CIDADE","ESTADO"]
+Row 2:
+  Contrato (Col 0/Mapped): '52261'
+  Raw Row: ["52261","PF","Baldur Rocha Giovannini","04\/12\/13","00325265631","A","5318170","1a parcela","502.97","05\/01\/26","10\/01\/26","16","PROFESSORA RITA DE CASSIA","0","Jardim Mans\u00f5es Palmeiras","77809550","Aragua\u00edna","TO"]
+Row 3:
+  Contrato (Col 0/Mapped): '37958'
+  Raw Row: ["37958","PF","Francisca De Jesus Pontes e Vasconcelos","19\/03\/09","46023720315","A","5320502","1a parcela","1551.04","05\/01\/26","25\/01\/26","1","DOM SEBASTIAO LEME","655","FATIMA","60050160","Fortaleza","CE"]
+Row 4:
+  Contrato (Col 0/Mapped): '71288'
+  Raw Row: ["71288","PF","Maria Clara Balbino Lago Cunha","07\/06\/22","61006702326","A","5322557","1a parcela","539.23","05\/01\/26","20\/01\/26","6","ALAGOAS","650","Savassi","30130160","Belo Horizonte","MG"]
+Row 1:
+  Contrato (Col 0/Mapped): 'CONTRATO'
+  Raw Row: ["CONTRATO","TP_CONTRATO","CONTRATANTE","CONTRATACAO","CPF_CNPJ","STATUS","VENDA","PARCELA","DEBITO","EMISSAO","VENCIMENTO","DIAS_ATRASO","RUA","NUMERO","BAIRRO","CEP","CIDADE","ESTADO"]
+Row 2:
+  Contrato (Col 0/Mapped): '52261'
+  Raw Row: ["52261","PF","Baldur Rocha Giovannini","04\/12\/13","00325265631","A","5318170","1a parcela","502.97","05\/01\/26","10\/01\/26","18","PROFESSORA RITA DE CASSIA","0","Jardim Mans\u00f5es Palmeiras","77809550","Aragua\u00edna","TO"]
+Row 3:
+  Contrato (Col 0/Mapped): '37958'
+  Raw Row: ["37958","PF","Francisca De Jesus Pontes e Vasconcelos","19\/03\/09","46023720315","A","5320502","1a parcela","1551.04","05\/01\/26","25\/01\/26","3","DOM SEBASTIAO LEME","655","FATIMA","60050160","Fortaleza","CE"]
+Row 4:
+  Contrato (Col 0/Mapped): '71288'
+  Raw Row: ["71288","PF","Maria Clara Balbino Lago Cunha","07\/06\/22","61006702326","A","5322557","1a parcela","539.23","05\/01\/26","20\/01\/26","8","ALAGOAS","650","Savassi","30130160","Belo Horizonte","MG"]
+Row 1:
+  Contrato (Col 0/Mapped): 'CONTRATO'
+  Raw Row: ["CONTRATO","TP_CONTRATO","CONTRATANTE","CONTRATACAO","CPF_CNPJ","STATUS","VENDA","PARCELA","DEBITO","EMISSAO","VENCIMENTO","DIAS_ATRASO","RUA","NUMERO","BAIRRO","CEP","CIDADE","ESTADO"]
+Row 2:
+  Contrato (Col 0/Mapped): '52261'
+  Raw Row: ["52261","PF","Baldur Rocha Giovannini","04\/12\/13","00325265631","A","5318170","1a parcela","502.97","05\/01\/26","10\/01\/26","20","PROFESSORA RITA DE CASSIA","0","Jardim Mans\u00f5es Palmeiras","77809550","Aragua\u00edna","TO"]
+Row 3:
+  Contrato (Col 0/Mapped): '37958'
+  Raw Row: ["37958","PF","Francisca De Jesus Pontes e Vasconcelos","19\/03\/09","46023720315","A","5320502","1a parcela","1551.04","05\/01\/26","25\/01\/26","5","DOM SEBASTIAO LEME","655","FATIMA","60050160","Fortaleza","CE"]
+Row 4:
+  Contrato (Col 0/Mapped): '71288'
+  Raw Row: ["71288","PF","Maria Clara Balbino Lago Cunha","07\/06\/22","61006702326","A","5322557","1a parcela","539.23","05\/01\/26","20\/01\/26","10","ALAGOAS","650","Savassi","30130160","Belo Horizonte","MG"]
+Row 1:
+  Contrato (Col 0/Mapped): 'CONTRATO'
+  Raw Row: ["CONTRATO","TP_CONTRATO","CONTRATANTE","CONTRATACAO","CPF_CNPJ","STATUS","VENDA","PARCELA","DEBITO","EMISSAO","VENCIMENTO","DIAS_ATRASO","RUA","NUMERO","BAIRRO","CEP","CIDADE","ESTADO"]
+Row 2:
+  Contrato (Col 0/Mapped): '52261'
+  Raw Row: ["52261","PF","Baldur Rocha Giovannini","04\/12\/13","00325265631","A","5318170","1a parcela","502.97","05\/01\/26","10\/01\/26","23","PROFESSORA RITA DE CASSIA","0","Jardim Mans\u00f5es Palmeiras","77809550","Aragua\u00edna","TO"]
+Row 3:
+  Contrato (Col 0/Mapped): '65002'
+  Raw Row: ["65002","PF","Lais Parriao Barros","22\/08\/17","02862266183","A","5326884","1a parcela","496.24","12\/01\/26","30\/01\/26","3","DOIS DE JULHO","609","CENTRO","77805130","Aragua\u00edna","TO"]
+Row 4:
+  Contrato (Col 0/Mapped): '37958'
+  Raw Row: ["37958","PF","Francisca De Jesus Pontes e Vasconcelos","19\/03\/09","46023720315","A","5320502","1a parcela","1551.04","05\/01\/26","25\/01\/26","8","DOM SEBASTIAO LEME","655","FATIMA","60050160","Fortaleza","CE"]
+Row 1:
+  Contrato (Col 0/Mapped): 'CONTRATO'
+  Raw Row: ["CONTRATO","TP_CONTRATO","CONTRATANTE","CONTRATACAO","CPF_CNPJ","STATUS","VENDA","PARCELA","DEBITO","EMISSAO","VENCIMENTO","DIAS_ATRASO","RUA","NUMERO","BAIRRO","CEP","CIDADE","ESTADO"]
+Row 2:
+  Contrato (Col 0/Mapped): '65002'
+  Raw Row: ["65002","PF","Lais Parriao Barros","22\/08\/17","02862266183","A","5326884","1a parcela","496.24","12\/01\/26","30\/01\/26","4","DOIS DE JULHO","609","CENTRO","77805130","Aragua\u00edna","TO"]
+Row 3:
+  Contrato (Col 0/Mapped): '37958'
+  Raw Row: ["37958","PF","Francisca De Jesus Pontes e Vasconcelos","19\/03\/09","46023720315","A","5320502","1a parcela","1551.04","05\/01\/26","25\/01\/26","9","DOM SEBASTIAO LEME","655","FATIMA","60050160","Fortaleza","CE"]
+Row 4:
+  Contrato (Col 0/Mapped): '71288'
+  Raw Row: ["71288","PF","Maria Clara Balbino Lago Cunha","07\/06\/22","61006702326","A","5322557","1a parcela","539.23","05\/01\/26","20\/01\/26","14","ALAGOAS","650","Savassi","30130160","Belo Horizonte","MG"]
+Row 1:
+  Contrato (Col 0/Mapped): 'CONTRATO'
+  Raw Row: ["CONTRATO","TP_CONTRATO","CONTRATANTE","CONTRATACAO","CPF_CNPJ","STATUS","VENDA","PARCELA","DEBITO","EMISSAO","VENCIMENTO","DIAS_ATRASO","RUA","NUMERO","BAIRRO","CEP","CIDADE","ESTADO"]
+Row 2:
+  Contrato (Col 0/Mapped): '65002'
+  Raw Row: ["65002","PF","Lais Parriao Barros","22\/08\/17","02862266183","A","5326884","1a parcela","496.24","12\/01\/26","30\/01\/26","5","DOIS DE JULHO","609","CENTRO","77805130","Aragua\u00edna","TO"]
+Row 3:
+  Contrato (Col 0/Mapped): '37958'
+  Raw Row: ["37958","PF","Francisca De Jesus Pontes e Vasconcelos","19\/03\/09","46023720315","A","5320502","1a parcela","1551.04","05\/01\/26","25\/01\/26","10","DOM SEBASTIAO LEME","655","FATIMA","60050160","Fortaleza","CE"]
+Row 4:
+  Contrato (Col 0/Mapped): '71288'
+  Raw Row: ["71288","PF","Maria Clara Balbino Lago Cunha","07\/06\/22","61006702326","A","5322557","1a parcela","539.23","05\/01\/26","20\/01\/26","15","ALAGOAS","650","Savassi","30130160","Belo Horizonte","MG"]
+Row 1:
+  Contrato (Col 0/Mapped): 'CONTRATO'
+  Raw Row: ["CONTRATO","TP_CONTRATO","CONTRATANTE","CONTRATACAO","CPF_CNPJ","STATUS","VENDA","PARCELA","DEBITO","EMISSAO","VENCIMENTO","DIAS_ATRASO","RUA","NUMERO","BAIRRO","CEP","CIDADE","ESTADO"]
+Row 2:
+  Contrato (Col 0/Mapped): '65002'
+  Raw Row: ["65002","PF","Lais Parriao Barros","22\/08\/17","02862266183","A","5326884","1a parcela","496.24","12\/01\/26","30\/01\/26","6","DOIS DE JULHO","609","CENTRO","77805130","Aragua\u00edna","TO"]
+Row 3:
+  Contrato (Col 0/Mapped): '37958'
+  Raw Row: ["37958","PF","Francisca De Jesus Pontes e Vasconcelos","19\/03\/09","46023720315","A","5320502","1a parcela","1551.04","05\/01\/26","25\/01\/26","11","DOM SEBASTIAO LEME","655","FATIMA","60050160","Fortaleza","CE"]
+Row 4:
+  Contrato (Col 0/Mapped): '71288'
+  Raw Row: ["71288","PF","Maria Clara Balbino Lago Cunha","07\/06\/22","61006702326","A","5322557","1a parcela","539.23","05\/01\/26","20\/01\/26","16","ALAGOAS","650","Savassi","30130160","Belo Horizonte","MG"]

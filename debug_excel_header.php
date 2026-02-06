@@ -4,16 +4,7 @@ require_once __DIR__ . '/vendor/autoload.php';
 use PhpOffice\PhpSpreadsheet\IOFactory;
 
 // Pega o arquivo mais recente ou um específico
-$file = 'public/uploads/parcelas_em_aberto (22).xlsx';
-
-if (!file_exists($file)) {
-    // Tenta achar o mais recente se o nome fixo não existir
-    $files = glob('public/uploads/*.xlsx');
-    usort($files, function($a, $b) {
-        return filemtime($b) - filemtime($a);
-    });
-    $file = $files[0] ?? null;
-}
+$file = 'public/uploads/RELATORIO PDD - MAI-20251.xls';
 
 if (!$file) {
     die("Nenhum arquivo encontrado.");
