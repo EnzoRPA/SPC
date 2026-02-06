@@ -36,7 +36,16 @@ class DataEnrichmentImporter implements ImportStrategy {
         $idxContrato = -1;
         $idxNome = -1;
         $idxCpf = -1;
-        $idxEndereco = -1;
+        $idxEndereco = -1; // Legacy
+        $idxRua = -1;
+        $idxNumero = -1;
+        $idxBairro = -1;
+        $idxCidade = -1;
+        $idxUf = -1;
+        $idxCep = -1;
+        $idxComplemento = -1;
+        $idxEnderecoFull = -1;
+        
         $headersFound = false;
 
         $updatedCount = 0;
@@ -62,14 +71,12 @@ class DataEnrichmentImporter implements ImportStrategy {
                 }
 
                 $tempContrato = -1;
-                $tempCpf = -1;
 
                 foreach ($rowData as $j => $colName) {
                     if (!$colName) continue;
                     $colName = strtoupper((string)$colName);
                     
                     if (strpos($colName, 'CONTRATO') !== false) $tempContrato = $j;
-                    if (strpos($colName, 'CPF') !== false || strpos($colName, 'CNPJ') !== false) $tempCpf = $j;
                 }
 
                 if ($tempContrato !== -1) {
@@ -78,14 +85,24 @@ class DataEnrichmentImporter implements ImportStrategy {
                         if (!$colName) continue;
                         $colName = strtoupper((string)$colName);
                         
+                        // Map Contract and Personal Info
                         if (strpos($colName, 'CONTRATO') !== false) $idxContrato = $j;
                         if (strpos($colName, 'NOME') !== false || strpos($colName, 'CONTRATANTE') !== false) $idxNome = $j;
                         if (strpos($colName, 'CPF') !== false || strpos($colName, 'CNPJ') !== false) $idxCpf = $j;
-                        if (strpos($colName, 'ENDERECO') !== false || strpos($colName, 'RUA') !== false) $idxEndereco = $j;
+                        
+                        // Map Address Components
+                        if (strpos($colName, 'RUA') !== false || strpos($colName, 'LOGRADOURO') !== false) $idxRua = $j;
+                        if (strpos($colName, 'ENDERECO') !== false) $idxEnderecoFull = $j; // Generic fallback
+                        if (strpos($colName, 'NUMERO') !== false || $colName === 'N' || $colName === 'NO') $idxNumero = $j;
+                        if (strpos($colName, 'BAIRRO') !== false) $idxBairro = $j;
+                        if (strpos($colName, 'CIDADE') !== false || strpos($colName, 'MUNICIPIO') !== false) $idxCidade = $j;
+                        if (strpos($colName, 'UF') !== false || strpos($colName, 'ESTADO') !== false) $idxUf = $j;
+                        if (strpos($colName, 'CEP') !== false) $idxCep = $j;
+                        if (strpos($colName, 'COMPLEMENTO') !== false) $idxComplemento = $j;
                     }
                     $headersFound = true;
                 }
-                continue; // Done with this row (it was either a header or a pre-header row)
+                continue; // Done with this row
             }
 
             // Process Data Row
@@ -95,8 +112,33 @@ class DataEnrichmentImporter implements ImportStrategy {
             $contratoNorm = Normalizer::contrato($contratoRaw);
             
             $cpf = ($idxCpf !== -1) ? Normalizer::cpfCnpj($rowData[$idxCpf] ?? null) : null;
-            $endereco = ($idxEndereco !== -1) ? ($rowData[$idxEndereco] ?? null) : null;
             $nome = ($idxNome !== -1) ? ($rowData[$idxNome] ?? null) : null;
+
+            // Build Address from components
+            $addrParts = [];
+            
+            // Prefer breakdown if available, else fallback to full address column
+            $hasSpecificAddress = false;
+            
+            if ($idxRua !== -1 && !empty($rowData[$idxRua])) {
+                $addrParts[] = $rowData[$idxRua];
+                $hasSpecificAddress = true;
+            }
+            // Use generic 'endereco' column only if we didn't find specific street/rua, or if we want to append? 
+            // Usually if 'Rua' is present, 'Endereco' might be duplicate or absent. 
+            // Let's use EnderecoFull only if Rua is empty.
+            if (!$hasSpecificAddress && $idxEnderecoFull !== -1 && !empty($rowData[$idxEnderecoFull])) {
+                $addrParts[] = $rowData[$idxEnderecoFull];
+            }
+
+            if ($idxNumero !== -1 && !empty($rowData[$idxNumero])) $addrParts[] = $rowData[$idxNumero];
+            if ($idxComplemento !== -1 && !empty($rowData[$idxComplemento])) $addrParts[] = $rowData[$idxComplemento];
+            if ($idxBairro !== -1 && !empty($rowData[$idxBairro])) $addrParts[] = $rowData[$idxBairro];
+            if ($idxCidade !== -1 && !empty($rowData[$idxCidade])) $addrParts[] = $rowData[$idxCidade];
+            if ($idxUf !== -1 && !empty($rowData[$idxUf])) $addrParts[] = $rowData[$idxUf];
+            if ($idxCep !== -1 && !empty($rowData[$idxCep])) $addrParts[] = "CEP: " . $rowData[$idxCep];
+
+            $endereco = !empty($addrParts) ? implode(', ', $addrParts) : null;
 
             if ($cpf || $endereco || $nome) {
                 $stmtUpdate->execute([
