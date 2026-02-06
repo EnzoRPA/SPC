@@ -114,31 +114,47 @@ class DataEnrichmentImporter implements ImportStrategy {
             $cpf = ($idxCpf !== -1) ? Normalizer::cpfCnpj($rowData[$idxCpf] ?? null) : null;
             $nome = ($idxNome !== -1) ? ($rowData[$idxNome] ?? null) : null;
 
-            // Build Address from components
-            $addrParts = [];
-            
-            // Prefer breakdown if available, else fallback to full address column
-            $hasSpecificAddress = false;
-            
-            if ($idxRua !== -1 && !empty($rowData[$idxRua])) {
-                $addrParts[] = $rowData[$idxRua];
-                $hasSpecificAddress = true;
-            }
-            // Use generic 'endereco' column only if we didn't find specific street/rua, or if we want to append? 
-            // Usually if 'Rua' is present, 'Endereco' might be duplicate or absent. 
-            // Let's use EnderecoFull only if Rua is empty.
-            if (!$hasSpecificAddress && $idxEnderecoFull !== -1 && !empty($rowData[$idxEnderecoFull])) {
-                $addrParts[] = $rowData[$idxEnderecoFull];
-            }
+            // Build Address
+            $endereco = null;
 
-            if ($idxNumero !== -1 && !empty($rowData[$idxNumero])) $addrParts[] = $rowData[$idxNumero];
-            if ($idxComplemento !== -1 && !empty($rowData[$idxComplemento])) $addrParts[] = $rowData[$idxComplemento];
-            if ($idxBairro !== -1 && !empty($rowData[$idxBairro])) $addrParts[] = $rowData[$idxBairro];
-            if ($idxCidade !== -1 && !empty($rowData[$idxCidade])) $addrParts[] = $rowData[$idxCidade];
-            if ($idxUf !== -1 && !empty($rowData[$idxUf])) $addrParts[] = $rowData[$idxUf];
-            if ($idxCep !== -1 && !empty($rowData[$idxCep])) $addrParts[] = "CEP: " . $rowData[$idxCep];
+            // Priority 1: Full Address Column ("Endereço")
+            if ($idxEnderecoFull !== -1 && !empty($rowData[$idxEnderecoFull])) {
+                $endereco = $rowData[$idxEnderecoFull];
+                
+                // Optional: Append specific parts if they might be missing from "Full" address?
+                // Usually "Complete Address" implies it has everything. 
+                // However, let's append CEP if provided separately and not detected?
+                // For now, trust the user's "Endereço Completo".
+                
+                // If the user wants to append City/UF:
+                $extraParts = [];
+                if ($idxCidade !== -1 && !empty($rowData[$idxCidade])) $extraParts[] = $rowData[$idxCidade];
+                if ($idxUf !== -1 && !empty($rowData[$idxUf])) $extraParts[] = $rowData[$idxUf];
+                if ($idxCep !== -1 && !empty($rowData[$idxCep])) $extraParts[] = "CEP: " . $rowData[$idxCep];
+                
+                if (!empty($extraParts)) {
+                    // Check if extra parts are already in the address to avoid duplication (simple check)
+                    $enderecoUpper = mb_strtoupper($endereco);
+                    foreach ($extraParts as $part) {
+                        if (strpos($enderecoUpper, mb_strtoupper($part)) === false) {
+                            $endereco .= " - " . $part;
+                        }
+                    }
+                }
 
-            $endereco = !empty($addrParts) ? implode(', ', $addrParts) : null;
+            } else {
+                // Priority 2: Build from Components
+                $addrParts = [];
+                if ($idxRua !== -1 && !empty($rowData[$idxRua])) $addrParts[] = $rowData[$idxRua];
+                if ($idxNumero !== -1 && !empty($rowData[$idxNumero])) $addrParts[] = $rowData[$idxNumero];
+                if ($idxComplemento !== -1 && !empty($rowData[$idxComplemento])) $addrParts[] = $rowData[$idxComplemento];
+                if ($idxBairro !== -1 && !empty($rowData[$idxBairro])) $addrParts[] = $rowData[$idxBairro];
+                if ($idxCidade !== -1 && !empty($rowData[$idxCidade])) $addrParts[] = $rowData[$idxCidade];
+                if ($idxUf !== -1 && !empty($rowData[$idxUf])) $addrParts[] = $rowData[$idxUf];
+                if ($idxCep !== -1 && !empty($rowData[$idxCep])) $addrParts[] = "CEP: " . $rowData[$idxCep];
+                
+                $endereco = !empty($addrParts) ? implode(', ', $addrParts) : null;
+            }
 
             if ($cpf || $endereco || $nome) {
                 $stmtUpdate->execute([
