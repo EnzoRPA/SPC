@@ -14,106 +14,94 @@ class DataEnrichmentImporter implements ImportStrategy {
     }
 
     public function import($filePath, $batchId) {
-        $spreadsheet = IOFactory::load($filePath);
+        // Use createReaderForFile to correctly handle different file types (XLSX, CSV, etc.)
+        $reader = IOFactory::createReaderForFile($filePath);
+        // optimization: read data only, skip formatting
+        $reader->setReadDataOnly(true);
+        
+        $spreadsheet = $reader->load($filePath);
         $sheet = $spreadsheet->getActiveSheet();
 
-        $rows = [];
-        foreach ($sheet->getRowIterator() as $row) {
-            $cellIterator = $row->getCellIterator();
-            $cellIterator->setIterateOnlyExistingCells(false);
-            $cells = [];
-            foreach ($cellIterator as $cell) {
-                // Read as formatted value to capture dates correctly if needed, or raw
-                $cells[] = $cell->getValue();
-            }
-            $rows[] = $cells;
-        }
-
-        if (empty($rows)) {
-            return;
-        }
-
-        // Detect Headers in first 5 rows
-        $idxContrato = -1;
-        $idxNome = -1;
-        $idxCpf = -1;
-        $idxEndereco = -1;
-        
-        // Helper to find headers
-        $headerRowIndex = 0;
-        foreach ($rows as $i => $row) {
-            if ($i > 5) break; 
-            
-            $tempContrato = -1;
-            $tempCpf = -1;
-            
-            foreach ($row as $j => $colName) {
-                if (!$colName) continue;
-                $colName = strtoupper((string)$colName);
-                
-                if (strpos($colName, 'CONTRATO') !== false) $tempContrato = $j;
-                if (strpos($colName, 'CPF') !== false || strpos($colName, 'CNPJ') !== false) $tempCpf = $j;
-            }
-            
-            if ($tempContrato !== -1) {
-                $headerRowIndex = $i;
-                // Found header row, map all
-                foreach ($row as $j => $colName) {
-                    if (!$colName) continue;
-                    $colName = strtoupper((string)$colName);
-                    
-                    if (strpos($colName, 'CONTRATO') !== false) $idxContrato = $j;
-                    if (strpos($colName, 'NOME') !== false || strpos($colName, 'CONTRATANTE') !== false) $idxNome = $j;
-                    if (strpos($colName, 'CPF') !== false || strpos($colName, 'CNPJ') !== false) $idxCpf = $j;
-                    if (strpos($colName, 'ENDERECO') !== false || strpos($colName, 'RUA') !== false) $idxEndereco = $j;
-                }
-                break;
-            }
-        }
-
-        if ($idxContrato === -1) {
-            throw new \Exception("Coluna 'Contrato' não encontrada. Impossível vincular dados.");
-        }
-
         // Prepare UPDATE statement (NO INSERTS)
-        // Only update fields if they satisfy conditions (e.g. overwrite or fill empty)
-        // User requested: "concatenar/deixar mais completos". We will prioritize non-empty values from file.
         $stmtUpdate = $this->db->prepare("
             UPDATE pdd_perdas 
             SET 
-                batch_id = ?, -- Update batch ID to track latest touch? Optional.
+                batch_id = ?, 
                 cpf_cnpj = COALESCE(?, cpf_cnpj), 
                 endereco = COALESCE(?, endereco),
                 nome = COALESCE(?, nome)
             WHERE codigo_contrato_norm = ?
         ");
 
+        $idxContrato = -1;
+        $idxNome = -1;
+        $idxCpf = -1;
+        $idxEndereco = -1;
+        $headersFound = false;
+
         $updatedCount = 0;
+        
+        // Iterate row by row to save memory
+        foreach ($sheet->getRowIterator() as $row) {
+            $rowIndex = $row->getRowIndex();
+            
+            // Get cells for this row
+            $cellIterator = $row->getCellIterator();
+            $cellIterator->setIterateOnlyExistingCells(false);
+            
+            $rowData = [];
+            foreach ($cellIterator as $cell) {
+                $rowData[] = $cell->getValue();
+            }
 
-        foreach ($rows as $index => $row) {
-            if ($index <= $headerRowIndex) continue; // Skip headers
+            // Header Detection (look in first 10 rows to be safe, code said 5 but a bit more buffer helps)
+            if (!$headersFound) {
+                if ($rowIndex > 10) {
+                     // If we went past 10 scan rows and found nothing, probably invalid format or no headers
+                     break; 
+                }
 
-            $contratoRaw = $row[$idxContrato] ?? null;
+                $tempContrato = -1;
+                $tempCpf = -1;
+
+                foreach ($rowData as $j => $colName) {
+                    if (!$colName) continue;
+                    $colName = strtoupper((string)$colName);
+                    
+                    if (strpos($colName, 'CONTRATO') !== false) $tempContrato = $j;
+                    if (strpos($colName, 'CPF') !== false || strpos($colName, 'CNPJ') !== false) $tempCpf = $j;
+                }
+
+                if ($tempContrato !== -1) {
+                    // Found header row, map all
+                    foreach ($rowData as $j => $colName) {
+                        if (!$colName) continue;
+                        $colName = strtoupper((string)$colName);
+                        
+                        if (strpos($colName, 'CONTRATO') !== false) $idxContrato = $j;
+                        if (strpos($colName, 'NOME') !== false || strpos($colName, 'CONTRATANTE') !== false) $idxNome = $j;
+                        if (strpos($colName, 'CPF') !== false || strpos($colName, 'CNPJ') !== false) $idxCpf = $j;
+                        if (strpos($colName, 'ENDERECO') !== false || strpos($colName, 'RUA') !== false) $idxEndereco = $j;
+                    }
+                    $headersFound = true;
+                }
+                continue; // Done with this row (it was either a header or a pre-header row)
+            }
+
+            // Process Data Row
+            $contratoRaw = $rowData[$idxContrato] ?? null;
             if (!$contratoRaw) continue;
 
             $contratoNorm = Normalizer::contrato($contratoRaw);
             
-            $cpf = ($idxCpf !== -1) ? Normalizer::cpfCnpj($row[$idxCpf] ?? null) : null;
-            $endereco = ($idxEndereco !== -1) ? ($row[$idxEndereco] ?? null) : null;
-            $nome = ($idxNome !== -1) ? ($row[$idxNome] ?? null) : null;
+            $cpf = ($idxCpf !== -1) ? Normalizer::cpfCnpj($rowData[$idxCpf] ?? null) : null;
+            $endereco = ($idxEndereco !== -1) ? ($rowData[$idxEndereco] ?? null) : null;
+            $nome = ($idxNome !== -1) ? ($rowData[$idxNome] ?? null) : null;
 
-            // Only proceed if we have at least one useful field to update
             if ($cpf || $endereco || $nome) {
-                // COALESCE logic in SQL handles "Keep existing if new is null"
-                // But we want "Overwrite existing with New if New is NOT null"
-                // The SQL `COALESCE(?, cpf_cnpj)` means: If ? (new value) is NOT NULL, use it. Else use existing.
-                // However, we passed nulls from PHP if empty. So logic holds:
-                // If spreadsheet has value -> Update. If spreadsheet empty -> Keep DB value.
-                
-                // EXECUTE
                 $stmtUpdate->execute([
                     $batchId, 
-                    $cpf ?: null,      // Ensure PHP null if empty/false
+                    $cpf ?: null,      
                     $endereco ?: null, 
                     $nome ?: null, 
                     $contratoNorm
@@ -121,8 +109,16 @@ class DataEnrichmentImporter implements ImportStrategy {
                 
                 $updatedCount += $stmtUpdate->rowCount();
             }
+            
+            // Optional: Free up memory for this row cycle if needed, 
+            // though variable scope handles most. 
+            // PhpSpreadsheet keeps the whole sheet in memory by default though.
+            // For strictly large files, we'd need ChunkReadFilter, 
+            // but this simple loop refactor is usually enough for 512MB limit unless file is >100k rows.
         }
-        
-        // Log or return result? (Optional, handled by caller mostly)
+
+        if (!$headersFound || $idxContrato === -1) {
+             throw new \Exception("Coluna 'Contrato' não encontrada. Impossível vincular dados.");
+        }
     }
 }
