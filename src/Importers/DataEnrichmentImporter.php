@@ -22,8 +22,10 @@ class DataEnrichmentImporter implements ImportStrategy {
         $spreadsheet = $reader->load($filePath);
         $sheet = $spreadsheet->getActiveSheet();
 
-        // Prepare UPDATE statement (NO INSERTS)
-        $stmtUpdate = $this->db->prepare("
+        // Prepare UPDATE statements for BOTH tables (NO INSERTS)
+        
+        // 1. Update PDD_PERDAS
+        $stmtUpdatePdd = $this->db->prepare("
             UPDATE pdd_perdas 
             SET 
                 batch_id = ?, 
@@ -31,6 +33,16 @@ class DataEnrichmentImporter implements ImportStrategy {
                 endereco = COALESCE(?, endereco),
                 nome = COALESCE(?, nome)
             WHERE codigo_contrato_norm = ?
+        ");
+        
+        // 2. Update SPC_INCLUSOS (also needs cadastral updates)
+        $stmtUpdateSpc = $this->db->prepare("
+            UPDATE spc_inclusos 
+            SET 
+                batch_id = ?, 
+                cpf_cnpj = COALESCE(?, cpf_cnpj),
+                contratante = COALESCE(?, contratante)
+            WHERE contrato_norm = ?
         ");
 
         $idxContrato = -1;
@@ -48,7 +60,8 @@ class DataEnrichmentImporter implements ImportStrategy {
         
         $headersFound = false;
 
-        $updatedCount = 0;
+        $updatedCountPdd = 0;
+        $updatedCountSpc = 0;
         
         // Iterate row by row to save memory
         foreach ($sheet->getRowIterator() as $row) {
@@ -157,15 +170,26 @@ class DataEnrichmentImporter implements ImportStrategy {
             }
 
             if ($cpf || $endereco || $nome) {
-                $stmtUpdate->execute([
+                // Update PDD_PERDAS
+                $stmtUpdatePdd->execute([
                     $batchId, 
                     $cpf ?: null,      
                     $endereco ?: null, 
                     $nome ?: null, 
                     $contratoNorm
                 ]);
+                $updatedCountPdd += $stmtUpdatePdd->rowCount();
                 
-                $updatedCount += $stmtUpdate->rowCount();
+                // Update SPC_INCLUSOS (only CPF and Nome, as endereco is not directly in this table)
+                if ($cpf || $nome) {
+                    $stmtUpdateSpc->execute([
+                        $batchId,
+                        $cpf ?: null,
+                        $nome ?: null,
+                        $contratoNorm
+                    ]);
+                    $updatedCountSpc += $stmtUpdateSpc->rowCount();
+                }
             }
             
             // Optional: Free up memory for this row cycle if needed, 
@@ -178,5 +202,8 @@ class DataEnrichmentImporter implements ImportStrategy {
         if (!$headersFound || $idxContrato === -1) {
              throw new \Exception("Coluna 'Contrato' não encontrada. Impossível vincular dados.");
         }
+        
+        // Log results for debugging
+        error_log("DataEnrichmentImporter: Updated $updatedCountPdd records in pdd_perdas, $updatedCountSpc records in spc_inclusos");
     }
 }
