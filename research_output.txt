@@ -1,0 +1,94 @@
+=== Searching for 'DEMITIDO' ===
+Array
+(
+    [id] => 997
+    [contrato] => 136
+    [tp_contrato] => Demitidos / Aposentados
+    [contratante] => Gees S A
+    [cpf_cnpj] => 05619725324
+    [debito] => 345.48
+)
+Array
+(
+    [id] => 998
+    [contrato] => 136
+    [tp_contrato] => Demitidos / Aposentados
+    [contratante] => Gees S A
+    [cpf_cnpj] => 05619725324
+    [debito] => 345.48
+)
+Array
+(
+    [id] => 999
+    [contrato] => 136
+    [tp_contrato] => Demitidos / Aposentados
+    [contratante] => Gees S A
+    [cpf_cnpj] => 00197888356
+    [debito] => 977.76
+)
+Array
+(
+    [id] => 1000
+    [contrato] => 136
+    [tp_contrato] => Demitidos / Aposentados
+    [contratante] => Gees S A
+    [cpf_cnpj] => 00197888356
+    [debito] => 977.76
+)
+Array
+(
+    [id] => 1001
+    [contrato] => 136
+    [tp_contrato] => Demitidos / Aposentados
+    [contratante] => Gees S A
+    [cpf_cnpj] => 00197888356
+    [debito] => 977.76
+)
+
+=== Searching for 'APOSENTADO' ===
+Array
+(
+    [id] => 997
+    [contrato] => 136
+    [tp_contrato] => Demitidos / Aposentados
+    [contratante] => Gees S A
+    [cpf_cnpj] => 05619725324
+    [debito] => 345.48
+)
+Array
+(
+    [id] => 998
+    [contrato] => 136
+    [tp_contrato] => Demitidos / Aposentados
+    [contratante] => Gees S A
+    [cpf_cnpj] => 05619725324
+    [debito] => 345.48
+)
+Array
+(
+    [id] => 999
+    [contrato] => 136
+    [tp_contrato] => Demitidos / Aposentados
+    [contratante] => Gees S A
+    [cpf_cnpj] => 00197888356
+    [debito] => 977.76
+)
+Array
+(
+    [id] => 1000
+    [contrato] => 136
+    [tp_contrato] => Demitidos / Aposentados
+    [contratante] => Gees S A
+    [cpf_cnpj] => 00197888356
+    [debito] => 977.76
+)
+Array
+(
+    [id] => 1001
+    [contrato] => 136
+    [tp_contrato] => Demitidos / Aposentados
+    [contratante] => Gees S A
+    [cpf_cnpj] => 00197888356
+    [debito] => 977.76
+)
+
