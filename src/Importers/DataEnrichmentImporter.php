@@ -35,13 +35,19 @@ class DataEnrichmentImporter implements ImportStrategy {
             WHERE codigo_contrato_norm = ?
         ");
         
-        // 2. Update SPC_INCLUSOS (also needs cadastral updates)
+        // 2. Update SPC_INCLUSOS (also needs cadastral updates including address)
         $stmtUpdateSpc = $this->db->prepare("
             UPDATE spc_inclusos 
             SET 
                 batch_id = ?, 
                 cpf_cnpj = COALESCE(?, cpf_cnpj),
-                contratante = COALESCE(?, contratante)
+                contratante = COALESCE(?, contratante),
+                rua = COALESCE(?, rua),
+                numero = COALESCE(?, numero),
+                bairro = COALESCE(?, bairro),
+                cep = COALESCE(?, cep),
+                cidade = COALESCE(?, cidade),
+                estado = COALESCE(?, estado)
             WHERE contrato_norm = ?
         ");
 
@@ -180,12 +186,26 @@ class DataEnrichmentImporter implements ImportStrategy {
                 ]);
                 $updatedCountPdd += $stmtUpdatePdd->rowCount();
                 
-                // Update SPC_INCLUSOS (only CPF and Nome, as endereco is not directly in this table)
-                if ($cpf || $nome) {
+                // Update SPC_INCLUSOS (CPF, Nome, and individual address components)
+                if ($cpf || $nome || $endereco) {
+                    // Extract individual address components (if they exist in the spreadsheet)
+                    $rua = ($idxRua !== -1 && isset($rowData[$idxRua])) ? $rowData[$idxRua] : null;
+                    $numero = ($idxNumero !== -1 && isset($rowData[$idxNumero])) ? $rowData[$idxNumero] : null;
+                    $bairro = ($idxBairro !== -1 && isset($rowData[$idxBairro])) ? $rowData[$idxBairro] : null;
+                    $cep = ($idxCep !== -1 && isset($rowData[$idxCep])) ? $rowData[$idxCep] : null;
+                    $cidade = ($idxCidade !== -1 && isset($rowData[$idxCidade])) ? $rowData[$idxCidade] : null;
+                    $uf = ($idxUf !== -1 && isset($rowData[$idxUf])) ? $rowData[$idxUf] : null;
+                    
                     $stmtUpdateSpc->execute([
                         $batchId,
                         $cpf ?: null,
                         $nome ?: null,
+                        $rua ?: null,
+                        $numero ?: null,
+                        $bairro ?: null,
+                        $cep ?: null,
+                        $cidade ?: null,
+                        $uf ?: null,
                         $contratoNorm
                     ]);
                     $updatedCountSpc += $stmtUpdateSpc->rowCount();
