@@ -195,6 +195,7 @@ foreach ($inclusao as $i) $totalInclusaoValor += ($i['debito'] ?? $i['valor'] ??
                             <th scope="col" class="sortable px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider cursor-pointer hover:bg-slate-100" data-sort="vencimento">Vencimento <span class="sort-arrow">↕</span></th>
                             <th scope="col" class="sortable px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider cursor-pointer hover:bg-slate-100" data-sort="valor">Valor <span class="sort-arrow">↕</span></th>
                             <th scope="col" class="sortable px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider cursor-pointer hover:bg-slate-100" data-sort="motivo">Motivo <span class="sort-arrow">↕</span></th>
+                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Ações</th>
                         </tr>
                     </thead>
                     <tbody class="bg-white divide-y divide-slate-200">
@@ -212,6 +213,14 @@ foreach ($inclusao as $i) $totalInclusaoValor += ($i['debito'] ?? $i['valor'] ??
                                     <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full <?php echo ($row['motivo'] ?? '') == 'PDD PERDAS' ? 'bg-red-100 text-red-800' : 'bg-blue-100 text-blue-800'; ?>">
                                         <?php echo !empty($row['motivo']) ? htmlspecialchars($row['motivo']) : 'EM ABERTO'; ?>
                                     </span>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-500 space-x-2">
+                                    <button onclick='manualInclude(<?php echo json_encode($row); ?>, this)' class="text-blue-600 hover:text-blue-900 font-medium hover:underline text-xs" title="Marcar como já inclusa no SPC">
+                                        Já Inclusa
+                                    </button>
+                                    <button onclick='ignoreRecord("<?php echo $row['contrato_norm']; ?>", "<?php echo $row['cpf_cnpj_norm']; ?>", this)' class="text-gray-600 hover:text-gray-900 font-medium hover:underline text-xs" title="Não incluir (Ignorar)">
+                                        Não Incluir
+                                    </button>
                                 </td>
                             </tr>
                             <?php endforeach; ?>
@@ -375,6 +384,92 @@ foreach ($inclusao as $i) $totalInclusaoValor += ($i['debito'] ?? $i['valor'] ??
                 btn.textContent = originalText;
                 btn.disabled = false;
             });
+    }
+
+    // Ignore Record Functionality
+    function ignoreRecord(contrato_norm, cpf_cnpj_norm, btn) {
+        if (!confirm('Deseja realmente IGNORAR este registro? Ele não aparecerá mais nesta lista.')) {
+            return;
+        }
+
+        const originalText = btn.textContent;
+        btn.textContent = '...';
+        btn.disabled = true;
+
+        const formData = new FormData();
+        formData.append('contrato_norm', contrato_norm);
+        formData.append('cpf_cnpj_norm', cpf_cnpj_norm);
+        formData.append('motivo', 'Ignorado pelo usuário via painel');
+
+        fetch(`index.php?page=admin_action&action=ignore_record`, {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                const row = btn.closest('tr');
+                row.remove();
+                updatePagination('table-inclusao');
+            } else {
+                alert('Erro ao ignorar: ' + (data.error || 'Erro desconhecido'));
+                btn.textContent = originalText;
+                btn.disabled = false;
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Erro na requisição.');
+            btn.textContent = originalText;
+            btn.disabled = false;
+        });
+    }
+
+    // Manual Include Functionality
+    function manualInclude(rowData, btn) {
+        if (!confirm('Marcar este registro como JÁ INCLUSO? Ele será movido para a lista de inclusos.')) {
+            return;
+        }
+
+        const originalText = btn.textContent;
+        btn.textContent = '...';
+        btn.disabled = true;
+
+        // Use jQuery param logic or manual FormData construction for complex object?
+        // Let's iterate object keys and append to FormData
+        const formData = new FormData();
+        for (const key in rowData) {
+            if (rowData.hasOwnProperty(key)) {
+                // Handle nulls
+                const val = rowData[key] === null ? '' : rowData[key];
+                formData.append(`data[${key}]`, val);
+            }
+        }
+
+        fetch(`index.php?page=admin_action&action=manual_include`, {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                const row = btn.closest('tr');
+                row.remove();
+                updatePagination('table-inclusao');
+                
+                // Optional: Reload to update counters, but removing row is faster feedback
+            } else {
+                alert('Erro ao incluir manualmente: ' + (data.error || 'Erro desconhecido'));
+                btn.textContent = originalText;
+                btn.disabled = false;
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Erro na requisição.');
+            btn.textContent = originalText;
+            btn.disabled = false;
+        });
     }
 
     // Table Sorting Functionality
