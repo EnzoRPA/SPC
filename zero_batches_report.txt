@@ -1,0 +1,10 @@
+Batches with zero values:
+Batch ID: 187 | Date: 2026-02-09 15:54:05 | Zero Count: 1688
+Batch ID: 185 | Date: 2026-02-09 14:32:13 | Zero Count: 4
+Batch ID: 115 | Date: 2026-01-20 10:52:28 | Zero Count: 129
+Batch ID: 95 | Date: 2025-12-26 08:48:04 | Zero Count: 29
+Batch ID: 94 | Date: 2025-12-24 15:45:05 | Zero Count: 54
+Batch ID: 83 | Date: 2025-12-22 08:53:01 | Zero Count: 673
+Batch ID: 79 | Date: 2025-12-15 15:05:36 | Zero Count: 6905
+Batch ID: 41 | Date: 2025-12-10 15:36:09 | Zero Count: 35
+Batch ID: 39 | Date: 2025-12-10 15:29:36 | Zero Count: 5

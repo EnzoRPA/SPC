@@ -9,8 +9,9 @@ class Normalizer {
     }
 
     public static function contrato($value) {
-        // Remove espaços extras, converte para maiúsculo e remove zeros à esquerda
+        // Remove ALL spaces (not just trim), convert to uppercase, remove leading zeros
         $value = strtoupper(trim((string)$value));
+        $value = str_replace(' ', '', $value); // Remove ALL spaces
         return ltrim($value, '0');
     }
 
@@ -20,7 +21,10 @@ class Normalizer {
         try {
             // Se for numérico (Excel timestamp)
             if (is_numeric($value)) {
-                return \PhpOffice\PhpSpreadsheet\Shared\Date::excelToDateTimeObject($value)->format('Y-m-d');
+                $dt = \PhpOffice\PhpSpreadsheet\Shared\Date::excelToDateTimeObject($value);
+                $year = (int)$dt->format('Y');
+                if ($year < 1900 || $year > 2200) return null;
+                return $dt->format('Y-m-d');
             }
             
             // Tenta converter string PT-BR (dd/mm/yyyy)
@@ -41,6 +45,8 @@ class Normalizer {
                         $year += 2000;
                     }
 
+                    if ($year < 1900 || $year > 2200) return null;
+
                     if (checkdate($month, $day, $year)) {
                         return sprintf('%04d-%02d-%02d', $year, $month, $day);
                     }
@@ -60,8 +66,16 @@ class Normalizer {
                 // Fix if strtotime parsed as year 0025
                 if ($year < 1000) {
                      $year += 2000;
+                     // Re-check validity after adjustment
+                     if ($year < 1900 || $year > 2200) return null;
                      return sprintf('%04d-%s', $year, date('m-d', $timestamp));
                 }
+                
+                // Validate year range
+                if ($year < 1900 || $year > 2200) {
+                    return null;
+                }
+
                 return date('Y-m-d', $timestamp);
             }
         } catch (\Exception $e) {
@@ -73,12 +87,33 @@ class Normalizer {
 
     public static function valor($value) {
         if (is_string($value)) {
-            $value = str_replace(['R$', ' '], '', $value);
-            if (strpos($value, ',') !== false) {
+            // Remove non-breaking spaces and other whitespace
+            $value = preg_replace('/[\x00-\x1F\x7F\xA0]/u', '', $value);
+            $value = str_replace(['R$', ' ', 'r$', ' '], '', $value); // Remove basics
+            
+            // Check for Brazilian format (1.234,56) vs International (1,234.56)
+            // Heuristic: if last punctuation is comma, it's likely decimal separator for BR
+            $lastComma = strrpos($value, ',');
+            $lastDot = strrpos($value, '.');
+            
+            if ($lastComma !== false && ($lastDot === false || $lastComma > $lastDot)) {
+                // Brazilian format: remove dots, replace comma with dot
                 $value = str_replace('.', '', $value);
                 $value = str_replace(',', '.', $value);
+            } elseif ($lastDot !== false && ($lastComma === false || $lastDot > $lastComma)) {
+                // International format: remove commas
+                $value = str_replace(',', '', $value);
             }
         }
         return (float) $value;
+    }
+    
+    // Alias methods for compatibility
+    public static function normalizarContrato($value) {
+        return self::contrato($value);
+    }
+    
+    public static function normalizarCpfCnpj($value) {
+        return self::cpfCnpj($value);
     }
 }

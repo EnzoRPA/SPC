@@ -1,0 +1,9 @@
+Input: 215437 => Output: NULL
+Input: '215437' => Output: NULL
+Input: '30/07/215437' => Output: NULL
+Input: '215437-07-30' => Output: '2026-02-11'
+Input: '7/30/215437' => Output: NULL
+Input: '30-07-215437' => Output: NULL
+Input: 45000 => Output: '2023-03-15'
+Input: '01/01/2025' => Output: '2025-01-01'
+Input: '30/07/2154' => Output: '2154-07-30'

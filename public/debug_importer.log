@@ -1,0 +1,60 @@
+=== New Import (2026-02-09 20:05:59) ===
+Headers found: CONTRATO | TP_CONTRATO | CONTRATANTE | CONTRATACAO | CPF_CNPJ | STATUS | VENDA | PARCELA | DEBITO | EMISSAO | VENCIMENTO | DIAS_ATRASO | RUA | NUMERO | BAIRRO | CEP | CIDADE | ESTADO | Nascimento | LINHA | STATUS INCLUSAO | DATA INCLUSAO | HORA INCLUSAO | MOTIVO
+Indices: Venc=10, Contr=1, Nome=2, Valor=-1
+Row 0: RawValor=NULL -> NormValor=0
+=== New Import (2026-02-09 20:32:23) ===
+Headers found: Código da Venda | Número da Parcela | Data de Vencimento | Valor | Forma de Cobrança | Documento | Data de Recebimento | Acréscimos | Código do Beneficiário | Código do Contrato | Número da Conta | Desconto | Fatura | Destinatário | Fatura2 | Forma de Recebimento
+Indices: Venc=2, Contr=9, Nome=-1, Valor=3
+Row 0: RawValor=202.66 -> NormValor=202.66
+Row 1: RawValor=202.66 -> NormValor=202.66
+Row 2: RawValor=81.96000000000001 -> NormValor=81.96
+Row 3: RawValor=9 -> NormValor=9
+Row 4: RawValor=61.92 -> NormValor=61.92
+=== New Import (2026-02-09 20:44:52) ===
+Headers found: Código da Venda | Número da Parcela | Data de Vencimento | Valor | Forma de Cobrança | Documento | Data de Recebimento | Acréscimos | Código do Beneficiário | Código do Contrato | Número da Conta | Desconto | Fatura | Destinatário | Fatura2 | Forma de Recebimento
+Indices: Venc=2, Contr=9, Nome=-1, Valor=3
+Row 0: RawValor=202.66 -> NormValor=202.66
+Row 1: RawValor=202.66 -> NormValor=202.66
+Row 2: RawValor=81.96000000000001 -> NormValor=81.96
+Row 3: RawValor=9 -> NormValor=9
+Row 4: RawValor=61.92 -> NormValor=61.92
+=== New Import (2026-02-11 11:38:07) ===
+Headers found: Código da Venda | Número da Parcela | Data de Vencimento | Valor | Forma de Cobrança | Documento | Data de Recebimento | Acréscimos | Código do Beneficiário | Código do Contrato | Número da Conta | Desconto | Fatura | Destinatário | Fatura | Forma de Recebimento
+Indices: Venc=2, Contr=9, Nome=-1, Valor=3
+Row 0: RawValor=425.73 -> NormValor=425.73
+Row 1: RawValor=880.52 -> NormValor=880.52
+Row 2: RawValor=1375.68 -> NormValor=1375.68
+Row 3: RawValor=740.73 -> NormValor=740.73
+Row 4: RawValor=484.37 -> NormValor=484.37
+=== New Import (2026-02-11 11:40:51) ===
+Headers found: Código da Venda | Número da Parcela | Data de Vencimento | Valor | Forma de Cobrança | Documento | Data de Recebimento | Acréscimos | Código do Beneficiário | Código do Contrato | Número da Conta | Desconto | Fatura | Destinatário | Fatura | Forma de Recebimento
+Indices: Venc=2, Contr=9, Nome=-1, Valor=3
+Row 0: RawValor=452.38 -> NormValor=452.38
+Row 1: RawValor=687.53 -> NormValor=687.53
+Row 2: RawValor=1479.88 -> NormValor=1479.88
+Row 3: RawValor=740.73 -> NormValor=740.73
+Row 4: RawValor=737.54 -> NormValor=737.54
+=== New Import (2026-02-11 11:41:54) ===
+Headers found: Código da Venda | Número da Parcela | Data de Vencimento | Valor | Forma de Cobrança | Documento | Data de Recebimento | Acréscimos | Código do Beneficiário | Código do Contrato | Número da Conta | Desconto | Fatura | Destinatário | Fatura | Forma de Recebimento
+Indices: Venc=2, Contr=9, Nome=-1, Valor=3
+Row 0: RawValor=543.53 -> NormValor=543.53
+Row 1: RawValor=1190.3600000000001 -> NormValor=1190.36
+Row 2: RawValor=288.45 -> NormValor=288.45
+Row 3: RawValor=798.44 -> NormValor=798.44
+Row 4: RawValor=283.27 -> NormValor=283.27
+=== New Import (2026-02-11 11:48:23) ===
+Headers found: Código da Venda | Número da Parcela | Data de Vencimento | Valor | Forma de Cobrança | Documento | Data de Recebimento | Acréscimos | Código do Beneficiário | Código do Contrato | Número da Conta | Desconto | Fatura | Destinatário | Fatura | Forma de Recebimento
+Indices: Venc=2, Contr=9, Nome=-1, Valor=3
+Row 0: RawValor=1664.03 -> NormValor=1664.03
+Row 1: RawValor=332.62 -> NormValor=332.62
+Row 2: RawValor=1039.4 -> NormValor=1039.4
+Row 3: RawValor=1576.78 -> NormValor=1576.78
+Row 4: RawValor=1075.4 -> NormValor=1075.4
+=== New Import (2026-02-11 12:09:08) ===
+Headers found: Código da Venda | Número da Parcela | Data de Vencimento | Valor | Forma de Cobrança | Documento | Data de Recebimento | Acréscimos | Código do Beneficiário | Código do Contrato | Número da Conta | Desconto | Fatura | Destinatário | Fatura | Forma de Recebimento
+Indices: Venc=2, Contr=9, Nome=-1, Valor=3
+Row 0: RawValor=138.6 -> NormValor=138.6
+Row 1: RawValor=208.32 -> NormValor=208.32
+Row 2: RawValor=1687.23 -> NormValor=1687.23
+Row 3: RawValor=1432.38 -> NormValor=1432.38
+Row 4: RawValor=1064.81 -> NormValor=1064.81

@@ -11,6 +11,13 @@ use App\Comparator;
 $database = new Database();
 $db = $database->getConnection();
 
+if (!$db) {
+    // If running locally, you might need to check if MySQL is running.
+    // Since we are in development mode (php -S), let's show a helpful error.
+    http_response_code(500);
+    die("<h1>Erro de Conexão com o Banco de Dados</h1><p>Não foi possível conectar ao banco de dados. Verifique se o MySQL está rodando e se as credenciais em <code>config/db.php</code> ou variáveis de ambiente estão corretas.</p>");
+}
+
 $page = $_GET['page'] ?? 'dashboard';
 $message = '';
 
@@ -361,7 +368,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (!empty($_FILES['enrichment_file']['name'])) {
             $path = sys_get_temp_dir() . '/' . basename($_FILES['enrichment_file']['name']);
             move_uploaded_file($_FILES['enrichment_file']['tmp_name'], $path);
+            error_log("DEBUG INDEX.PHP: Processing enrichment file: " . $_FILES['enrichment_file']['name'] . " at $path");
             $importer->importarArquivo($path, 'enrichment');
+            error_log("DEBUG INDEX.PHP: Enrichment import completed");
             $processed++;
         }
 

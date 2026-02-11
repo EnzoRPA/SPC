@@ -37,6 +37,7 @@ class PddPerdasImporter implements ImportStrategy {
         // Precisamos identificar as colunas pelo nome, pois o user disse que "podem existir repetidas" e "considerar apenas colunas corretas".
         // Vamos procurar os índices de "Data de Vencimento" e "Código do Contrato".
         
+        // Initialize standard indices
         $idxVencimento = -1;
         $idxContrato = -1;
         $idxVenda = -1;
@@ -45,17 +46,36 @@ class PddPerdasImporter implements ImportStrategy {
         $idxCpf = -1;
         $idxEndereco = -1;
         
+        // Logging for debug
+        $logFile = 'debug_importer.log';
+        file_put_contents($logFile, "=== New Import (" . date('Y-m-d H:i:s') . ") ===\n", FILE_APPEND);
+        file_put_contents($logFile, "Headers found: " . implode(" | ", $header) . "\n", FILE_APPEND);
+        
         foreach ($header as $i => $colName) {
+            $colNameRaw = $colName;
             $colName = mb_strtoupper(trim($colName), 'UTF-8');
+            
+            // Debug each column
+            // file_put_contents($logFile, "Col $i: $colNameRaw -> $colName\n", FILE_APPEND);
+
             if (strpos($colName, 'VENCIMENTO') !== false) $idxVencimento = $i;
             if (strpos($colName, 'CONTRATO') !== false) $idxContrato = $i;
             if (strpos($colName, 'VENDA') !== false) $idxVenda = $i;
-            if ((strpos($colName, 'CONTRATANTE') !== false) || (strpos($colName, 'NOME') !== false)) $idxNome = $i;
-            if ((strpos($colName, 'VALOR') !== false)) $idxValor = $i;
+            if ((strpos($colName, 'CONTRATANTE') !== false) || (strpos($colName, 'NOME') !== false) || (strpos($colName, 'CLIENTE') !== false)) $idxNome = $i;
+            
+            // Expanded logic for VALOR
+            if ((strpos($colName, 'VALOR') !== false) || (strpos($colName, 'VLR') !== false) || (strpos($colName, 'SALDO') !== false) || (strpos($colName, 'MONTANTE') !== false)) {
+                // Avoid "VALOR ENTRADA" if there is a "VALOR TOTAL" or logic like that, but valid PDD usually has just one main value.
+                // We pick the first one matching or prioritize "VALOR"
+                if ($idxValor === -1) $idxValor = $i;
+            }
+            
             if ((strpos($colName, 'CPF') !== false) || (strpos($colName, 'CNPJ') !== false)) $idxCpf = $i;
             if ((strpos($colName, 'ENDERECO') !== false) || (strpos($colName, 'RUA') !== false)) $idxEndereco = $i;
         }
         
+        file_put_contents($logFile, "Indices: Venc=$idxVencimento, Contr=$idxContrato, Nome=$idxNome, Valor=$idxValor\n", FILE_APPEND);
+
         if ($idxVencimento === -1 || $idxContrato === -1) {
             throw new \Exception("Colunas 'Data de Vencimento' ou 'Código do Contrato' não encontradas na planilha PDD Perdas.");
         }
@@ -87,7 +107,17 @@ class PddPerdasImporter implements ImportStrategy {
             $contratoNorm = Normalizer::contrato($contrato);
             
             $nome = ($idxNome !== -1) ? ($row[$idxNome] ?? null) : null;
-            $valor = ($idxValor !== -1) ? Normalizer::valor($row[$idxValor] ?? null) : 0.00;
+            
+            $valorRaw = ($idxValor !== -1) ? ($row[$idxValor] ?? null) : null;
+            $valor = Normalizer::valor($valorRaw);
+            
+            // Log first few rows to debug value parsing
+            if ($index < 5) {
+                file_put_contents($logFile, "Row $index: RawValor=" . var_export($valorRaw, true) . " -> NormValor=$valor\n", FILE_APPEND);
+            }
+            if ($valor == 0 && $valorRaw != 0 && $valorRaw !== null) {
+                 file_put_contents($logFile, "WARNING Row $index: Value became 0! Raw=" . var_export($valorRaw, true) . "\n", FILE_APPEND);
+            }
             $cpf = ($idxCpf !== -1) ? Normalizer::cpfCnpj($row[$idxCpf] ?? null) : null;
             $endereco = ($idxEndereco !== -1) ? ($row[$idxEndereco] ?? null) : null;
             

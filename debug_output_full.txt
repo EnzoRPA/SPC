@@ -1,0 +1,12 @@
+=== Columns spc_inclusos ===
+id, batch_id, contrato, tp_contrato, contratante, contratacao, cpf_cnpj, status, venda, parcela, debito, emissao, vencimento, dias_atraso, rua, numero, bairro, cep, cidade, estado, nascimento, linha, status_inclusao, data_inclusao, hora_inclusao, cpf_cnpj_norm, contrato_norm
+
+=== Data Contract 63818 (spc_inclusos) ===
+C: '63818', CPF: '05201555306', V: '2025-09-30'
+
+=== Data Contract 63818 (spc_historico_removidos) ===
+C: '63818', CPF: '523.837.253-15', V: '2025-09-30'
+C: '63818', CPF: '523.837.253-15', V: '2025-09-30'
+C: '63818', CPF: '523.837.253-15', V: '2025-09-30'
+C: '63818', CPF: '523.837.253-15', V: '2025-09-30'
+C: '63818', CPF: '523.837.253-15', V: '2025-09-30'

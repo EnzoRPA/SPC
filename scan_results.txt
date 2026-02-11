@@ -1,0 +1,12 @@
+Starting scan...
+Checking file: pdd geral fev-2025 para tras.xlsx
+  Error reading pdd geral fev-2025 para tras.xlsx: Class "ZipArchive" not found
+Checking file: REMOVER.xlsx
+  Error reading REMOVER.xlsx: Class "ZipArchive" not found
+Checking file: parcelas_em_aberto (41).xlsx
+  Error reading parcelas_em_aberto (41).xlsx: Class "ZipArchive" not found
+Checking file: INCLUIR - 26-12-2025.xlsx
+  Error reading INCLUIR - 26-12-2025.xlsx: Class "ZipArchive" not found
+Checking file: parcelas_em_aberto (40).xlsx
+  Error reading parcelas_em_aberto (40).xlsx: Class "ZipArchive" not found
+Scan complete.

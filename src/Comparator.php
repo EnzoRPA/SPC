@@ -9,6 +9,9 @@ class Comparator {
     private $driver;
 
     public function __construct($db) {
+        if (!$db) {
+            throw new \Exception('Database connection failed. Cannot initialize Comparator.');
+        }
         $this->db = $db;
         $this->driver = $this->db->getAttribute(PDO::ATTR_DRIVER_NAME);
     }
@@ -62,9 +65,8 @@ class Comparator {
                 ON s.contrato_norm = pp.codigo_contrato_norm
             LEFT JOIN pdd_pagos pg_check
                 ON (pp.codigo_venda = pg_check.titulo_norm AND pp.id IS NOT NULL)
-            LEFT JOIN spc_excluidos ex
-                ON s.cpf_cnpj_norm = ex.cpf_cnpj_norm
-                AND s.contrato_norm = ex.contrato_norm
+            LEFT JOIN spc_historico_removidos ex
+                ON s.contrato = ex.contrato
                 AND (ex.vencimento IS NULL OR s.vencimento = ex.vencimento)
             WHERE p.id IS NULL -- Missing from Active Debts
             AND (
@@ -86,9 +88,8 @@ class Comparator {
                     OR (s.contrato_norm = pg.titulo_norm AND s.contrato_norm != '')
                     OR (s.venda != '' AND s.venda = pg.titulo_norm)
                 )
-            LEFT JOIN spc_excluidos ex
-                ON s.cpf_cnpj_norm = ex.cpf_cnpj_norm
-                AND s.contrato_norm = ex.contrato_norm
+            LEFT JOIN spc_historico_removidos ex
+                ON s.contrato = ex.contrato
                 AND (ex.vencimento IS NULL OR s.vencimento = ex.vencimento)
             WHERE ex.id IS NULL
             $dateFilter
@@ -156,7 +157,7 @@ class Comparator {
                 pp.data_vencimento as emissao,
                 pp.data_vencimento as vencimento,
                 DATEDIFF(CURDATE(), pp.data_vencimento) as dias_atraso,
-                COALESCE(pp.endereco, '') as rua, NULL as numero, NULL as bairro, NULL as cep, NULL as cidade, NULL as estado,
+                pp.rua, pp.numero, pp.bairro, pp.cep, pp.cidade, pp.estado,
                 'PDD PERDAS (Importado)' as motivo
             FROM pdd_perdas pp
             LEFT JOIN spc_inclusos s ON pp.codigo_contrato_norm = s.contrato_norm
