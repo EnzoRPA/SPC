@@ -1,0 +1,170 @@
+=== Lista de Demitidos e Aposentados ===
+Contrato        | Tipo                      | Nome/Contratante               | CPF/CNPJ           | Valor
+----------------------------------------------------------------------------------------------------
+2851            | Demitidos / Aposentados   | Avb - Aco Verde Do Brasil      | 85347930349        | 715,28
+2851            | Demitidos / Aposentados   | Avb - Aco Verde Do Brasil      | 04030858376        | 808,48
+2851            | Demitidos / Aposentados   | Avb - Aco Verde Do Brasil      | 04030858376        | 808,48
+2851            | Demitidos / Aposentados   | Avb - Aco Verde Do Brasil      | 04030858376        | 808,48
+2851            | Demitidos / Aposentados   | Avb - Aco Verde Do Brasil      | 04030858376        | 722,62
+2851            | Demitidos / Aposentados   | Avb - Aco Verde Do Brasil      | 04030858376        | 722,62
+2851            | Demitidos / Aposentados   | Avb - Aco Verde Do Brasil      | 04030858376        | 722,62
+2851            | Demitidos / Aposentados   | Avb - Aco Verde Do Brasil      | 04030858376        | 722,62
+2851            | Demitidos / Aposentados   | Avb - Aco Verde Do Brasil      | 04030858376        | 722,62
+2851            | Demitidos / Aposentados   | Avb - Aco Verde Do Brasil      | 85347930349        | 786,40
+2851            | Demitidos / Aposentados   | Avb - Aco Verde Do Brasil      | 85347930349        | 799,50
+2851            | Demitidos / Aposentados   | Avb - Aco Verde Do Brasil      | 62313036324        | 168,27
+2851            | Demitidos / Aposentados   | Avb - Aco Verde Do Brasil      | 90864247320        | 306,73
+2851            | Demitidos / Aposentados   | Avb - Aco Verde Do Brasil      | 90864247320        | 289,53
+2851            | Demitidos / Aposentados   | Avb - Aco Verde Do Brasil      | 90864247320        | 274,73
+2851            | Demitidos / Aposentados   | Avb - Aco Verde Do Brasil      | 90864247320        | 274,73
+2851            | Demitidos / Aposentados   | Avb - Aco Verde Do Brasil      | 04231525307        | 838,87
+2851            | Demitidos / Aposentados   | Avb - Aco Verde Do Brasil      | 85347930349        | 926,99
+260             | Demitidos / Aposentados   | Clube Adm Ben Planos Priv De A | 33994366704        | 385,24
+260             | Demitidos / Aposentados   | Clube Adm Ben Planos Priv De A | 33994366704        | 385,24
+260             | Demitidos / Aposentados   | Clube Adm Ben Planos Priv De A | 33994366704        | 473,03
+260             | Demitidos / Aposentados   | Clube Adm Ben Planos Priv De A | 33994366704        | 510,21
+260             | Demitidos / Aposentados   | Clube Adm Ben Planos Priv De A | 33994366704        | 439,37
+260             | Demitidos / Aposentados   | Clube Adm Ben Planos Priv De A | 08800671799        | 387,06
+260             | Demitidos / Aposentados   | Clube Adm Ben Planos Priv De A | 08800671799        | 385,24
+260             | Demitidos / Aposentados   | Clube Adm Ben Planos Priv De A | 08800671799        | 428,08
+260             | Demitidos / Aposentados   | Clube Adm Ben Planos Priv De A | 08800671799        | 398,05
+260             | Demitidos / Aposentados   | Clube Adm Ben Planos Priv De A | 08800671799        | 473,03
+260             | Demitidos / Aposentados   | Clube Adm Ben Planos Priv De A | 08800671799        | 488,55
+260             | Demitidos / Aposentados   | Clube Adm Ben Planos Priv De A | 08800671799        | 439,37
+260             | Demitidos / Aposentados   | Clube Adm Ben Planos Priv De A | 33994366704        | 385,24
+260             | Demitidos / Aposentados   | Clube Adm Ben Planos Priv De A | 33994366704        | 385,24
+3383            | Demitidos / Aposentados   | Distribuidora Imperatriz De Ba | 01453757309        | 789,16
+3383            | Demitidos / Aposentados   | Distribuidora Imperatriz De Ba | 01453757309        | 789,16
+3383            | Demitidos / Aposentados   | Distribuidora Imperatriz De Ba | 01453757309        | 789,16
+136             | Demitidos / Aposentados   | Gees S A                       | 05619725324        | 345,48
+136             | Demitidos / Aposentados   | Gees S A                       | 00197888356        | 977,76
+136             | Demitidos / Aposentados   | Gees S A                       | 00197888356        | 977,76
+136             | Demitidos / Aposentados   | Gees S A                       | 00197888356        | 977,76
+136             | Demitidos / Aposentados   | Gees S A                       | 00197888356        | 1.037,81
+136             | Demitidos / Aposentados   | Gees S A                       | 00197888356        | 977,76
+136             | Demitidos / Aposentados   | Gees S A                       | 00197888356        | 977,76
+136             | Demitidos / Aposentados   | Gees S A                       | 00197888356        | 1.036,44
+136             | Demitidos / Aposentados   | Gees S A                       | 00197888356        | 1.036,44
+136             | Demitidos / Aposentados   | Gees S A                       | 05619725324        | 345,48
+2643            | Demitidos / Aposentados   | Hospital Santa Monica Ltda     | 04727830337        | 283,35
+2643            | Demitidos / Aposentados   | Hospital Santa Monica Ltda     | 04727830337        | 283,35
+2643            | Demitidos / Aposentados   | Hospital Santa Monica Ltda     | 99543052387        | 581,80
+2643            | Demitidos / Aposentados   | Hospital Santa Monica Ltda     | 03285887338        | 1.150,67
+2643            | Demitidos / Aposentados   | Hospital Santa Monica Ltda     | 03285887338        | 1.269,09
+2643            | Demitidos / Aposentados   | Hospital Santa Monica Ltda     | 03285887338        | 1.269,09
+2643            | Demitidos / Aposentados   | Hospital Santa Monica Ltda     | 03285887338        | 1.269,09
+2643            | Demitidos / Aposentados   | Hospital Santa Monica Ltda     | 03285887338        | 1.341,09
+2643            | Demitidos / Aposentados   | Hospital Santa Monica Ltda     | 03285887338        | 1.269,09
+2643            | Demitidos / Aposentados   | Hospital Santa Monica Ltda     | 03285887338        | 1.269,09
+2643            | Demitidos / Aposentados   | Hospital Santa Monica Ltda     | 03285887338        | 1.307,07
+2643            | Demitidos / Aposentados   | Hospital Santa Monica Ltda     | 03285887338        | 1.314,54
+3521            | Demitidos / Aposentados   | I L Nogueira Alimentos         | 00163873330        | 30,36
+2610            | Demitidos / Aposentados   | Ideia Uniformes Profissionais  | 95409831349        | 582,28
+2610            | Demitidos / Aposentados   | Ideia Uniformes Profissionais  | 95409831349        | 591,52
+2610            | Demitidos / Aposentados   | Ideia Uniformes Profissionais  | 95409831349        | 541,86
+2610            | Demitidos / Aposentados   | Ideia Uniformes Profissionais  | 95409831349        | 718,07
+2460            | Demitidos / Aposentados   | Jupiter Ti 1 Servicos De Infor | 05142108345        | 580,71
+2460            | Demitidos / Aposentados   | Jupiter Ti 1 Servicos De Infor | 05142108345        | 558,95
+1497            | Demitidos / Aposentados   | Magazine Liliani S/A           | 74320807391        | 295,55
+3596            | Demitidos / Aposentados   | Maity Agricola Ltda            | 49526111400        | 898,30
+3597            | Demitidos / Aposentados   | Maity Bioenergia Ltda          | 43574386400        | 1.214,63
+1944            | Demitidos / Aposentados   | Mateus Supermercados           | 64468690372        | 311,51
+1944            | Demitidos / Aposentados   | Mateus Supermercados           | 64468690372        | 311,51
+1944            | Demitidos / Aposentados   | Mateus Supermercados           | 64468690372        | 311,51
+1944            | Demitidos / Aposentados   | Mateus Supermercados           | 64468690372        | 311,51
+1944            | Demitidos / Aposentados   | Mateus Supermercados           | 64468690372        | 311,51
+1944            | Demitidos / Aposentados   | Mateus Supermercados           | 60244131309        | 311,51
+1944            | Demitidos / Aposentados   | Mateus Supermercados           | 60244131309        | 311,51
+1944            | Demitidos / Aposentados   | Mateus Supermercados           | 60244131309        | 311,51
+1944            | Demitidos / Aposentados   | Mateus Supermercados           | 60244131309        | 311,51
+1944            | Demitidos / Aposentados   | Mateus Supermercados           | 60244131309        | 311,51
+1944            | Demitidos / Aposentados   | Mateus Supermercados           | 76790312315        | 826,11
+1944            | Demitidos / Aposentados   | Mateus Supermercados           | 76790312315        | 1.268,84
+1944            | Demitidos / Aposentados   | Mateus Supermercados           | 60244131309        | 311,51
+1944            | Demitidos / Aposentados   | Mateus Supermercados           | 60244131309        | 311,51
+1944            | Demitidos / Aposentados   | Mateus Supermercados           | 64468690372        | 311,51
+1944            | Demitidos / Aposentados   | Mateus Supermercados           | 64468690372        | 311,51
+2914            | Demitidos / Aposentados   | Milcar Locadora De Veiculos Lt | 02327984351        | 531,03
+2914            | Demitidos / Aposentados   | Milcar Locadora De Veiculos Lt | 02327984351        | 531,03
+2370            | Demitidos / Aposentados   | Murta E Murta Ltda             | 65584210544        | 273,04
+2912            | Demitidos / Aposentados   | Mutum Maquinas E Implementos A | 92084575320        | 1.128,16
+2912            | Demitidos / Aposentados   | Mutum Maquinas E Implementos A | 92084575320        | 960,42
+2912            | Demitidos / Aposentados   | Mutum Maquinas E Implementos A | 92084575320        | 908,98
+2912            | Demitidos / Aposentados   | Mutum Maquinas E Implementos A | 03243106338        | 258,07
+2912            | Demitidos / Aposentados   | Mutum Maquinas E Implementos A | 03243106338        | 258,07
+2912            | Demitidos / Aposentados   | Mutum Maquinas E Implementos A | 03243106338        | 279,07
+2907            | Demitidos / Aposentados   | Nazaria Distribuidora De Produ | 02138155323        | 291,62
+2907            | Demitidos / Aposentados   | Nazaria Distribuidora De Produ | 60822274337        | 720,49
+2907            | Demitidos / Aposentados   | Nazaria Distribuidora De Produ | 60822274337        | 720,49
+2907            | Demitidos / Aposentados   | Nazaria Distribuidora De Produ | 60822274337        | 814,16
+2907            | Demitidos / Aposentados   | Nazaria Distribuidora De Produ | 60822274337        | 832,16
+2907            | Demitidos / Aposentados   | Nazaria Distribuidora De Produ | 60822274337        | 814,16
+2907            | Demitidos / Aposentados   | Nazaria Distribuidora De Produ | 60822274337        | 814,16
+2907            | Demitidos / Aposentados   | Nazaria Distribuidora De Produ | 60822274337        | 814,16
+2907            | Demitidos / Aposentados   | Nazaria Distribuidora De Produ | 02138155323        | 258,07
+2907            | Demitidos / Aposentados   | Nazaria Distribuidora De Produ | 02138155323        | 291,62
+2907            | Demitidos / Aposentados   | Nazaria Distribuidora De Produ | 02138155323        | 291,62
+2907            | Demitidos / Aposentados   | Nazaria Distribuidora De Produ | 02138155323        | 291,62
+2907            | Demitidos / Aposentados   | Nazaria Distribuidora De Produ | 60822274337        | 720,49
+2907            | Demitidos / Aposentados   | Nazaria Distribuidora De Produ | 60822274337        | 814,16
+2907            | Demitidos / Aposentados   | Nazaria Distribuidora De Produ | 60822274337        | 720,49
+2907            | Demitidos / Aposentados   | Nazaria Distribuidora De Produ | 60822274337        | 720,49
+2907            | Demitidos / Aposentados   | Nazaria Distribuidora De Produ | 60822274337        | 720,49
+2907            | Demitidos / Aposentados   | Nazaria Distribuidora De Produ | 02138155323        | 291,62
+3453            | Demitidos / Aposentados   | Produtecnica Nordeste Comercio | 02679858000        | 240,00
+3456            | Demitidos / Aposentados   | Produtecnica Nordeste Comercio | 21693538873        | 6.783,60
+3456            | Demitidos / Aposentados   | Produtecnica Nordeste Comercio | 95433350010        | 106,15
+3457            | Demitidos / Aposentados   | Produtecnica Nordeste Comercio | 24936062804        | 294,03
+1504            | Demitidos / Aposentados   | R T Serviços Ltda             | 23002930300        | 1.197,72
+1504            | Demitidos / Aposentados   | R T Serviços Ltda             | 23002930300        | 1.197,72
+1504            | Demitidos / Aposentados   | R T Serviços Ltda             | 23002930300        | 1.197,72
+1504            | Demitidos / Aposentados   | R T Serviços Ltda             | 23002930300        | 1.197,72
+1504            | Demitidos / Aposentados   | R T Serviços Ltda             | 23002930300        | 1.197,72
+166             | Demitidos / Aposentados   | Radio Mirante Do Maranhao Ltda | 78292085300        | 677,67
+166             | Demitidos / Aposentados   | Radio Mirante Do Maranhao Ltda | 78292085300        | 677,67
+166             | Demitidos / Aposentados   | Radio Mirante Do Maranhao Ltda | 78292085300        | 677,67
+166             | Demitidos / Aposentados   | Radio Mirante Do Maranhao Ltda | 78292085300        | 677,67
+166             | Demitidos / Aposentados   | Radio Mirante Do Maranhao Ltda | 78292085300        | 725,35
+1419            | Demitidos / Aposentados   | S. Barros De Souza Eireli      | 05646624371        | 674,53
+1419            | Demitidos / Aposentados   | S. Barros De Souza Eireli      | 05646624371        | 524,16
+1419            | Demitidos / Aposentados   | S. Barros De Souza Eireli      | 05646624371        | 451,49
+1419            | Demitidos / Aposentados   | S. Barros De Souza Eireli      | 05646624371        | 423,14
+2553            | Demitidos / Aposentados   | Silva Nunes Representacoes Ltd | 74196901387        | 1.036,80
+3700            | Demitidos / Aposentados   | Unimed Maranhão Do Sul - Coop | 00740544306        | 452,05
+3700            | Demitidos / Aposentados   | Unimed Maranhão Do Sul - Coop | 00740544306        | 452,05
+3700            | Demitidos / Aposentados   | Unimed Maranhão Do Sul - Coop | 00740544306        | 452,05
+3700            | Demitidos / Aposentados   | Unimed Maranhão Do Sul - Coop | 40441148387        | 18,90
+3700            | Demitidos / Aposentados   | Unimed Maranhão Do Sul - Coop | 40441148387        | 18,90
+3700            | Demitidos / Aposentados   | Unimed Maranhão Do Sul - Coop | 80052029387        | 154,65
+3700            | Demitidos / Aposentados   | Unimed Maranhão Do Sul - Coop | 80052029387        | 154,65
+3700            | Demitidos / Aposentados   | Unimed Maranhão Do Sul - Coop | 80052029387        | 154,65
+3700            | Demitidos / Aposentados   | Unimed Maranhão Do Sul - Coop | 80052029387        | 154,65
+3700            | Demitidos / Aposentados   | Unimed Maranhão Do Sul - Coop | 80052029387        | 154,65
+3700            | Demitidos / Aposentados   | Unimed Maranhão Do Sul - Coop | 80052029387        | 154,65
+3700            | Demitidos / Aposentados   | Unimed Maranhão Do Sul - Coop | 57663688368        | 90,00
+3700            | Demitidos / Aposentados   | Unimed Maranhão Do Sul - Coop | 57663688368        | 404,26
+3700            | Demitidos / Aposentados   | Unimed Maranhão Do Sul - Coop | 80052029387        | 154,65
+3700            | Demitidos / Aposentados   | Unimed Maranhão Do Sul - Coop | 61909939315        | 18,90
+3700            | Demitidos / Aposentados   | Unimed Maranhão Do Sul - Coop | 00740544306        | 347,73
+3700            | Demitidos / Aposentados   | Unimed Maranhão Do Sul - Coop | 00740544306        | 347,73
+3700            | Demitidos / Aposentados   | Unimed Maranhão Do Sul - Coop | 00740544306        | 347,73
+3700            | Demitidos / Aposentados   | Unimed Maranhão Do Sul - Coop | 00740544306        | 297,31
+3700            | Demitidos / Aposentados   | Unimed Maranhão Do Sul - Coop | 00740544306        | 347,73
+3700            | Demitidos / Aposentados   | Unimed Maranhão Do Sul - Coop | 00740544306        | 347,73
+3700            | Demitidos / Aposentados   | Unimed Maranhão Do Sul - Coop | 00740544306        | 373,34
+3700            | Demitidos / Aposentados   | Unimed Maranhão Do Sul - Coop | 00740544306        | 452,05
+3700            | Demitidos / Aposentados   | Unimed Maranhão Do Sul - Coop | 00740544306        | 452,05
+3700            | Demitidos / Aposentados   | Unimed Maranhão Do Sul - Coop | 00740544306        | 452,05
+3700            | Demitidos / Aposentados   | Unimed Maranhão Do Sul - Coop | 00740544306        | 452,05
+3700            | Demitidos / Aposentados   | Unimed Maranhão Do Sul - Coop | 00740544306        | 452,05
+3700            | Demitidos / Aposentados   | Unimed Maranhão Do Sul - Coop | 00740544306        | 452,05
+3700            | Demitidos / Aposentados   | Unimed Maranhão Do Sul - Coop | 99916258368        | 37,80
+1339            | Demitidos / Aposentados   | Unimed Maranhão Do Sul - Coop | 36540340397        | 61,68
+178             | Demitidos / Aposentados   | Unisulma Unidade De Ensino Sup | 42773857291        | 862,20
+178             | Demitidos / Aposentados   | Unisulma Unidade De Ensino Sup | 42773857291        | 783,81
+2497            | Demitidos / Aposentados   | Voz Ltda                       | 60834219344        | 248,31
+2497            | Demitidos / Aposentados   | Voz Ltda                       | 60557347378        | 271,58
+2497            | Demitidos / Aposentados   | Voz Ltda                       | 60834219344        | 248,31
+2497            | Demitidos / Aposentados   | Voz Ltda                       | 60557347378        | 271,58
+
+Total de registros: 165

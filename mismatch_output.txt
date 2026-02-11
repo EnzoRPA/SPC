@@ -1,0 +1,553 @@
+Found 37 mismatch records:
+Array
+(
+    [id] => 3709
+    [contrato] => 2907
+    [tp_contrato] => Demitidos / Aposentados
+    [contratante] => Nazaria Distribuidora De Produtos Farmaceuticos Ltda
+    [cpf_cnpj] => 07224991001700
+    [cpf_cnpj_norm] => 60822274337
+    [debito] => 720.49
+)
+Array
+(
+    [id] => 3711
+    [contrato] => 2553
+    [tp_contrato] => Demitidos / Aposentados
+    [contratante] => Rogerio Representacoes
+    [cpf_cnpj] => 23933173000168
+    [cpf_cnpj_norm] => 74196901387
+    [debito] => 1036.80
+)
+Array
+(
+    [id] => 3712
+    [contrato] => 3521
+    [tp_contrato] => Demitidos / Aposentados
+    [contratante] => I L NOGUEIRA ALIMENTOS ME
+    [cpf_cnpj] => 30965884000180
+    [cpf_cnpj_norm] => 00163873330
+    [debito] => 30.36
+)
+Array
+(
+    [id] => 3733
+    [contrato] => 2460
+    [tp_contrato] => Demitidos / Aposentados
+    [contratante] => Visao Servicos E Informatica Ltda
+    [cpf_cnpj] => 06253008000146
+    [cpf_cnpj_norm] => 05142108345
+    [debito] => 580.71
+)
+Array
+(
+    [id] => 3735
+    [contrato] => 2907
+    [tp_contrato] => Demitidos / Aposentados
+    [contratante] => Nazaria Distribuidora De Produtos Farmaceuticos Ltda
+    [cpf_cnpj] => 07224991001700
+    [cpf_cnpj_norm] => 60822274337
+    [debito] => 720.49
+)
+Array
+(
+    [id] => 3757
+    [contrato] => 2460
+    [tp_contrato] => Demitidos / Aposentados
+    [contratante] => Visao Servicos E Informatica Ltda
+    [cpf_cnpj] => 06253008000146
+    [cpf_cnpj_norm] => 05142108345
+    [debito] => 558.95
+)
+Array
+(
+    [id] => 3759
+    [contrato] => 2907
+    [tp_contrato] => Demitidos / Aposentados
+    [contratante] => Nazaria Distribuidora De Produtos Farmaceuticos Ltda
+    [cpf_cnpj] => 07224991001700
+    [cpf_cnpj_norm] => 60822274337
+    [debito] => 720.49
+)
+Array
+(
+    [id] => 3761
+    [contrato] => 2914
+    [tp_contrato] => Demitidos / Aposentados
+    [contratante] => Milcar Loc Veic
+    [cpf_cnpj] => 02505854000155
+    [cpf_cnpj_norm] => 02327984351
+    [debito] => 531.03
+)
+Array
+(
+    [id] => 3798
+    [contrato] => 1504
+    [tp_contrato] => Demitidos / Aposentados
+    [contratante] => R T Serviços Ltda
+    [cpf_cnpj] => 22046360000167
+    [cpf_cnpj_norm] => 23002930300
+    [debito] => 1095.11
+)
+Array
+(
+    [id] => 3799
+    [contrato] => 2460
+    [tp_contrato] => Demitidos / Aposentados
+    [contratante] => Visao Servicos E Informatica Ltda
+    [cpf_cnpj] => 06253008000146
+    [cpf_cnpj_norm] => 05142108345
+    [debito] => 544.90
+)
+Array
+(
+    [id] => 3802
+    [contrato] => 2907
+    [tp_contrato] => Demitidos / Aposentados
+    [contratante] => Nazaria Distribuidora De Produtos Farmaceuticos Ltda
+    [cpf_cnpj] => 07224991001700
+    [cpf_cnpj_norm] => 60822274337
+    [debito] => 720.49
+)
+Array
+(
+    [id] => 3804
+    [contrato] => 2914
+    [tp_contrato] => Demitidos / Aposentados
+    [contratante] => Milcar Loc Veic
+    [cpf_cnpj] => 02505854000155
+    [cpf_cnpj_norm] => 02327984351
+    [debito] => 531.03
+)
+Array
+(
+    [id] => 3914
+    [contrato] => 1504
+    [tp_contrato] => Demitidos / Aposentados
+    [contratante] => R T Serviços Ltda
+    [cpf_cnpj] => 22046360000167
+    [cpf_cnpj_norm] => 23002930300
+    [debito] => 1197.72
+)
+Array
+(
+    [id] => 3915
+    [contrato] => 2460
+    [tp_contrato] => Demitidos / Aposentados
+    [contratante] => Visao Servicos E Informatica Ltda
+    [cpf_cnpj] => 06253008000146
+    [cpf_cnpj_norm] => 05142108345
+    [debito] => 735.36
+)
+Array
+(
+    [id] => 3918
+    [contrato] => 2907
+    [tp_contrato] => Demitidos / Aposentados
+    [contratante] => Nazaria Distribuidora De Produtos Farmaceuticos Ltda
+    [cpf_cnpj] => 07224991001700
+    [cpf_cnpj_norm] => 60822274337
+    [debito] => 720.49
+)
+Array
+(
+    [id] => 4053
+    [contrato] => 1504
+    [tp_contrato] => Demitidos / Aposentados
+    [contratante] => R T Serviços Ltda
+    [cpf_cnpj] => 22046360000167
+    [cpf_cnpj_norm] => 23002930300
+    [debito] => 1197.72
+)
+Array
+(
+    [id] => 4054
+    [contrato] => 2460
+    [tp_contrato] => Demitidos / Aposentados
+    [contratante] => Visao Servicos E Informatica Ltda
+    [cpf_cnpj] => 06253008000146
+    [cpf_cnpj_norm] => 05142108345
+    [debito] => 461.35
+)
+Array
+(
+    [id] => 4058
+    [contrato] => 2907
+    [tp_contrato] => Demitidos / Aposentados
+    [contratante] => Nazaria Distribuidora De Produtos Farmaceuticos Ltda
+    [cpf_cnpj] => 07224991001700
+    [cpf_cnpj_norm] => 60822274337
+    [debito] => 720.49
+)
+Array
+(
+    [id] => 4059
+    [contrato] => 2907
+    [tp_contrato] => Demitidos / Aposentados
+    [contratante] => Nazaria Distribuidora De Produtos Farmaceuticos Ltda
+    [cpf_cnpj] => 07224991001700
+    [cpf_cnpj_norm] => 02138155323
+    [debito] => 258.07
+)
+Array
+(
+    [id] => 4238
+    [contrato] => 1504
+    [tp_contrato] => Demitidos / Aposentados
+    [contratante] => R T Serviços Ltda
+    [cpf_cnpj] => 22046360000167
+    [cpf_cnpj_norm] => 23002930300
+    [debito] => 1197.72
+)
+Array
+(
+    [id] => 4239
+    [contrato] => 2460
+    [tp_contrato] => Demitidos / Aposentados
+    [contratante] => Visao Servicos E Informatica Ltda
+    [cpf_cnpj] => 06253008000146
+    [cpf_cnpj_norm] => 05142108345
+    [debito] => 427.71
+)
+Array
+(
+    [id] => 4243
+    [contrato] => 2907
+    [tp_contrato] => Demitidos / Aposentados
+    [contratante] => Nazaria Distribuidora De Produtos Farmaceuticos Ltda
+    [cpf_cnpj] => 07224991001700
+    [cpf_cnpj_norm] => 60822274337
+    [debito] => 814.16
+)
+Array
+(
+    [id] => 4244
+    [contrato] => 2907
+    [tp_contrato] => Demitidos / Aposentados
+    [contratante] => Nazaria Distribuidora De Produtos Farmaceuticos Ltda
+    [cpf_cnpj] => 07224991001700
+    [cpf_cnpj_norm] => 02138155323
+    [debito] => 291.62
+)
+Array
+(
+    [id] => 4384
+    [contrato] => 3597
+    [tp_contrato] => Demitidos / Aposentados
+    [contratante] => Maity Bioenergia
+    [cpf_cnpj] => 07007398000218
+    [cpf_cnpj_norm] => 60827569327
+    [debito] => 1115.47
+)
+Array
+(
+    [id] => 4432
+    [contrato] => 166
+    [tp_contrato] => Demitidos / Aposentados
+    [contratante] => Rad Mirante Ltda
+    [cpf_cnpj] => 10363729000186
+    [cpf_cnpj_norm] => 78292085300
+    [debito] => 677.67
+)
+Array
+(
+    [id] => 4554
+    [contrato] => 1504
+    [tp_contrato] => Demitidos / Aposentados
+    [contratante] => R T Serviços Ltda
+    [cpf_cnpj] => 22046360000167
+    [cpf_cnpj_norm] => 23002930300
+    [debito] => 1197.72
+)
+Array
+(
+    [id] => 4555
+    [contrato] => 2460
+    [tp_contrato] => Demitidos / Aposentados
+    [contratante] => Visao Servicos E Informatica Ltda
+    [cpf_cnpj] => 06253008000146
+    [cpf_cnpj_norm] => 05142108345
+    [debito] => 461.92
+)
+Array
+(
+    [id] => 4558
+    [contrato] => 2907
+    [tp_contrato] => Demitidos / Aposentados
+    [contratante] => Nazaria Distribuidora De Produtos Farmaceuticos Ltda
+    [cpf_cnpj] => 07224991001700
+    [cpf_cnpj_norm] => 60822274337
+    [debito] => 832.16
+)
+Array
+(
+    [id] => 4559
+    [contrato] => 2907
+    [tp_contrato] => Demitidos / Aposentados
+    [contratante] => Nazaria Distribuidora De Produtos Farmaceuticos Ltda
+    [cpf_cnpj] => 07224991001700
+    [cpf_cnpj_norm] => 02138155323
+    [debito] => 291.62
+)
+Array
+(
+    [id] => 4671
+    [contrato] => 3597
+    [tp_contrato] => Demitidos / Aposentados
+    [contratante] => Maity Bioenergia
+    [cpf_cnpj] => 07007398000218
+    [cpf_cnpj_norm] => 60827569327
+    [debito] => 1115.47
+)
+Array
+(
+    [id] => 6251
+    [contrato] => 3597
+    [tp_contrato] => Demitidos / Aposentados
+    [contratante] => Maity Bioenergia
+    [cpf_cnpj] => 07007398000218
+    [cpf_cnpj_norm] => 43574386400
+    [debito] => 1214.63
+)
+Array
+(
+    [id] => 6253
+    [contrato] => 3453
+    [tp_contrato] => Demitidos / Aposentados
+    [contratante] => Produtecnica Nordeste
+    [cpf_cnpj] => 10211971000215
+    [cpf_cnpj_norm] => 02679858000
+    [debito] => 240.00
+)
+Array
+(
+    [id] => 6254
+    [contrato] => 3456
+    [tp_contrato] => Demitidos / Aposentados
+    [contratante] => Produtecnica Nordeste
+    [cpf_cnpj] => 10211971000649
+    [cpf_cnpj_norm] => 21693538873
+    [debito] => 6783.60
+)
+Array
+(
+    [id] => 6255
+    [contrato] => 3456
+    [tp_contrato] => Demitidos / Aposentados
+    [contratante] => Produtecnica Nordeste
+    [cpf_cnpj] => 10211971000649
+    [cpf_cnpj_norm] => 95433350010
+    [debito] => 106.15
+)
+Array
+(
+    [id] => 6256
+    [contrato] => 3457
+    [tp_contrato] => Demitidos / Aposentados
+    [contratante] => Produtecnica Nordeste
+    [cpf_cnpj] => 10211971000720
+    [cpf_cnpj_norm] => 24936062804
+    [debito] => 294.03
+)
+Array
+(
+    [id] => 7906
+    [contrato] => 2370
+    [tp_contrato] => Demitidos / Aposentados
+    [contratante] => Murta Imperatriz
+    [cpf_cnpj] => 69435501000105
+    [cpf_cnpj_norm] => 65584210544
+    [debito] => 273.04
+)
+Array
+(
+    [id] => 7908
+    [contrato] => 3596
+    [tp_contrato] => Demitidos / Aposentados
+    [contratante] => Maity Agricola
+    [cpf_cnpj] => 07908458000192
+    [cpf_cnpj_norm] => 49526111400
+    [debito] => 898.30
+)
+
+=== Also checking Demitidos specifically ===
+Array
+(
+    [id] => 3418
+    [contrato] => 178
+    [tp_contrato] => Demitidos / Aposentados
+    [contratante] => Unisulma Unidade De Ensino Superior Sul Do Ma Ltda
+    [cpf_cnpj] => 03155983361
+    [cpf_cnpj_norm] => 42773857291
+)
+Array
+(
+    [id] => 3419
+    [contrato] => 2497
+    [tp_contrato] => Demitidos / Aposentados
+    [contratante] => Voz Ltda
+    [cpf_cnpj] => 62052234306
+    [cpf_cnpj_norm] => 60834219344
+)
+Array
+(
+    [id] => 3420
+    [contrato] => 2643
+    [tp_contrato] => Demitidos / Aposentados
+    [contratante] => Hospital Santa Monica Ltda
+    [cpf_cnpj] => 70309922100
+    [cpf_cnpj_norm] => 04727830337
+)
+Array
+(
+    [id] => 3481
+    [contrato] => 1944
+    [tp_contrato] => Demitidos / Aposentados
+    [contratante] => Mateus Supermercados
+    [cpf_cnpj] => 05144589332
+    [cpf_cnpj_norm] => 75738430115
+)
+Array
+(
+    [id] => 3500
+    [contrato] => 178
+    [tp_contrato] => Demitidos / Aposentados
+    [contratante] => Unisulma Unidade De Ensino Superior Sul Do Ma Ltda
+    [cpf_cnpj] => 03155983361
+    [cpf_cnpj_norm] => 42773857291
+)
+Array
+(
+    [id] => 3544
+    [contrato] => 2497
+    [tp_contrato] => Demitidos / Aposentados
+    [contratante] => Voz Ltda
+    [cpf_cnpj] => 62052234306
+    [cpf_cnpj_norm] => 60834219344
+)
+Array
+(
+    [id] => 3545
+    [contrato] => 2643
+    [tp_contrato] => Demitidos / Aposentados
+    [contratante] => Hospital Santa Monica Ltda
+    [cpf_cnpj] => 70309922100
+    [cpf_cnpj_norm] => 04727830337
+)
+Array
+(
+    [id] => 3564
+    [contrato] => 1944
+    [tp_contrato] => Demitidos / Aposentados
+    [contratante] => Mateus Supermercados
+    [cpf_cnpj] => 05144589332
+    [cpf_cnpj_norm] => 75738430115
+)
+Array
+(
+    [id] => 3697
+    [contrato] => 3700
+    [tp_contrato] => Demitidos / Aposentados
+    [contratante] => Unimed Maranhão Do Sul - Cooperativa De Trabalho Medico - Hui
+    [cpf_cnpj] => 40211762334
+    [cpf_cnpj_norm] => 00740544306
+)
+Array
+(
+    [id] => 3698
+    [contrato] => 3700
+    [tp_contrato] => Demitidos / Aposentados
+    [contratante] => Unimed Maranhão Do Sul - Cooperativa De Trabalho Medico - Hui
+    [cpf_cnpj] => 40211762334
+    [cpf_cnpj_norm] => 00740544306
+)
+Array
+(
+    [id] => 3699
+    [contrato] => 3700
+    [tp_contrato] => Demitidos / Aposentados
+    [contratante] => Unimed Maranhão Do Sul - Cooperativa De Trabalho Medico - Hui
+    [cpf_cnpj] => 40211762334
+    [cpf_cnpj_norm] => 00740544306
+)
+Array
+(
+    [id] => 3700
+    [contrato] => 3700
+    [tp_contrato] => Demitidos / Aposentados
+    [contratante] => Unimed Maranhão Do Sul - Cooperativa De Trabalho Medico - Hui
+    [cpf_cnpj] => 40211762334
+    [cpf_cnpj_norm] => 00740544306
+)
+Array
+(
+    [id] => 3701
+    [contrato] => 136
+    [tp_contrato] => Demitidos / Aposentados
+    [contratante] => Gees S A
+    [cpf_cnpj] => 61146610360
+    [cpf_cnpj_norm] => 00197888356
+)
+Array
+(
+    [id] => 3708
+    [contrato] => 2497
+    [tp_contrato] => Demitidos / Aposentados
+    [contratante] => Voz Ltda
+    [cpf_cnpj] => 62052234306
+    [cpf_cnpj_norm] => 60557347378
+)
+Array
+(
+    [id] => 3709
+    [contrato] => 2907
+    [tp_contrato] => Demitidos / Aposentados
+    [contratante] => Nazaria Distribuidora De Produtos Farmaceuticos Ltda
+    [cpf_cnpj] => 07224991001700
+    [cpf_cnpj_norm] => 60822274337
+)
+Array
+(
+    [id] => 3710
+    [contrato] => 2912
+    [tp_contrato] => Demitidos / Aposentados
+    [contratante] => Mutum Maquinas E Implementos Agricolas Ltda
+    [cpf_cnpj] => 23513381387
+    [cpf_cnpj_norm] => 03243106338
+)
+Array
+(
+    [id] => 3711
+    [contrato] => 2553
+    [tp_contrato] => Demitidos / Aposentados
+    [contratante] => Rogerio Representacoes
+    [cpf_cnpj] => 23933173000168
+    [cpf_cnpj_norm] => 74196901387
+)
+Array
+(
+    [id] => 3712
+    [contrato] => 3521
+    [tp_contrato] => Demitidos / Aposentados
+    [contratante] => I L NOGUEIRA ALIMENTOS ME
+    [cpf_cnpj] => 30965884000180
+    [cpf_cnpj_norm] => 00163873330
+)
+Array
+(
+    [id] => 3716
+    [contrato] => 3700
+    [tp_contrato] => Demitidos / Aposentados
+    [contratante] => Unimed Maranhão Do Sul - Cooperativa De Trabalho Medico - Hui
+    [cpf_cnpj] => 40211762334
+    [cpf_cnpj_norm] => 00740544306
+)
+Array
+(
+    [id] => 3717
+    [contrato] => 3700
+    [tp_contrato] => Demitidos / Aposentados
+    [contratante] => Unimed Maranhão Do Sul - Cooperativa De Trabalho Medico - Hui
+    [cpf_cnpj] => 40211762334
+    [cpf_cnpj_norm] => 40441148387
+)

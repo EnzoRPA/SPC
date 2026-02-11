@@ -138,6 +138,11 @@ class Comparator {
             AND pg.id IS NULL
             AND $vencAdjusted >= $dateSub5Year
             AND (p.contratante NOT LIKE 'Unimed Maranhão Do Sul%' OR p.contratante IS NULL)
+            -- SafeGuard: Demitidos/Aposentados MUST be individuals (CPF), not Companies (CNPJ)
+            AND NOT (
+                (p.tp_contrato LIKE '%Demitidos%' OR p.tp_contrato LIKE '%Aposentados%')
+                AND CHAR_LENGTH(REPLACE(REPLACE(REPLACE(p.cpf_cnpj, '.', ''), '-', ''), '/', '')) > 11
+            )
             $dateFilter
 
             UNION

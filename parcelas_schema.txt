@@ -1,0 +1,23 @@
+=== Columns parcelas_em_aberto ===
+id | int | NO | PRI |  | auto_increment
+batch_id | int | YES | MUL |  | 
+contrato | varchar(100) | YES |  |  | 
+tp_contrato | varchar(50) | YES |  |  | 
+contratante | varchar(255) | YES |  |  | 
+contratacao | date | YES |  |  | 
+cpf_cnpj | varchar(20) | YES |  |  | 
+status | varchar(50) | YES |  |  | 
+venda | varchar(50) | YES |  |  | 
+parcela | varchar(20) | YES |  |  | 
+debito | decimal(15,2) | YES |  |  | 
+emissao | date | YES |  |  | 
+vencimento | date | YES |  |  | 
+dias_atraso | int | YES |  |  | 
+rua | varchar(255) | YES |  |  | 
+numero | varchar(50) | YES |  |  | 
+bairro | varchar(100) | YES |  |  | 
+cep | varchar(20) | YES |  |  | 
+cidade | varchar(100) | YES |  |  | 
+estado | varchar(2) | YES |  |  | 
+cpf_cnpj_norm | varchar(20) | YES | MUL |  | 
+contrato_norm | varchar(100) | YES | MUL |  | 
