@@ -122,6 +122,7 @@ class Comparator {
             SELECT p.id, p.batch_id, p.contrato, p.tp_contrato, p.contratante, p.contratacao, p.cpf_cnpj, p.status, 
                    p.venda, p.parcela, p.debito, p.emissao, p.vencimento, p.dias_atraso, 
                    p.rua, p.numero, p.bairro, p.cep, p.cidade, p.estado,
+                   p.contrato_norm, p.cpf_cnpj_norm,
                    CASE 
                        WHEN pp.id IS NOT NULL THEN 'PDD PERDAS' 
                        ELSE 'EM ABERTO' 
@@ -166,6 +167,7 @@ class Comparator {
                 pp.data_vencimento as vencimento,
                 DATEDIFF(CURDATE(), pp.data_vencimento) as dias_atraso,
                 pp.rua, pp.numero, pp.bairro, pp.cep, pp.cidade, pp.estado,
+                pp.codigo_contrato_norm, pp.cpf_cnpj,
                 'PDD PERDAS (Importado)' as motivo
             FROM pdd_perdas pp
             LEFT JOIN spc_inclusos s ON pp.codigo_contrato_norm = s.contrato_norm
