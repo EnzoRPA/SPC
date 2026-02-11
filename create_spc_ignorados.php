@@ -14,7 +14,7 @@ $sql = "CREATE TABLE IF NOT EXISTS spc_ignorados (
     data_ignorado DATETIME DEFAULT CURRENT_TIMESTAMP,
     INDEX (contrato_norm),
     INDEX (cpf_cnpj_norm)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;";
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;";
 
 try {
     $db->exec($sql);
