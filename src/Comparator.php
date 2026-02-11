@@ -134,8 +134,11 @@ class Comparator {
                 ON (p.contrato_norm = pg.codigo_norm OR p.contrato_norm = pg.titulo_norm)
             LEFT JOIN pdd_perdas pp
                 ON p.contrato_norm = pp.codigo_contrato_norm
+            LEFT JOIN spc_ignorados i 
+            ON p.contrato_norm = i.contrato_norm
             WHERE s.id IS NULL
             AND pg.id IS NULL
+            AND i.id IS NULL -- Filter out ignored records
             AND $vencAdjusted >= $dateSub5Year
             AND (p.contratante NOT LIKE 'Unimed Maranhão Do Sul%' OR p.contratante IS NULL)
             -- SafeGuard: Demitidos/Aposentados MUST be individuals (CPF), not Companies (CNPJ)

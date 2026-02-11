@@ -63,6 +63,88 @@ if ($page === 'admin_action') {
             error_log($e->getMessage());
             echo json_encode(['success' => false, 'error' => $e->getMessage()]);
         }
+    } elseif ($action === 'ignore_record') {
+        $contrato_norm = $_POST['contrato_norm'] ?? '';
+        $cpf_cnpj_norm = $_POST['cpf_cnpj_norm'] ?? '';
+        $motivo = $_POST['motivo'] ?? 'Ignorado pelo usuário via relatório';
+        
+        try {
+            $stmt = $db->prepare("INSERT INTO spc_ignorados (contrato_norm, cpf_cnpj_norm, motivo) VALUES (?, ?, ?)");
+            $stmt->execute([$contrato_norm, $cpf_cnpj_norm, $motivo]);
+            echo json_encode(['success' => true]);
+        } catch (Exception $e) {
+            error_log($e->getMessage());
+            echo json_encode(['success' => false, 'error' => $e->getMessage()]);
+        }
+    } elseif ($action === 'manual_include') {
+        // We receive validated data from frontend or fetch it again? 
+        // Frontend has all data in the table row/JS object, but passing it all via POST is safer if we just pass IDs and fetch?
+        // But "ObterParaInclusao" is a complex query, not a single table lookup.
+        // Let's accept data via POST to populate spc_inclusos.
+        
+        $data = $_POST['data'] ?? [];
+        
+        if (empty($data)) {
+            echo json_encode(['success' => false, 'error' => 'Dados inválidos']);
+            exit;
+        }
+
+        try {
+            // Check if already exists to avoid dupes
+            $check = $db->prepare("SELECT id FROM spc_inclusos WHERE contrato_norm = ? AND cpf_cnpj_norm = ?");
+            $check->execute([$data['contrato_norm'], $data['cpf_cnpj_norm']]);
+            if ($check->fetch()) {
+                 echo json_encode(['success' => false, 'error' => 'Registro já incluso.']);
+                 exit;
+            }
+
+            // Prepare Insert
+            // Columns: batch_id, contrato, tp_contrato, contratante, contratacao, cpf_cnpj, status, 
+            // venda, parcela, debito, emissao, vencimento, dias_atraso, rua, numero, bairro, cep, cidade, estado, 
+            // cpf_cnpj_norm, contrato_norm, status_inclusao, data_inclusao, hora_inclusao, motivo
+            
+            $sql = "INSERT INTO spc_inclusos (
+                batch_id, contrato, tp_contrato, contratante, contratacao, cpf_cnpj, status, 
+                venda, parcela, debito, emissao, vencimento, dias_atraso, rua, numero, bairro, cep, cidade, estado, 
+                cpf_cnpj_norm, contrato_norm, status_inclusao, data_inclusao, hora_inclusao, motivo
+            ) VALUES (
+                ?, ?, ?, ?, ?, ?, ?, 
+                ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 
+                ?, ?, ?, CURDATE(), CURTIME(), ?
+            )";
+            
+            $stmt = $db->prepare($sql);
+            $stmt->execute([
+                $data['batch_id'] ?? null,
+                $data['contrato'],
+                $data['tp_contrato'],
+                $data['contratante'],
+                $data['contratacao'],
+                $data['cpf_cnpj'], // Assuming this is the validated/display one
+                $data['status'],
+                $data['venda'],
+                $data['parcela'],
+                $data['debito'],
+                $data['emissao'],
+                $data['vencimento'],
+                $data['dias_atraso'],
+                $data['rua'],
+                $data['numero'],
+                $data['bairro'],
+                $data['cep'],
+                $data['cidade'],
+                $data['estado'],
+                $data['cpf_cnpj_norm'],
+                $data['contrato_norm'],
+                'MANUAL',
+                'Informada Inclusão Direto no SPC Control'
+            ]);
+            
+            echo json_encode(['success' => true]);
+        } catch (Exception $e) {
+            error_log("Manual Include Error: " . $e->getMessage());
+            echo json_encode(['success' => false, 'error' => $e->getMessage()]);
+        }
     } elseif ($action === 'get_column_values') {
         $column = $_GET['column'] ?? '';
         try {
