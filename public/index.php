@@ -113,20 +113,23 @@ if ($page === 'admin_action') {
                 ?, ?, ?, CURDATE(), CURTIME()
             )";
             
+            // Helper: converte string vazia para null (evita erro de data inválida no MySQL)
+            $nullIfEmpty = fn($v) => (isset($v) && $v !== '') ? $v : null;
+
             $stmt = $db->prepare($sql);
             $stmt->execute([
-                $data['batch_id'] ?? null,
+                $nullIfEmpty($data['batch_id'] ?? null),
                 $data['contrato'],
                 $data['tp_contrato'],
                 $data['contratante'],
-                $data['contratacao'],
-                $data['cpf_cnpj'], // Assuming this is the validated/display one
+                $nullIfEmpty($data['contratacao'] ?? null),   // date — pode ser vazio
+                $data['cpf_cnpj'],
                 $data['status'],
                 $data['venda'],
                 $data['parcela'],
                 $data['debito'],
-                $data['emissao'],
-                $data['vencimento'],
+                $nullIfEmpty($data['emissao'] ?? null),       // date — pode ser vazio
+                $nullIfEmpty($data['vencimento'] ?? null),    // date — pode ser vazio
                 $data['dias_atraso'],
                 $data['rua'],
                 $data['numero'],
