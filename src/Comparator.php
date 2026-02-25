@@ -124,7 +124,7 @@ class Comparator {
                    p.rua, p.numero, p.bairro, p.cep, p.cidade, p.estado,
                    p.contrato_norm, p.cpf_cnpj_norm,
                    CASE 
-                       WHEN pp.id IS NOT NULL THEN 'PDD PERDAS' 
+                       WHEN pp.id IS NOT NULL AND pp.data_vencimento <= DATE_SUB(CURDATE(), INTERVAL 6 MONTH) THEN 'PDD PERDAS' 
                        ELSE 'EM ABERTO' 
                    END as motivo
             FROM parcelas_em_aberto p
@@ -157,7 +157,7 @@ class Comparator {
                 pp.codigo_contrato as contrato,
                 'PDD' as tp_contrato,
                 COALESCE(pp.nome, h.contratante, 'Cliente PDD') as contratante,
-                h.data_inclusao_spc as contratacao, 
+                COALESCE(pp.data_contratacao, h.data_inclusao_spc) as contratacao, 
                 COALESCE(pp.cpf_cnpj, h.cpf_cnpj, 'CPF NAO ENCONTRADO') as cpf_cnpj,
                 'PDD PERDAS' as status,
                 pp.codigo_venda as venda,
@@ -168,7 +168,10 @@ class Comparator {
                 DATEDIFF(CURDATE(), pp.data_vencimento) as dias_atraso,
                 pp.rua, pp.numero, pp.bairro, pp.cep, pp.cidade, pp.estado,
                 pp.codigo_contrato_norm, pp.cpf_cnpj,
-                'PDD PERDAS (Importado)' as motivo
+                CASE 
+                    WHEN pp.data_vencimento <= DATE_SUB(CURDATE(), INTERVAL 6 MONTH) THEN 'PDD PERDAS (Importado)'
+                    ELSE 'EM ABERTO' -- User requested classification as normal debt if < 6 months
+                END as motivo
             FROM pdd_perdas pp
             LEFT JOIN spc_inclusos s ON pp.codigo_contrato_norm = s.contrato_norm
             LEFT JOIN pdd_pagos pg ON pp.codigo_venda = pg.titulo_norm

@@ -106,11 +106,11 @@ if ($page === 'admin_action') {
             $sql = "INSERT INTO spc_inclusos (
                 batch_id, contrato, tp_contrato, contratante, contratacao, cpf_cnpj, status, 
                 venda, parcela, debito, emissao, vencimento, dias_atraso, rua, numero, bairro, cep, cidade, estado, 
-                cpf_cnpj_norm, contrato_norm, status_inclusao, data_inclusao, hora_inclusao, motivo
+                cpf_cnpj_norm, contrato_norm, status_inclusao, data_inclusao, hora_inclusao
             ) VALUES (
                 ?, ?, ?, ?, ?, ?, ?, 
                 ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 
-                ?, ?, ?, CURDATE(), CURTIME(), ?
+                ?, ?, ?, CURDATE(), CURTIME()
             )";
             
             $stmt = $db->prepare($sql);
@@ -136,8 +136,7 @@ if ($page === 'admin_action') {
                 $data['estado'],
                 $data['cpf_cnpj_norm'],
                 $data['contrato_norm'],
-                'MANUAL',
-                'Informada Inclusão Direto no SPC Control'
+                'MANUAL'
             ]);
             
             echo json_encode(['success' => true]);

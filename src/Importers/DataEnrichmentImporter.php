@@ -59,7 +59,8 @@ class DataEnrichmentImporter implements ImportStrategy {
                 bairro = COALESCE(?, bairro),
                 cep = COALESCE(?, cep),
                 cidade = COALESCE(?, cidade),
-                estado = COALESCE(?, estado)
+                estado = COALESCE(?, estado),
+                data_contratacao = COALESCE(?, data_contratacao)
             WHERE codigo_contrato_norm = ?
         ");
         
@@ -80,6 +81,7 @@ class DataEnrichmentImporter implements ImportStrategy {
         ");
 
         $idxContrato = -1;
+        $idxDataContratacao = -1;
         $idxNome = -1;
         $idxCpf = -1;
         $idxEndereco = -1; // Legacy
@@ -128,6 +130,8 @@ class DataEnrichmentImporter implements ImportStrategy {
 
                 if ($tempContrato !== -1) {
                     // Found header row, map all
+                    $logMsg("Header row found at index $rowIndex: " . implode(" | ", array_map(function($c) { return $c ? $c : 'EMPTY'; }, $rowData)));
+
                     foreach ($rowData as $j => $colName) {
                         if (!$colName) continue;
                         $colNameUpper = strtoupper((string)$colName);
@@ -145,6 +149,20 @@ class DataEnrichmentImporter implements ImportStrategy {
                             $idxContrato = $j;
                         }
                         
+                        // Data Contratação / Data Inclusão
+                        // Normalize dashes/underscores to spaces for broader matching checks, or check both
+                        if (strpos($colNameClean, 'DATA_CONTRAT') !== false || 
+                            strpos($colNameClean, 'DATA DE CONTRAT') !== false || 
+                            strpos($colNameClean, 'DT_CONTRAT') !== false || 
+                            strpos($colNameClean, 'DT CONTRAT') !== false || 
+                            ($colNameClean === 'CONTRATACAO') ||
+                            ($colNameClean === 'DATA_INCLUSAO') ||
+                            ($colNameClean === 'DATA DE INCLUSAO') ||
+                            ($colNameClean === 'DT_INCLUSAO')
+                        ) {
+                            $idxDataContratacao = $j;
+                        }
+
                         // Nome: exact match first, then CONTRATANTE
                         if ($colNameClean === 'NOME') {
                             $idxNome = $j;
@@ -196,6 +214,7 @@ class DataEnrichmentImporter implements ImportStrategy {
                     $logMsg("  Cidade: " . ($idxCidade !== -1 ? "Col $idxCidade" : "NOT FOUND"));
                     $logMsg("  UF: " . ($idxUf !== -1 ? "Col $idxUf" : "NOT FOUND"));
                     $logMsg("  CEP: " . ($idxCep !== -1 ? "Col $idxCep" : "NOT FOUND"));
+                    $logMsg("  Data Contratacao: " . ($idxDataContratacao !== -1 ? "Col $idxDataContratacao" : "NOT FOUND"));
                 }
                 continue; // Done with this row
             }
@@ -208,6 +227,26 @@ class DataEnrichmentImporter implements ImportStrategy {
             
             $cpf = ($idxCpf !== -1) ? Normalizer::cpfCnpj($rowData[$idxCpf] ?? null) : null;
             $nome = ($idxNome !== -1) ? ($rowData[$idxNome] ?? null) : null;
+            
+            $dataContratacao = null;
+            if ($idxDataContratacao !== -1 && !empty($rowData[$idxDataContratacao])) {
+                // Try to handle Excel date or string date
+                $val = $rowData[$idxDataContratacao];
+                if (is_numeric($val)) {
+                    // Excel date
+                    $dataContratacao = \PhpOffice\PhpSpreadsheet\Shared\Date::excelToDateTimeObject($val)->format('Y-m-d');
+                } else {
+                    // String date DD/MM/YYYY
+                    $d = \DateTime::createFromFormat('d/m/Y', $val);
+                    if ($d && $d->format('d/m/Y') === $val) {
+                        $dataContratacao = $d->format('Y-m-d');
+                    } else {
+                        // Try Y-m-d
+                        $d2 = \DateTime::createFromFormat('Y-m-d', $val);
+                        if ($d2) $dataContratacao = $d2->format('Y-m-d');
+                    }
+                }
+            }
 
             // Build Address
             $endereco = null;
@@ -279,6 +318,7 @@ class DataEnrichmentImporter implements ImportStrategy {
                     $cep ?: null,
                     $cidade ?: null,
                     $uf ?: null,
+                    $dataContratacao ?: null,
                     $contratoNorm
                 ]);
                 $rowsAffected = $stmtUpdatePdd->rowCount();
