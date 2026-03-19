@@ -40,8 +40,6 @@ class SpcExcluidosImporter {
 
         foreach ($rows as $index => $row) {
             // Check if row is visible (respect Excel filters)
-            // $rows is 0-indexed. We shifted one off.
-            // So $index 0 in $rows corresponds to Excel Row 2.
             $excelRowIndex = $index + 2;
             if (!$worksheet->getRowDimension($excelRowIndex)->getVisible()) {
                 continue;
@@ -61,9 +59,14 @@ class SpcExcluidosImporter {
             // Data de exclusão: hoje (assumindo que o arquivo reflete o estado atual)
             $dataExclusao = date('Y-m-d');
 
-            // Check for duplicates in spc_excluidos
-            $stmtCheck = $this->db->prepare("SELECT id FROM spc_excluidos WHERE cpf_cnpj_norm = ? AND contrato_norm = ?");
-            $stmtCheck->execute([$cpfNorm, $contratoNorm]);
+            // Check for duplicates in spc_excluidos (include vencimento so same contract different parcel can be re-imported)
+            if ($vencimento) {
+                $stmtCheck = $this->db->prepare("SELECT id FROM spc_excluidos WHERE cpf_cnpj_norm = ? AND contrato_norm = ? AND vencimento = ?");
+                $stmtCheck->execute([$cpfNorm, $contratoNorm, $vencimento]);
+            } else {
+                $stmtCheck = $this->db->prepare("SELECT id FROM spc_excluidos WHERE cpf_cnpj_norm = ? AND contrato_norm = ?");
+                $stmtCheck->execute([$cpfNorm, $contratoNorm]);
+            }
             
             if (!$stmtCheck->fetch()) {
                 $stmt->execute([
@@ -72,17 +75,22 @@ class SpcExcluidosImporter {
                 ]);
             }
 
-            // --- NEW LOGIC: Archive and Delete from spc_inclusos ---
-            // Find matching record in spc_inclusos
-            // Matching criteria: CPF/CNPJ AND Contrato (normalized)
-            // Optional: Check Vencimento if provided? For now, let's stick to strict CPF+Contrato match.
-            
-            $sqlFind = "SELECT * FROM spc_inclusos WHERE cpf_cnpj_norm = ? AND contrato_norm = ?";
-            $stmtFind = $this->db->prepare($sqlFind);
-            $stmtFind->execute([$cpfNorm, $contratoNorm]);
-            $record = $stmtFind->fetch(PDO::FETCH_ASSOC);
+            // --- Find and delete specific parcel from spc_inclusos ---
+            // Match by vencimento when available to target the exact parcel
+            if ($vencimento) {
+                $sqlFind = "SELECT * FROM spc_inclusos WHERE cpf_cnpj_norm = ? AND contrato_norm = ? AND vencimento = ?";
+                $stmtFind = $this->db->prepare($sqlFind);
+                $stmtFind->execute([$cpfNorm, $contratoNorm, $vencimento]);
+            } else {
+                $sqlFind = "SELECT * FROM spc_inclusos WHERE cpf_cnpj_norm = ? AND contrato_norm = ?";
+                $stmtFind = $this->db->prepare($sqlFind);
+                $stmtFind->execute([$cpfNorm, $contratoNorm]);
+            }
 
-            if ($record) {
+            // fetchAll so ALL matching parcelas are deleted, not just the first
+            $records = $stmtFind->fetchAll(PDO::FETCH_ASSOC);
+
+            foreach ($records as $record) {
                 // Archive
                 $sqlArchive = "INSERT INTO spc_historico_removidos (
                     original_id, contrato, tp_contrato, contratante, cpf_cnpj, valor, vencimento, data_inclusao_spc, motivo_remocao

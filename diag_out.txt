@@ -1,0 +1,36 @@
+=== PDD_PERDAS ===
+id=20141 | venda=5145479 | contrato=1504 | norm=1504 | venc=2025-03-30 | cpf=23002930300
+id=20143 | venda=5160041 | contrato=1504 | norm=1504 | venc=2025-04-30 | cpf=23002930300
+id=20144 | venda=5174159 | contrato=1504 | norm=1504 | venc=2025-05-30 | cpf=23002930300
+id=20150 | venda=5187926 | contrato=1504 | norm=1504 | venc=2025-06-30 | cpf=23002930300
+id=16641 | venda=4715654 | contrato=30341 | norm=30341 | venc=2023-04-15 | cpf=09680382397
+id=20161 | venda=5223179 | contrato=52310 | norm=52310 | venc=2025-10-07 | cpf=07416746370
+id=20279 | venda=45870 | contrato=52310 | norm=52310 | venc=2025-08-10 | cpf=07416746370
+id=20104 | venda=5231810 | contrato=52436 | norm=52436 | venc=2025-07-30 | cpf=61925152391
+id=20151 | venda=5191392 | contrato=52436 | norm=52436 | venc=2025-06-30 | cpf=61925152391
+id=20105 | venda=5231811 | contrato=52437 | norm=52437 | venc=2025-07-30 | cpf=61925152391
+id=20152 | venda=5191393 | contrato=52437 | norm=52437 | venc=2025-06-30 | cpf=61925152391
+
+=== SPC_INCLUSOS ===
+id=3798 | contrato=1504 | norm=1504 | venda=5145479 | cpf=23002930300 | tp=Demitidos / Aposentados
+id=3914 | contrato=1504 | norm=1504 | venda=5160041 | cpf=23002930300 | tp=Demitidos / Aposentados
+id=4053 | contrato=1504 | norm=1504 | venda=5174159 | cpf=23002930300 | tp=Demitidos / Aposentados
+id=4238 | contrato=1504 | norm=1504 | venda=5187926 | cpf=23002930300 | tp=Demitidos / Aposentados
+id=4554 | contrato=1504 | norm=1504 | venda=5230354 | cpf=23002930300 | tp=Demitidos / Aposentados
+id=2621 | contrato=30341 | norm=30341 | venda=4715654 | cpf=09680382397 | tp=PF
+id=5983 | contrato=30341 | norm=30341 | venda=5236052 | cpf=09680382397 | tp=PF
+id=4395 | contrato=52310 | norm=52310 | venda=5223179 | cpf=07416746370 | tp=PF
+id=4717 | contrato=52310 | norm=52310 | venda=5237151 | cpf=07416746370 | tp=PF
+id=6027 | contrato=52310 | norm=52310 | venda=5251225 | cpf=07416746370 | tp=PF
+id=4316 | contrato=52436 | norm=52436 | venda=5191392 | cpf=61925152391 | tp=PF
+id=4576 | contrato=52436 | norm=52436 | venda=5231810 | cpf=61925152391 | tp=PF
+id=5991 | contrato=52436 | norm=52436 | venda=5245612 | cpf=61925152391 | tp=PF
+id=4317 | contrato=52437 | norm=52437 | venda=5191393 | cpf=61925152391 | tp=PF
+id=4577 | contrato=52437 | norm=52437 | venda=5231811 | cpf=61925152391 | tp=PF
+id=5990 | contrato=52437 | norm=52437 | venda=5245613 | cpf=61925152391 | tp=PF
+
+=== PDD_PAGOS (check) ===
+(nenhum)
+
+=== PARCELAS_EM_ABERTO ===
+(nenhum)

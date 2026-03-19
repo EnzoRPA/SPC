@@ -170,6 +170,13 @@
                             </td>
                         <?php endforeach; ?>
                         <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                            <?php if ($table === 'pdd_perdas'): ?>
+                            <button onclick="markAsPago('<?php echo $table; ?>', <?php echo $row['id']; ?>, this)"
+                                class="text-green-600 hover:text-green-900 font-medium ml-2"
+                                title="Marcar como pago e mover para PDD Pagos">
+                                ✅ Marcar como Pago
+                            </button>
+                            <?php endif; ?>
                             <button onclick="deleteRow('<?php echo $table; ?>', <?php echo $row['id']; ?>)" class="text-red-600 hover:text-red-900 ml-4">
                                 <?php echo $table === 'import_batches' ? 'Reverter' : 'Excluir'; ?>
                             </button>
@@ -237,6 +244,43 @@ function deleteRow(table, id) {
             });
     }
 }
+
+function markAsPago(table, id, btn) {
+    if (!confirm('Confirmar que este PDD foi PAGO? O registro será movido para a lista de PDDs Pagos e removido de PDD Perdas.')) {
+        return;
+    }
+
+    const originalText = btn.innerHTML;
+    btn.innerHTML = '⏳ Processando...';
+    btn.disabled = true;
+
+    const formData = new FormData();
+    formData.append('id', id);
+
+    fetch('index.php?page=admin_action&action=mark_pdd_pago', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            // Remove the row from the DOM
+            const row = btn.closest('tr');
+            if (row) row.remove();
+        } else {
+            alert('Erro ao marcar como pago: ' + (data.error || 'Erro desconhecido'));
+            btn.innerHTML = originalText;
+            btn.disabled = false;
+        }
+    })
+    .catch(error => {
+        console.error('Fetch error:', error);
+        alert('Erro na requisição: ' + error.message);
+        btn.innerHTML = originalText;
+        btn.disabled = false;
+    });
+}
+
 
 // Table Sorting Functionality
 function setupTableSorting() {

@@ -171,11 +171,11 @@ try {
             ],
             [
                 'title' => '4. PDD Pagos',
-                'subtitle' => 'Adicionar (Append) • PDF',
+                'subtitle' => 'Adicionar (Append) • PDF ou Excel',
                 'icon' => 'file-text',
                 'color' => 'purple',
                 'name' => 'pdd_pagos_file',
-                'accept' => '.pdf',
+                'accept' => '.pdf, .xls, .xlsx, .csv',
                 'btn' => 'Importar PDD Pagos',
                 'tooltip' => 'Relatorio baixado no Piramide (Financeiro-Contas a Receber-Relatorios-Por NDO) sendo CR0117 para PF e CR0118 para PJ',
                 'model' => 'modelo_pdd_pagos.pdf'

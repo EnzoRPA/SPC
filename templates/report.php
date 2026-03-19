@@ -23,6 +23,13 @@ foreach ($exclusao as $e) $totalExclusaoValor += ($e['valor_debito'] ?? $e['valo
 $totalInclusaoQtd = count($inclusao);
 $totalInclusaoValor = 0;
 foreach ($inclusao as $i) $totalInclusaoValor += ($i['debito'] ?? $i['valor'] ?? 0);
+
+// Helper para Renderizar Células Editáveis In-Line
+$renderEditable = function($value, $table, $id, $column) {
+    if (empty($value) && $value !== '0' && $value !== 0) $value = '';
+    $valSafe = htmlspecialchars(trim((string)$value));
+    return "<span contenteditable=\"true\" class=\"editable-span inline-block min-w-[2rem] px-1.5 py-0.5 -mx-1.5 rounded cursor-text hover:bg-blue-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors whitespace-nowrap\" data-table=\"{$table}\" data-id=\"{$id}\" data-column=\"{$column}\">{$valSafe}</span>";
+};
 ?>
 
 <div class="space-y-8">
@@ -38,6 +45,9 @@ foreach ($inclusao as $i) $totalInclusaoValor += ($i['debito'] ?? $i['valor'] ??
             <a href="run_cleanup.php" target="_blank" class="inline-flex items-center px-4 py-2 border border-orange-300 rounded-md shadow-sm text-sm font-medium text-orange-700 bg-orange-50 hover:bg-orange-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500">
                 🧹 Limpar Duplicatas
             </a>
+            <button onclick="runEnrichment(this)" class="inline-flex items-center px-4 py-2 border border-blue-300 rounded-md shadow-sm text-sm font-medium text-blue-700 bg-blue-50 hover:bg-blue-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                ✨ Auto-Preencher Dados
+            </button>
             
             <!-- Export Form with Date Filter -->
             <form action="export.php" method="GET" class="flex items-center gap-2 bg-white p-1 rounded-lg border border-slate-200 shadow-sm">
@@ -129,12 +139,24 @@ foreach ($inclusao as $i) $totalInclusaoValor += ($i['debito'] ?? $i['valor'] ??
                         <?php else: ?>
                             <?php foreach ($exclusao as $row): ?>
                             <tr class="hover:bg-slate-50 transition-colors">
-                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-slate-900"><?php echo !empty($row['cpf_cnpj']) ? htmlspecialchars($row['cpf_cnpj']) : '-'; ?></td>
-                                <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-500"><?php echo !empty($row['contrato']) ? htmlspecialchars($row['contrato']) : '-'; ?></td>
-                                <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-500"><?php echo !empty($row['venda']) ? htmlspecialchars($row['venda']) : '-'; ?></td>
-                                <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-500"><?php echo formatDate($row['vencimento']); ?></td>
-                                <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-500"><?php echo formatDate($row['data_inclusao']); ?></td>
-                                <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-500">R$ <?php echo number_format($row['valor_debito'] ?? $row['valor'], 2, ',', '.'); ?></td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-slate-900">
+                                    <?php echo $renderEditable($row['cpf_cnpj'], $row['source_table'], $row['id'], 'cpf_cnpj'); ?>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-500">
+                                    <?php echo $renderEditable($row['contrato'], $row['source_table'], $row['id'], 'contrato'); ?>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-500">
+                                    <?php echo $renderEditable($row['venda'], $row['source_table'], $row['id'], 'venda'); ?>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-500">
+                                    <?php echo $renderEditable(formatDate($row['vencimento']), $row['source_table'], $row['id'], 'vencimento'); ?>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-500">
+                                    <?php echo $renderEditable(formatDate($row['data_inclusao']), $row['source_table'], $row['id'], 'data_inclusao'); ?>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-500 flex items-center gap-1">
+                                    R$ <?php echo $renderEditable(number_format($row['valor_debito'] ?? $row['valor'], 2, ',', '.'), $row['source_table'], $row['id'], 'debito'); ?>
+                                </td>
                                 <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-500">
                                     <?php 
                                         $badgeClass = 'bg-yellow-100 text-yellow-800'; // Default: Sem Parcela
@@ -150,9 +172,12 @@ foreach ($inclusao as $i) $totalInclusaoValor += ($i['debito'] ?? $i['valor'] ??
                                         <?php echo !empty($row['motivo']) ? htmlspecialchars($row['motivo']) : '-'; ?>
                                     </span>
                                 </td>
-                                <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-500">
-                                    <button onclick="deleteRecord(<?php echo $row['id']; ?>, 'spc_inclusos', this)" class="text-red-600 hover:text-red-900 font-medium hover:underline">
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-500 space-x-2">
+                                    <button onclick="deleteRecord(<?php echo $row['id']; ?>, 'spc_inclusos', this)" class="text-red-600 hover:text-red-900 font-medium hover:underline text-xs" title="Confirmar exclusão do SPC">
                                         Excluir
+                                    </button>
+                                    <button onclick="ignoreExclusion('<?php echo htmlspecialchars($row['contrato_norm'] ?? ''); ?>', '<?php echo htmlspecialchars($row['cpf_cnpj_norm'] ?? ''); ?>', '<?php echo htmlspecialchars($row['vencimento'] ?? ''); ?>', this)" class="text-blue-600 hover:text-blue-900 font-medium hover:underline text-xs" title="A dívida ainda procede. Manter no SPC.">
+                                        Manter no SPC
                                     </button>
                                 </td>
                             </tr>
@@ -204,11 +229,37 @@ foreach ($inclusao as $i) $totalInclusaoValor += ($i['debito'] ?? $i['valor'] ??
                         <?php else: ?>
                             <?php foreach ($inclusao as $row): ?>
                             <tr class="hover:bg-slate-50 transition-colors">
-                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-slate-900"><?php echo !empty($row['cpf_cnpj']) ? htmlspecialchars($row['cpf_cnpj']) : '-'; ?></td>
-                                <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-500"><?php $nome = $row['contratante'] ?? $row['nome'] ?? ''; echo !empty($nome) ? htmlspecialchars($nome) : '-'; ?></td>
-                                <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-500"><?php echo !empty($row['contrato']) ? htmlspecialchars($row['contrato']) : '-'; ?></td>
-                                <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-500"><?php $venc = $row['vencimento'] ?? $row['data_vencimento']; echo formatDate($venc); ?></td>
-                                <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-500">R$ <?php echo number_format($row['debito'] ?? $row['valor'], 2, ',', '.'); ?></td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-slate-900">
+                                    <?php echo $renderEditable($row['cpf_cnpj'], $row['source_table'], $row['id'], 'cpf_cnpj'); ?>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-500">
+                                    <?php 
+                                        $nomeCol = ($row['source_table'] === 'pdd_perdas') ? 'nome' : 'contratante';
+                                        $nome = $row['contratante'] ?? $row['nome'] ?? '';
+                                        echo $renderEditable($nome, $row['source_table'], $row['id'], $nomeCol); 
+                                    ?>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-500">
+                                    <?php 
+                                        $contratoCol = ($row['source_table'] === 'pdd_perdas') ? 'codigo_contrato' : 'contrato';
+                                        $contrato = $row['contrato'] ?? '';
+                                        echo $renderEditable($contrato, $row['source_table'], $row['id'], $contratoCol); 
+                                    ?>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-500">
+                                    <?php 
+                                        $vencCol = ($row['source_table'] === 'pdd_perdas') ? 'data_vencimento' : 'vencimento';
+                                        $venc = $row['vencimento'] ?? $row['data_vencimento'];
+                                        echo $renderEditable(formatDate($venc), $row['source_table'], $row['id'], $vencCol); 
+                                    ?>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-500 flex items-center gap-1">
+                                    R$ <?php 
+                                        $valorCol = ($row['source_table'] === 'pdd_perdas') ? 'valor' : 'debito';
+                                        $valor = number_format($row['debito'] ?? $row['valor'], 2, ',', '.');
+                                        echo $renderEditable($valor, $row['source_table'], $row['id'], $valorCol); 
+                                    ?>
+                                </td>
                                 <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-500">
                                     <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full <?php echo ($row['motivo'] ?? '') == 'PDD PERDAS' ? 'bg-red-100 text-red-800' : 'bg-blue-100 text-blue-800'; ?>">
                                         <?php echo !empty($row['motivo']) ? htmlspecialchars($row['motivo']) : 'EM ABERTO'; ?>
@@ -218,7 +269,7 @@ foreach ($inclusao as $i) $totalInclusaoValor += ($i['debito'] ?? $i['valor'] ??
                                     <button onclick='manualInclude(<?php echo json_encode($row); ?>, this)' class="text-blue-600 hover:text-blue-900 font-medium hover:underline text-xs" title="Marcar como já inclusa no SPC">
                                         Já Inclusa
                                     </button>
-                                    <button onclick='ignoreRecord("<?php echo $row['contrato_norm']; ?>", "<?php echo $row['cpf_cnpj_norm']; ?>", this)' class="text-gray-600 hover:text-gray-900 font-medium hover:underline text-xs" title="Não incluir (Ignorar)">
+                                    <button onclick='ignoreRecord("<?php echo htmlspecialchars($row['contrato_norm']); ?>", "<?php echo htmlspecialchars($row['cpf_cnpj_norm']); ?>", "<?php echo htmlspecialchars($row['vencimento'] ?? $row['data_vencimento'] ?? ''); ?>", this)' class="text-gray-600 hover:text-gray-900 font-medium hover:underline text-xs" title="Não incluir (Ignorar)">
                                         Não Incluir
                                     </button>
                                 </td>
@@ -387,7 +438,7 @@ foreach ($inclusao as $i) $totalInclusaoValor += ($i['debito'] ?? $i['valor'] ??
     }
 
     // Ignore Record Functionality
-    function ignoreRecord(contrato_norm, cpf_cnpj_norm, btn) {
+    function ignoreRecord(contrato_norm, cpf_cnpj_norm, vencimento, btn) {
         if (!confirm('Deseja realmente IGNORAR este registro? Ele não aparecerá mais nesta lista.')) {
             return;
         }
@@ -399,6 +450,7 @@ foreach ($inclusao as $i) $totalInclusaoValor += ($i['debito'] ?? $i['valor'] ??
         const formData = new FormData();
         formData.append('contrato_norm', contrato_norm);
         formData.append('cpf_cnpj_norm', cpf_cnpj_norm);
+        formData.append('vencimento', vencimento);
         formData.append('motivo', 'Ignorado pelo usuário via painel');
 
         fetch(`index.php?page=admin_action&action=ignore_record`, {
@@ -413,6 +465,46 @@ foreach ($inclusao as $i) $totalInclusaoValor += ($i['debito'] ?? $i['valor'] ??
                 updatePagination('table-inclusao');
             } else {
                 alert('Erro ao ignorar: ' + (data.error || 'Erro desconhecido'));
+                btn.textContent = originalText;
+                btn.disabled = false;
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Erro na requisição.');
+            btn.textContent = originalText;
+            btn.disabled = false;
+        });
+    }
+
+    // Ignore Exclusion Functionality (Manter no SPC)
+    function ignoreExclusion(contrato_norm, cpf_cnpj_norm, vencimento, btn) {
+        if (!confirm('Deseja MANTER este registro no SPC? A dívida será considerada como ainda procedente e não aparecerá mais na lista de exclusão.')) {
+            return;
+        }
+
+        const originalText = btn.textContent;
+        btn.textContent = '...';
+        btn.disabled = true;
+
+        const formData = new FormData();
+        formData.append('contrato_norm', contrato_norm);
+        formData.append('cpf_cnpj_norm', cpf_cnpj_norm);
+        formData.append('vencimento', vencimento);
+        formData.append('motivo', 'Manter no SPC - Dívida ainda procede');
+
+        fetch(`index.php?page=admin_action&action=ignore_record`, {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                const row = btn.closest('tr');
+                row.remove();
+                updatePagination('table-exclusao');
+            } else {
+                alert('Erro ao manter no SPC: ' + (data.error || 'Erro desconhecido'));
                 btn.textContent = originalText;
                 btn.disabled = false;
             }
@@ -537,4 +629,93 @@ foreach ($inclusao as $i) $totalInclusaoValor += ($i['debito'] ?? $i['valor'] ??
     
     // Initialize sorting
     setupTableSorting();
+
+    // Inline Editing Logic
+    document.addEventListener('focusout', function(e) {
+        if (e.target.classList && e.target.classList.contains('editable-span')) {
+            saveCell(e.target);
+        }
+    });
+
+    document.addEventListener('keydown', function(e) {
+        if (e.target.classList && e.target.classList.contains('editable-span')) {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                e.target.blur(); // Triggers focusout
+            }
+        }
+    });
+
+    function saveCell(span) {
+        const table = span.dataset.table;
+        const id = span.dataset.id;
+        const column = span.dataset.column;
+        const value = span.innerText.trim();
+
+        if (!id || id === 'null' || !table) {
+            span.classList.add('bg-red-100');
+            setTimeout(() => span.classList.remove('bg-red-100'), 1500);
+            return;
+        }
+        
+        // Opt visual feedback
+        span.classList.add('opacity-50');
+
+        const formData = new FormData();
+        formData.append('table', table);
+        formData.append('id', id);
+        formData.append('column', column);
+        formData.append('value', value);
+
+        fetch('index.php?page=admin_action&action=update_cell', {
+            method: 'POST',
+            body: formData
+        })
+        .then(r => r.json())
+        .then(data => {
+            span.classList.remove('opacity-50');
+            if (data.success) {
+                span.classList.add('bg-green-100', 'text-green-800');
+                setTimeout(() => span.classList.remove('bg-green-100', 'text-green-800'), 1000);
+            } else {
+                span.classList.add('bg-red-100', 'text-red-800');
+                alert('Erro ao salvar: ' + (data.error || 'Desconhecido'));
+            }
+        })
+        .catch(err => {
+            console.error(err);
+            span.classList.remove('opacity-50');
+            span.classList.add('bg-red-100', 'text-red-800');
+        });
+    }
+
+    // Run Enrichment Functionality
+    function runEnrichment(btn) {
+        if (!confirm('Deseja iniciar a varredura para auto-preencher os nomes e CPFs que estão faltando na base? Isso pode levar alguns segundos.')) {
+            return;
+        }
+
+        const originalText = btn.innerHTML;
+        btn.innerHTML = '<i data-lucide="loader" class="w-4 h-4 mr-2 animate-spin"></i> Processando...';
+        btn.disabled = true;
+
+        fetch(`index.php?page=admin_action&action=enrich_pdd`)
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert(`Varredura concluída!\n\nCPFs enriquecidos: ${data.cpfs}\nNomes enriquecidos: ${data.nomes}\n\nA página será recarregada para mostrar os resultados.`);
+                    window.location.reload();
+                } else {
+                    alert('Erro durante a varredura: ' + (data.error || 'Erro desconhecido'));
+                    btn.innerHTML = originalText;
+                    btn.disabled = false;
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Erro na requisição.');
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+            });
+    }
 </script>

@@ -64,10 +64,12 @@ class PddPerdasImporter implements ImportStrategy {
             if ((strpos($colName, 'CONTRATANTE') !== false) || (strpos($colName, 'NOME') !== false) || (strpos($colName, 'CLIENTE') !== false)) $idxNome = $i;
             
             // Expanded logic for VALOR
-            if ((strpos($colName, 'VALOR') !== false) || (strpos($colName, 'VLR') !== false) || (strpos($colName, 'SALDO') !== false) || (strpos($colName, 'MONTANTE') !== false)) {
+            if (strpos($colName, 'VALOR COBRAR') !== false) {
+                $idxValor = $i; // Always prioritize VALOR COBRAR if present
+            } elseif ($idxValor === -1 && ((strpos($colName, 'VALOR') !== false) || (strpos($colName, 'VLR') !== false) || (strpos($colName, 'SALDO') !== false) || (strpos($colName, 'MONTANTE') !== false))) {
                 // Avoid "VALOR ENTRADA" if there is a "VALOR TOTAL" or logic like that, but valid PDD usually has just one main value.
                 // We pick the first one matching or prioritize "VALOR"
-                if ($idxValor === -1) $idxValor = $i;
+                $idxValor = $i;
             }
             
             if ((strpos($colName, 'CPF') !== false) || (strpos($colName, 'CNPJ') !== false)) $idxCpf = $i;
@@ -106,7 +108,8 @@ class PddPerdasImporter implements ImportStrategy {
             $vencimento = Normalizer::data($row[$idxVencimento] ?? null);
             $contratoNorm = Normalizer::contrato($contrato);
             
-            $nome = ($idxNome !== -1) ? ($row[$idxNome] ?? null) : null;
+            $nomeRaw = ($idxNome !== -1) ? ($row[$idxNome] ?? null) : null;
+            $nome = Normalizer::nome($nomeRaw);
             
             $valorRaw = ($idxValor !== -1) ? ($row[$idxValor] ?? null) : null;
             $valor = Normalizer::valor($valorRaw);

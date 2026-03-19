@@ -82,6 +82,23 @@ class SpcImporter implements ImportStrategy {
             $contratoNorm = Normalizer::contrato($contrato);
 
             if ($cpfNorm) {
+                // Block re-insertion of records already confirmed as excluded from SPC
+                // Must match CPF + Contrato + Vencimento (same parcel specifically)
+                if ($vencimento) {
+                    $stmtCheckExcluido = $this->db->prepare(
+                        "SELECT id FROM spc_excluidos WHERE cpf_cnpj_norm = ? AND contrato_norm = ? AND vencimento = ? LIMIT 1"
+                    );
+                    $stmtCheckExcluido->execute([$cpfNorm, $contratoNorm, $vencimento]);
+                } else {
+                    $stmtCheckExcluido = $this->db->prepare(
+                        "SELECT id FROM spc_excluidos WHERE cpf_cnpj_norm = ? AND contrato_norm = ? LIMIT 1"
+                    );
+                    $stmtCheckExcluido->execute([$cpfNorm, $contratoNorm]);
+                }
+                if ($stmtCheckExcluido->fetch()) {
+                    continue; // Skip: this specific parcel was officially removed from SPC
+                }
+
                 $stmt->execute([
                     $batchId, $contrato, $tpContrato, $contratante, $contratacao, $cpf, $status,
                     $venda, $parcela, $debito, $emissao, $vencimento, $diasAtraso,

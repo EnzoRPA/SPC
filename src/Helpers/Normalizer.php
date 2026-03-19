@@ -8,6 +8,14 @@ class Normalizer {
         return preg_replace('/[^0-9]/', '', (string)$value);
     }
 
+    public static function nome($value) {
+        if (empty($value)) return $value;
+        $value = trim((string)$value);
+        // Remove prefixes like (PF), (PJ), (  PF  ), etc.
+        $value = preg_replace('/^\s*\(\s*(PF|PJ)\s*\)\s*/i', '', $value);
+        return trim($value);
+    }
+
     public static function contrato($value) {
         // Remove ALL spaces (not just trim), convert to uppercase, remove leading zeros
         $value = strtoupper(trim((string)$value));

@@ -1,0 +1,262 @@
+{
+    "pdd_perdas": [
+        {
+            "id": 20141,
+            "codigo_venda": "5145479",
+            "codigo_contrato": "1504",
+            "codigo_contrato_norm": "1504",
+            "data_vencimento": "2025-03-30",
+            "nome": "R T Serviços Ltda",
+            "cpf_cnpj": "23002930300",
+            "valor": "1095.11"
+        },
+        {
+            "id": 20143,
+            "codigo_venda": "5160041",
+            "codigo_contrato": "1504",
+            "codigo_contrato_norm": "1504",
+            "data_vencimento": "2025-04-30",
+            "nome": "R T Serviços Ltda",
+            "cpf_cnpj": "23002930300",
+            "valor": "1197.72"
+        },
+        {
+            "id": 20144,
+            "codigo_venda": "5174159",
+            "codigo_contrato": "1504",
+            "codigo_contrato_norm": "1504",
+            "data_vencimento": "2025-05-30",
+            "nome": "R T Serviços Ltda",
+            "cpf_cnpj": "23002930300",
+            "valor": "1197.72"
+        },
+        {
+            "id": 20150,
+            "codigo_venda": "5187926",
+            "codigo_contrato": "1504",
+            "codigo_contrato_norm": "1504",
+            "data_vencimento": "2025-06-30",
+            "nome": "R T Serviços Ltda",
+            "cpf_cnpj": "23002930300",
+            "valor": "1197.72"
+        },
+        {
+            "id": 16641,
+            "codigo_venda": "4715654",
+            "codigo_contrato": "30341",
+            "codigo_contrato_norm": "30341",
+            "data_vencimento": "2023-04-15",
+            "nome": "Katicilene Pereira Da Silva Brito",
+            "cpf_cnpj": "09680382397",
+            "valor": "159.97"
+        },
+        {
+            "id": 20161,
+            "codigo_venda": "5223179",
+            "codigo_contrato": "52310",
+            "codigo_contrato_norm": "52310",
+            "data_vencimento": "2025-10-07",
+            "nome": "Kleverson Gomes Lins",
+            "cpf_cnpj": "07416746370",
+            "valor": "616.57"
+        },
+        {
+            "id": 20279,
+            "codigo_venda": "45870",
+            "codigo_contrato": "52310",
+            "codigo_contrato_norm": "52310",
+            "data_vencimento": "2025-08-10",
+            "nome": "Kleverson Gomes Lins",
+            "cpf_cnpj": "07416746370",
+            "valor": "616.57"
+        },
+        {
+            "id": 20104,
+            "codigo_venda": "5231810",
+            "codigo_contrato": "52436",
+            "codigo_contrato_norm": "52436",
+            "data_vencimento": "2025-07-30",
+            "nome": "RAIMUNDO NONATO PEREIRA DE SOUSA",
+            "cpf_cnpj": "61925152391",
+            "valor": "235.18"
+        },
+        {
+            "id": 20151,
+            "codigo_venda": "5191392",
+            "codigo_contrato": "52436",
+            "codigo_contrato_norm": "52436",
+            "data_vencimento": "2025-06-30",
+            "nome": "RAIMUNDO NONATO PEREIRA DE SOUSA",
+            "cpf_cnpj": "61925152391",
+            "valor": "235.18"
+        },
+        {
+            "id": 20105,
+            "codigo_venda": "5231811",
+            "codigo_contrato": "52437",
+            "codigo_contrato_norm": "52437",
+            "data_vencimento": "2025-07-30",
+            "nome": "RAIMUNDO NONATO PEREIRA DE SOUSA",
+            "cpf_cnpj": "61925152391",
+            "valor": "306.81"
+        },
+        {
+            "id": 20152,
+            "codigo_venda": "5191393",
+            "codigo_contrato": "52437",
+            "codigo_contrato_norm": "52437",
+            "data_vencimento": "2025-06-30",
+            "nome": "RAIMUNDO NONATO PEREIRA DE SOUSA",
+            "cpf_cnpj": "61925152391",
+            "valor": "306.81"
+        }
+    ],
+    "spc_inclusos": [
+        {
+            "id": 3798,
+            "contrato": "1504",
+            "contrato_norm": "1504",
+            "venda": "5145479",
+            "cpf_cnpj": "23002930300",
+            "vencimento": "2025-03-30",
+            "tp_contrato": "Demitidos \/ Aposentados"
+        },
+        {
+            "id": 3914,
+            "contrato": "1504",
+            "contrato_norm": "1504",
+            "venda": "5160041",
+            "cpf_cnpj": "23002930300",
+            "vencimento": "2025-04-30",
+            "tp_contrato": "Demitidos \/ Aposentados"
+        },
+        {
+            "id": 4053,
+            "contrato": "1504",
+            "contrato_norm": "1504",
+            "venda": "5174159",
+            "cpf_cnpj": "23002930300",
+            "vencimento": "2025-05-30",
+            "tp_contrato": "Demitidos \/ Aposentados"
+        },
+        {
+            "id": 4238,
+            "contrato": "1504",
+            "contrato_norm": "1504",
+            "venda": "5187926",
+            "cpf_cnpj": "23002930300",
+            "vencimento": "2025-06-30",
+            "tp_contrato": "Demitidos \/ Aposentados"
+        },
+        {
+            "id": 4554,
+            "contrato": "1504",
+            "contrato_norm": "1504",
+            "venda": "5230354",
+            "cpf_cnpj": "23002930300",
+            "vencimento": "2025-07-30",
+            "tp_contrato": "Demitidos \/ Aposentados"
+        },
+        {
+            "id": 2621,
+            "contrato": "30341",
+            "contrato_norm": "30341",
+            "venda": "4715654",
+            "cpf_cnpj": "09680382397",
+            "vencimento": "2023-04-15",
+            "tp_contrato": "PF"
+        },
+        {
+            "id": 5983,
+            "contrato": "30341",
+            "contrato_norm": "30341",
+            "venda": "5236052",
+            "cpf_cnpj": "09680382397",
+            "vencimento": "2025-08-15",
+            "tp_contrato": "PF"
+        },
+        {
+            "id": 4395,
+            "contrato": "52310",
+            "contrato_norm": "52310",
+            "venda": "5223179",
+            "cpf_cnpj": "07416746370",
+            "vencimento": "2025-07-10",
+            "tp_contrato": "PF"
+        },
+        {
+            "id": 4717,
+            "contrato": "52310",
+            "contrato_norm": "52310",
+            "venda": "5237151",
+            "cpf_cnpj": "07416746370",
+            "vencimento": "2025-08-10",
+            "tp_contrato": "PF"
+        },
+        {
+            "id": 6027,
+            "contrato": "52310",
+            "contrato_norm": "52310",
+            "venda": "5251225",
+            "cpf_cnpj": "07416746370",
+            "vencimento": "2025-09-10",
+            "tp_contrato": "PF"
+        },
+        {
+            "id": 4316,
+            "contrato": "52436",
+            "contrato_norm": "52436",
+            "venda": "5191392",
+            "cpf_cnpj": "61925152391",
+            "vencimento": "2025-06-30",
+            "tp_contrato": "PF"
+        },
+        {
+            "id": 4576,
+            "contrato": "52436",
+            "contrato_norm": "52436",
+            "venda": "5231810",
+            "cpf_cnpj": "61925152391",
+            "vencimento": "2025-07-30",
+            "tp_contrato": "PF"
+        },
+        {
+            "id": 5991,
+            "contrato": "52436",
+            "contrato_norm": "52436",
+            "venda": "5245612",
+            "cpf_cnpj": "61925152391",
+            "vencimento": "2025-08-30",
+            "tp_contrato": "PF"
+        },
+        {
+            "id": 4317,
+            "contrato": "52437",
+            "contrato_norm": "52437",
+            "venda": "5191393",
+            "cpf_cnpj": "61925152391",
+            "vencimento": "2025-06-30",
+            "tp_contrato": "PF"
+        },
+        {
+            "id": 4577,
+            "contrato": "52437",
+            "contrato_norm": "52437",
+            "venda": "5231811",
+            "cpf_cnpj": "61925152391",
+            "vencimento": "2025-07-30",
+            "tp_contrato": "PF"
+        },
+        {
+            "id": 5990,
+            "contrato": "52437",
+            "contrato_norm": "52437",
+            "venda": "5245613",
+            "cpf_cnpj": "61925152391",
+            "vencimento": "2025-08-30",
+            "tp_contrato": "PF"
+        }
+    ],
+    "pdd_pagos_check": [],
+    "parcelas_em_aberto": []
+}

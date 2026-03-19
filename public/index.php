@@ -52,9 +52,10 @@ if ($page === 'admin_action') {
             echo json_encode(['success' => false, 'error' => $e->getMessage()]);
         }
     } elseif ($action === 'update_cell') {
+        $table  = $_POST['table'] ?? $table;
         $column = $_POST['column'] ?? '';
-        $value = $_POST['value'] ?? '';
-        $id = $_POST['id'] ?? 0;
+        $value  = $_POST['value'] ?? '';
+        $id     = $_POST['id'] ?? 0;
         
         try {
             $success = $admin->updateCell($table, $id, $column, $value);
@@ -66,11 +67,12 @@ if ($page === 'admin_action') {
     } elseif ($action === 'ignore_record') {
         $contrato_norm = $_POST['contrato_norm'] ?? '';
         $cpf_cnpj_norm = $_POST['cpf_cnpj_norm'] ?? '';
+        $vencimento = !empty($_POST['vencimento']) ? $_POST['vencimento'] : null;
         $motivo = $_POST['motivo'] ?? 'Ignorado pelo usuário via relatório';
         
         try {
-            $stmt = $db->prepare("INSERT INTO spc_ignorados (contrato_norm, cpf_cnpj_norm, motivo) VALUES (?, ?, ?)");
-            $stmt->execute([$contrato_norm, $cpf_cnpj_norm, $motivo]);
+            $stmt = $db->prepare("INSERT INTO spc_ignorados (contrato_norm, cpf_cnpj_norm, vencimento, motivo) VALUES (?, ?, ?, ?)");
+            $stmt->execute([$contrato_norm, $cpf_cnpj_norm, $vencimento, $motivo]);
             echo json_encode(['success' => true]);
         } catch (Exception $e) {
             error_log($e->getMessage());
@@ -152,6 +154,90 @@ if ($page === 'admin_action') {
         try {
             $values = $admin->getColumnValues($table, $column);
             echo json_encode(['success' => true, 'values' => $values]);
+        } catch (Exception $e) {
+            echo json_encode(['success' => false, 'error' => $e->getMessage()]);
+        }
+    } elseif ($action === 'mark_pdd_pago') {
+        $id = intval($_POST['id'] ?? $_GET['id'] ?? 0);
+        if (!$id) {
+            echo json_encode(['success' => false, 'error' => 'ID inválido']);
+            exit;
+        }
+        try {
+            // Fetch the pdd_perdas record
+            $stmt = $db->prepare("SELECT * FROM pdd_perdas WHERE id = ? LIMIT 1");
+            $stmt->execute([$id]);
+            $perdaRow = $stmt->fetch(PDO::FETCH_ASSOC);
+
+            if (!$perdaRow) {
+                echo json_encode(['success' => false, 'error' => 'Registro não encontrado']);
+                exit;
+            }
+
+            // Normalizer helper for cpf_cnpj_norm
+            require_once __DIR__ . '/../src/Helpers/Normalizer.php';
+
+            // Map pdd_perdas fields to pdd_pagos columns:
+            // titulo      <- codigo_contrato
+            // codigo      <- codigo_venda
+            // cliente     <- nome
+            // cpf_cnpj    <- cpf_cnpj
+            // situacao    <- 'PAGO MANUALMENTE'
+            // vencimento_boleto <- data_vencimento
+            // valor_titulo <- valor
+            // codigo_norm <- codigo_contrato_norm
+            // titulo_norm <- codigo_contrato_norm
+            // cpf_cnpj_norm <- cpf_cnpj (normalizado)
+
+            $cpfNorm = \App\Helpers\Normalizer::cpfCnpj($perdaRow['cpf_cnpj'] ?? '');
+
+            // Check if already in pdd_pagos to avoid duplicates
+            // Match by codigo_norm (contrato) OR titulo_norm (codigo_venda)
+            $checkStmt = $db->prepare("SELECT id FROM pdd_pagos WHERE codigo_norm = ? OR titulo_norm = ? LIMIT 1");
+            $checkStmt->execute([$perdaRow['codigo_contrato_norm'], $perdaRow['codigo_venda'] ?? $perdaRow['codigo_contrato_norm']]);
+
+            if (!$checkStmt->fetch()) {
+                $insertStmt = $db->prepare("
+                    INSERT INTO pdd_pagos (
+                        batch_id, titulo, codigo, cliente, cpf_cnpj, situacao,
+                        vencimento_boleto, valor_titulo, codigo_norm, titulo_norm, cpf_cnpj_norm
+                    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                ");
+                // Mapeamento conforme a query obterParaExclusao:
+                // - codigo_norm deve bater com spc_inclusos.contrato_norm → usa codigo_contrato_norm
+                // - titulo_norm deve bater com spc_inclusos.venda         → usa codigo_venda
+                $tituloNorm = !empty($perdaRow['codigo_venda']) ? $perdaRow['codigo_venda'] : $perdaRow['codigo_contrato_norm'];
+                $insertStmt->execute([
+                    $perdaRow['batch_id'],
+                    $perdaRow['codigo_contrato'],
+                    $perdaRow['codigo_venda'],
+                    $perdaRow['nome'],
+                    $perdaRow['cpf_cnpj'],
+                    'PAGO MANUALMENTE',
+                    $perdaRow['data_vencimento'],
+                    $perdaRow['valor'],
+                    $perdaRow['codigo_contrato_norm'],  // codigo_norm ← contrato_norm
+                    $tituloNorm,                         // titulo_norm ← codigo_venda
+                    $cpfNorm
+                ]);
+            }
+
+            // Delete from pdd_perdas
+            $deleteStmt = $db->prepare("DELETE FROM pdd_perdas WHERE id = ?");
+            $deleteStmt->execute([$id]);
+
+            echo json_encode(['success' => true]);
+        } catch (Exception $e) {
+            error_log("mark_pdd_pago Error: " . $e->getMessage());
+            echo json_encode(['success' => false, 'error' => $e->getMessage()]);
+        }
+    } elseif ($action === 'enrich_pdd') {
+        try {
+            require_once __DIR__ . '/../src/Comparator.php';
+            $comparator = new \App\Comparator($db);
+            $cpfs = $comparator->enriquecerCpfsPdd();
+            $nomes = $comparator->enriquecerNomesPdd();
+            echo json_encode(['success' => true, 'cpfs' => $cpfs, 'nomes' => $nomes]);
         } catch (Exception $e) {
             echo json_encode(['success' => false, 'error' => $e->getMessage()]);
         }

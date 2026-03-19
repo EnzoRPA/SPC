@@ -297,7 +297,39 @@ class AdminController {
 
         $colQuoted = $this->quoteIdentifier($column);
         $sql = "UPDATE $table SET $colQuoted = ? WHERE id = ?";
+        $params = [$value, $id];
+
+        // Format Date/Money if it's coming from inline edit
+        if (in_array($column, ['debito', 'valor', 'valor_debito'])) {
+            require_once __DIR__ . '/../src/Helpers/Normalizer.php';
+            $value = \App\Helpers\Normalizer::valor($value);
+            $params[0] = $value;
+        } elseif (in_array($column, ['vencimento', 'data_vencimento', 'emissao', 'contratacao', 'data_inclusao', 'data_inclusao_spc'])) {
+            require_once __DIR__ . '/../src/Helpers/Normalizer.php';
+            $dateVal = \App\Helpers\Normalizer::data($value);
+            if ($dateVal !== null) {
+                $value = $dateVal;
+                $params[0] = $value;
+            }
+        }
+
+        // Auto-normalize
+        $normColName = $column . '_norm';
+        if (in_array($normColName, $columns) || ($column === 'codigo_contrato' && in_array('codigo_contrato_norm', $columns))) {
+            require_once __DIR__ . '/../src/Helpers/Normalizer.php';
+            $actualNormCol = ($column === 'codigo_contrato') ? 'codigo_contrato_norm' : $normColName;
+            
+            $sql = "UPDATE $table SET $colQuoted = ?, " . $this->quoteIdentifier($actualNormCol) . " = ? WHERE id = ?";
+            
+            if ($column === 'cpf_cnpj') {
+                $normVal = \App\Helpers\Normalizer::cpfCnpj($value);
+            } else {
+                $normVal = \App\Helpers\Normalizer::contrato($value);
+            }
+            $params = [$value, $normVal, $id];
+        }
+
         $stmt = $this->db->prepare($sql);
-        return $stmt->execute([$value, $id]);
+        return $stmt->execute($params);
     }
 }

@@ -1,0 +1,188 @@
+=== SpcExcluidosImporter START: 2026-03-19 18:46:04 ===
+File: C:\Users\ENZOVE~1\AppData\Local\Temp/REMOVER.xlsx
+HEADER: ["id","TIPO DOCUMENTO","PF \/ CNPJ","CONTRATO","DATA VENCIMENTO SPC","VALOR D\u00c9BITO","DATA EXCLUS\u00c3O","STATUS ","DATA REMO\u00c7\u00c3O","REMOVIDOS SPC CONFERIDOS"]
+COLUMN MAP: {"cpf":2,"contrato":3,"vencimento":4}
+
+--- ROW 2 ---
+  cpf_raw=61263101364 | cpf_norm=61263101364
+  contrato_raw=49318 | contrato_norm=49318
+  vencimento_raw=10/11/2025 | vencimento_parsed=2025-11-10
+  spc_excluidos: JA EXISTE (duplicata), mas continuando delete
+  spc_inclusos encontrados: 0
+  (sem filtro vencimento) spc_inclusos com este cpf+contrato: 0
+
+--- ROW 3 ---
+  cpf_raw=12923088344 | cpf_norm=12923088344
+  contrato_raw=72494 | contrato_norm=72494
+  vencimento_raw=20/11/2025 | vencimento_parsed=2025-11-20
+  spc_excluidos: JA EXISTE (duplicata), mas continuando delete
+  spc_inclusos encontrados: 0
+  (sem filtro vencimento) spc_inclusos com este cpf+contrato: 0
+
+--- ROW 4 ---
+  cpf_raw=62342092385 | cpf_norm=62342092385
+  contrato_raw=29109 | contrato_norm=29109
+  vencimento_raw=25/11/2025 | vencimento_parsed=2025-11-25
+  spc_excluidos: JA EXISTE (duplicata), mas continuando delete
+  spc_inclusos encontrados: 0
+  (sem filtro vencimento) spc_inclusos com este cpf+contrato: 0
+
+--- ROW 5 ---
+  cpf_raw=62077206365 | cpf_norm=62077206365
+  contrato_raw=14834 | contrato_norm=14834
+  vencimento_raw=25/11/2025 | vencimento_parsed=2025-11-25
+  spc_excluidos: JA EXISTE (duplicata), mas continuando delete
+  spc_inclusos encontrados: 0
+  (sem filtro vencimento) spc_inclusos com este cpf+contrato: 0
+
+--- ROW 6 ---
+  cpf_raw=12140748395 | cpf_norm=12140748395
+  contrato_raw=69686 | contrato_norm=69686
+  vencimento_raw=30/09/2025 | vencimento_parsed=2025-09-30
+  spc_excluidos: JA EXISTE (duplicata), mas continuando delete
+  spc_inclusos encontrados: 0
+  (sem filtro vencimento) spc_inclusos com este cpf+contrato: 0
+
+--- ROW 7 ---
+  cpf_raw=05296255399 | cpf_norm=05296255399
+  contrato_raw=49264 | contrato_norm=49264
+  vencimento_raw=30/09/2025 | vencimento_parsed=2025-09-30
+  spc_excluidos: JA EXISTE (duplicata), mas continuando delete
+  spc_inclusos encontrados: 0
+  (sem filtro vencimento) spc_inclusos com este cpf+contrato: 0
+
+--- ROW 8 ---
+  cpf_raw=62342092385 | cpf_norm=62342092385
+  contrato_raw=29109 | contrato_norm=29109
+  vencimento_raw=25/09/2025 | vencimento_parsed=2025-09-25
+  spc_excluidos: JA EXISTE (duplicata), mas continuando delete
+  spc_inclusos encontrados: 0
+  (sem filtro vencimento) spc_inclusos com este cpf+contrato: 0
+
+--- ROW 9 ---
+  cpf_raw=86526952291 | cpf_norm=86526952291
+  contrato_raw=71388 | contrato_norm=71388
+  vencimento_raw=30/09/2025 | vencimento_parsed=2025-09-30
+  spc_excluidos: JA EXISTE (duplicata), mas continuando delete
+  spc_inclusos encontrados: 0
+  (sem filtro vencimento) spc_inclusos com este cpf+contrato: 0
+
+--- ROW 10 ---
+  cpf_raw=62326065310 | cpf_norm=62326065310
+  contrato_raw=60113 | contrato_norm=60113
+  vencimento_raw=10/10/2025 | vencimento_parsed=2025-10-10
+  spc_excluidos: JA EXISTE (duplicata), mas continuando delete
+  spc_inclusos encontrados: 0
+  (sem filtro vencimento) spc_inclusos com este cpf+contrato: 0
+
+--- ROW 11 ---
+  cpf_raw=08701869302 | cpf_norm=08701869302
+  contrato_raw=62856 | contrato_norm=62856
+  vencimento_raw=10/10/2025 | vencimento_parsed=2025-10-10
+  spc_excluidos: JA EXISTE (duplicata), mas continuando delete
+  spc_inclusos encontrados: 0
+  (sem filtro vencimento) spc_inclusos com este cpf+contrato: 0
+=== SpcExcluidosImporter START: 2026-03-19 18:53:41 ===
+File: C:\Users\ENZOVE~1\AppData\Local\Temp/REMOVER.xlsx
+HEADER: ["id","TIPO DOCUMENTO","PF \/ CNPJ","CONTRATO","DATA VENCIMENTO SPC","VALOR D\u00c9BITO","DATA EXCLUS\u00c3O","STATUS ","DATA REMO\u00c7\u00c3O","REMOVIDOS SPC CONFERIDOS"]
+COLUMN MAP: {"cpf":2,"contrato":3,"vencimento":4}
+
+--- ROW 2 ---
+  cpf_raw=61263101364 | cpf_norm=61263101364
+  contrato_raw=49318 | contrato_norm=49318
+  vencimento_raw=10/11/2025 | vencimento_parsed=2025-11-10
+  spc_excluidos: JA EXISTE (duplicata), mas continuando delete
+  spc_inclusos encontrados: 0
+  (sem filtro vencimento) spc_inclusos com este cpf+contrato: 0
+  spc_inclusos por CPF apenas (0 max 5):
+    *** CPF NAO EXISTE em spc_inclusos ***
+
+--- ROW 3 ---
+  cpf_raw=12923088344 | cpf_norm=12923088344
+  contrato_raw=72494 | contrato_norm=72494
+  vencimento_raw=20/11/2025 | vencimento_parsed=2025-11-20
+  spc_excluidos: JA EXISTE (duplicata), mas continuando delete
+  spc_inclusos encontrados: 0
+  (sem filtro vencimento) spc_inclusos com este cpf+contrato: 0
+  spc_inclusos por CPF apenas (0 max 5):
+    *** CPF NAO EXISTE em spc_inclusos ***
+
+--- ROW 4 ---
+  cpf_raw=62342092385 | cpf_norm=62342092385
+  contrato_raw=29109 | contrato_norm=29109
+  vencimento_raw=25/11/2025 | vencimento_parsed=2025-11-25
+  spc_excluidos: JA EXISTE (duplicata), mas continuando delete
+  spc_inclusos encontrados: 0
+  (sem filtro vencimento) spc_inclusos com este cpf+contrato: 0
+  spc_inclusos por CPF apenas (0 max 5):
+    *** CPF NAO EXISTE em spc_inclusos ***
+
+--- ROW 5 ---
+  cpf_raw=62077206365 | cpf_norm=62077206365
+  contrato_raw=14834 | contrato_norm=14834
+  vencimento_raw=25/11/2025 | vencimento_parsed=2025-11-25
+  spc_excluidos: JA EXISTE (duplicata), mas continuando delete
+  spc_inclusos encontrados: 0
+  (sem filtro vencimento) spc_inclusos com este cpf+contrato: 0
+  spc_inclusos por CPF apenas (0 max 5):
+    *** CPF NAO EXISTE em spc_inclusos ***
+
+--- ROW 6 ---
+  cpf_raw=12140748395 | cpf_norm=12140748395
+  contrato_raw=69686 | contrato_norm=69686
+  vencimento_raw=30/09/2025 | vencimento_parsed=2025-09-30
+  spc_excluidos: JA EXISTE (duplicata), mas continuando delete
+  spc_inclusos encontrados: 0
+  (sem filtro vencimento) spc_inclusos com este cpf+contrato: 0
+  spc_inclusos por CPF apenas (0 max 5):
+    *** CPF NAO EXISTE em spc_inclusos ***
+
+--- ROW 7 ---
+  cpf_raw=05296255399 | cpf_norm=05296255399
+  contrato_raw=49264 | contrato_norm=49264
+  vencimento_raw=30/09/2025 | vencimento_parsed=2025-09-30
+  spc_excluidos: JA EXISTE (duplicata), mas continuando delete
+  spc_inclusos encontrados: 0
+  (sem filtro vencimento) spc_inclusos com este cpf+contrato: 0
+  spc_inclusos por CPF apenas (0 max 5):
+    *** CPF NAO EXISTE em spc_inclusos ***
+
+--- ROW 8 ---
+  cpf_raw=62342092385 | cpf_norm=62342092385
+  contrato_raw=29109 | contrato_norm=29109
+  vencimento_raw=25/09/2025 | vencimento_parsed=2025-09-25
+  spc_excluidos: JA EXISTE (duplicata), mas continuando delete
+  spc_inclusos encontrados: 0
+  (sem filtro vencimento) spc_inclusos com este cpf+contrato: 0
+  spc_inclusos por CPF apenas (0 max 5):
+    *** CPF NAO EXISTE em spc_inclusos ***
+
+--- ROW 9 ---
+  cpf_raw=86526952291 | cpf_norm=86526952291
+  contrato_raw=71388 | contrato_norm=71388
+  vencimento_raw=30/09/2025 | vencimento_parsed=2025-09-30
+  spc_excluidos: JA EXISTE (duplicata), mas continuando delete
+  spc_inclusos encontrados: 0
+  (sem filtro vencimento) spc_inclusos com este cpf+contrato: 0
+  spc_inclusos por CPF apenas (0 max 5):
+    *** CPF NAO EXISTE em spc_inclusos ***
+
+--- ROW 10 ---
+  cpf_raw=62326065310 | cpf_norm=62326065310
+  contrato_raw=60113 | contrato_norm=60113
+  vencimento_raw=10/10/2025 | vencimento_parsed=2025-10-10
+  spc_excluidos: JA EXISTE (duplicata), mas continuando delete
+  spc_inclusos encontrados: 0
+  (sem filtro vencimento) spc_inclusos com este cpf+contrato: 0
+  spc_inclusos por CPF apenas (0 max 5):
+    *** CPF NAO EXISTE em spc_inclusos ***
+
+--- ROW 11 ---
+  cpf_raw=08701869302 | cpf_norm=08701869302
+  contrato_raw=62856 | contrato_norm=62856
+  vencimento_raw=10/10/2025 | vencimento_parsed=2025-10-10
+  spc_excluidos: JA EXISTE (duplicata), mas continuando delete
+  spc_inclusos encontrados: 0
+  (sem filtro vencimento) spc_inclusos com este cpf+contrato: 0
+  spc_inclusos por CPF apenas (0 max 5):
+    *** CPF NAO EXISTE em spc_inclusos ***
